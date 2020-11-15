@@ -1,6 +1,6 @@
 <div align = "center">
 
-<img height=200px src= "https://github.com/ACM-Thapar/ACM-official-website/blob/master/acm%20logo.png">
+<img height=200px src= "https://raw.githubusercontent.com/ACM-Thapar/Tourism-and-Travel/master/acm%20logo.png?token=ANOHNVTXGCMDCTX3PH4MQNK7WGWOK">
 
 <h1>ACM-official-website</h1>
 
