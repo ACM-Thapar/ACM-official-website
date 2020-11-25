@@ -1,0 +1,17 @@
+dist: xenial
+group: edge
+
+stages:
+  - name: Tests
+
+jobs:
+  include:
+    - stage: Tests
+      name: Pre-commit tests
+      language: node_js # pre-commit
+      node_js:
+        - 7
+      install:
+        - pip install pre-commit
+      script:
+        - pre-commit run --all-files
