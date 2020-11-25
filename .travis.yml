@@ -6,11 +6,12 @@ stages:
 
 jobs:
   include:
+
     - stage: Tests
       name: Pre-commit tests
-      language: node_js # pre-commit
-      node_js:
-        - 7
+      language: python # pre-commit
+      python:
+        - 3.8
       install:
         - pip install pre-commit
       script:
