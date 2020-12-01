@@ -1,17 +1,10 @@
 dist: xenial
 group: edge
-
-stages:
-  - name: Tests
-
 jobs:
   include:
-
-    - stage: Tests
-      name: Pre-commit tests
-      language: python # pre-commit
-      python:
-        - 3.8
+    - language: python
+      python: '3.7'
+      cache: pip
       install:
         - pip install pre-commit
       script:
