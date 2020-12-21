@@ -410,6 +410,11 @@ svg.think {
   height: 3vw;
 }
 
+a.learnmorenew:hover {
+  color: #1b97de;
+  text-decoration: none;
+}
+
 /* FOOTER */
 footer {
   background-color: #011627;
