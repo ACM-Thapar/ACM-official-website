@@ -1,6 +1,6 @@
 <div align = "center">
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <img height=200px src= "https://raw.githubusercontent.com/ACM-Thapar/Tourism-and-Travel/master/acm%20logo.png?token=ANOHNVTXGCMDCTX3PH4MQNK7WGWOK">
@@ -65,6 +65,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/gunjeevsingh"><img src="https://avatars3.githubusercontent.com/u/65218249?v=4" width="100px;" alt=""/><br /><sub><b>Gunjeev Singh</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=gunjeevsingh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ishita4416"><img src="https://avatars3.githubusercontent.com/u/72693136?v=4" width="100px;" alt=""/><br /><sub><b>ishita4416</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=ishita4416" title="Code">💻</a></td>
   </tr>
 </table>
 
