@@ -1,7 +1,6 @@
 <div align = "center">
 
-
-<img height=200px src= "https://raw.githubusercontent.com/ACM-Thapar/Tourism-and-Travel/master/acm%20logo.png?token=ANOHNVTXGCMDCTX3PH4MQNK7WGWOK">
+<img height=200px src= "https://raw.githubusercontent.com/ACM-Thapar/CS_COURSE_GUIDE/master/acm%20logo.png">
 
 <h1>ACM-official-website</h1>
 
@@ -17,8 +16,11 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ACM-Thapar/ACM-official-website)
 <a> <img src="https://badgen.net/dependabot/thepracticaldev/dev.to?icon=dependabot" alt="Dependabot Badge"></a>
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -68,6 +70,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
