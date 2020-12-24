@@ -18,7 +18,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/ACM-Thapar/ACM-official-website)
 <a> <img src="https://badgen.net/dependabot/thepracticaldev/dev.to?icon=dependabot" alt="Dependabot Badge"></a>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -61,6 +61,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/gunjeevsingh"><img src="https://avatars3.githubusercontent.com/u/65218249?v=4" width="100px;" alt=""/><br /><sub><b>Gunjeev Singh</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=gunjeevsingh" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ishita4416"><img src="https://avatars3.githubusercontent.com/u/72693136?v=4" width="100px;" alt=""/><br /><sub><b>ishita4416</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=ishita4416" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Esha-Sherring"><img src="https://avatars0.githubusercontent.com/u/66880336?v=4" width="100px;" alt=""/><br /><sub><b>Esha-Sherring</b></sub></a><br /><a href="#design-Esha-Sherring" title="Design">🎨</a></td>
   </tr>
 </table>
 
