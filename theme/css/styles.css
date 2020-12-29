@@ -1,4 +1,7 @@
 /* General stylerules for the entire page. */
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #f4f4f4;
   margin: 0px;
@@ -499,5 +502,177 @@ p.copyright {
     top: 38vh;
     width: 120px;
     height: 120px;
+  }
+}
+
+/* Team Page */
+
+.team-page-headings-div {
+  height: 100vh;
+}
+.team-page-head {
+  padding-top: 25vh;
+  color: black;
+  text-align: center;
+  font-weight: 700;
+  font-size: 5vw;
+}
+.team-page-subhead {
+  color: black;
+  text-align: center;
+  font-weight: 300;
+  font-size: 2.5vw;
+}
+.presidents,
+.society-heads,
+.carousel {
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 20vh;
+}
+
+.president-heading,
+.society-heads-heading,
+.department-heads-heading {
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 540;
+  margin-top: 5vh;
+  margin-bottom: 4vw;
+  color: black;
+}
+.president-img-div {
+  display: inline-block;
+  width: 38vw;
+  margin: auto;
+}
+.president-img {
+  width: 24vw;
+  border-radius: 50%;
+  height: 24vw;
+  padding: 0;
+  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.45));
+  display: inline;
+}
+.society-heads-img-div {
+  display: inline-block;
+  width: 30vw;
+  margin: auto;
+}
+.society-heads-img {
+  width: 24vw;
+  border-radius: 50%;
+  height: 24vw;
+  padding: 0;
+  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.45));
+  display: inline;
+}
+.position {
+  margin-top: 2vw;
+  font-size: 1.7vw;
+  margin-bottom: 0.2vw;
+  padding: 10px;
+}
+.name {
+  font-size: 2.2vw;
+  font-weight: bold;
+}
+.fa {
+  padding: 0 10px;
+  font-size: 1.9vw;
+  color: black;
+  transition: 0.4s;
+}
+.fa:hover {
+  color: #006494;
+}
+.fa-arrow-down {
+  font-size: 6vw;
+  margin-top: 10vh;
+  color: black;
+  transition: 0.4s;
+}
+
+.carousel {
+  font-family: Arial;
+  width: 95vw;
+  display: block;
+  margin: 10vh auto;
+}
+.slick-slide {
+  height: auto;
+  text-align: center;
+  align-items: center;
+}
+.slick-slide img {
+  margin: 10vh auto;
+  padding: 0;
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  text-align: center;
+  filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.45));
+  margin-bottom: 2vh;
+}
+
+.slick-arrow {
+  background-color: green;
+  border-radius: 50%;
+}
+.slick-center {
+  transform: scale(1.15, 1.15);
+  transform-origin: 50% 50%;
+}
+.carousel-credentials {
+  margin-bottom: 10vh;
+}
+.hero-figure img {
+  margin-top: 36%;
+  margin-left: 2vh;
+}
+.hide {
+  display: none;
+}
+.hero {
+  max-width: 100vw;
+  overflow: hidden;
+}
+.fa-caret-down {
+  margin-top: 5vh;
+  font-size: 6vw;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    display: none;
+  }
+  .hide {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .presidents,
+  .society-heads,
+  .carousel {
+    margin-bottom: 5vw;
+  }
+  .team-page-headings-div {
+    height: 60vh;
+  }
+  .fa-arrow-down {
+    display: none;
+  }
+  .slick-slide img {
+    margin: 10vw auto;
+  }
+  .carousel {
+    margin: 10vw auto;
+    width: 100vw;
+  }
+  .president-heading,
+  .society-heads-heading,
+  .department-heads-heading {
+    font-size: 5vw;
   }
 }
