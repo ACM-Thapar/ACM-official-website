@@ -1,5 +1,5 @@
 import React from 'react';
-
+import logo from '../../images/logo.svg';
 const Navbar = () => {
   return (
     <div>
@@ -7,7 +7,7 @@ const Navbar = () => {
         {/* //Navbar */}
         <nav className="navbar navbar-expand-lg shift fixed-top">
           <a className="navbar-brand" href="#">
-            <img src="../images/logo.svg" alt />
+            <img src={logo} alt />
           </a>
           <button
             className="navbar-toggler"

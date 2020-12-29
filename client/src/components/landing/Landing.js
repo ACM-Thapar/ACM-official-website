@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
+import Ellipse from '../../images/Ellipse.svg';
+import Group1 from '../../images/Group1.svg';
 import Navbar from '../navbar/Navbar';
+import Footer from '../footer/Footer';
 class Landing extends Component {
   render() {
     return (
       <div>
+        <Navbar />
         <section>
           <div className="container-fluid">
             <div className="row">
               <div
                 className="col-md-6 whitecircle"
                 style={{ paddingLeft: '0%' }}>
-                <img
-                  src="../images/Ellipse 1.svg"
-                  className="whitebg"
-                  align="left"
-                  alt
-                />
+                <img src={Ellipse} className="whitebg" align="left" alt />
                 <h1 className="ACMT">ACM THAPAR</h1>
                 <p className="maintext">
                   ACM offers the resources, access and tools to invent the
@@ -34,12 +33,7 @@ class Landing extends Component {
               <div
                 className="col-md-6 bluecircle"
                 style={{ paddingRight: '0%' }}>
-                <img
-                  className="bluebg"
-                  src="../images//Group 1.svg"
-                  align="right"
-                  alt
-                />
+                <img className="bluebg" src={Group1} align="right" alt />
               </div>
             </div>
           </div>
@@ -443,6 +437,8 @@ class Landing extends Component {
             </div>
           </div>
         </section>
+
+        <Footer />
       </div>
     );
   }
