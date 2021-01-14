@@ -698,3 +698,25 @@ p.copyright {
     font-size: 2.8vh;
   }
 }
+
+@media screen and (max-width: 1300px) {
+  ul.navbar-nav {
+    margin-left: -30%;
+  }
+  h1.ACMT {
+    font-size: 10vh;
+  }
+  .learn-more {
+    margin-top: 70%;
+  }
+  .maintext {
+    font-size: 2.4vh;
+  }
+  .membershiptextnew {
+    width: 100%;
+  }
+  svg.think {
+    width: 300px;
+    margin-left: 20%;
+  }
+}
