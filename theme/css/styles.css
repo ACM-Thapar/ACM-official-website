@@ -720,3 +720,19 @@ p.copyright {
     margin-left: 20%;
   }
 }
+
+@media screen and (max-width: 1220px) {
+  .learn-more {
+    margin-top: 85%;
+  }
+
+  .membershiptextnew {
+    margin-left: -10%;
+  }
+  .whitebg {
+    margin-top: -8%;
+  }
+  img.bluebg {
+    margin-top: -5%;
+  }
+}
