@@ -736,3 +736,12 @@ p.copyright {
     margin-top: -5%;
   }
 }
+
+@media screen and (max-width: 1170px) {
+  .whitebg {
+    margin-top: -11%;
+  }
+  img.bluebg {
+    margin-top: -10%;
+  }
+}
