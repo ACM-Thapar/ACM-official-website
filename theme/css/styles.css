@@ -680,92 +680,9 @@ p.copyright {
     font-size: 5vw;
   }
 }
+
 @media screen and (max-width: 1490px) {
   svg.think {
     margin-left: -30%;
-  }
-}
-@media screen and (max-width: 1400px) {
-  h1.ACMT {
-    font-size: 11vh;
-  }
-  .learn-more {
-    margin-top: 75%;
-  }
-  .maintext {
-    font-size: 2.8vh;
-  }
-}
-@media screen and (max-width: 1300px) {
-  ul.navbar-nav {
-    margin-left: -30%;
-  }
-  h1.ACMT {
-    font-size: 10vh;
-  }
-  .learn-more {
-    margin-top: 70%;
-  }
-  .maintext {
-    font-size: 2.4vh;
-  }
-  .membershiptextnew {
-    width: 100%;
-  }
-  svg.think {
-    width: 300px;
-    margin-left: 20%;
-  }
-}
-
-@media screen and (max-width: 1220px) {
-  .learn-more {
-    margin-top: 75%;
-  }
-
-  .membershiptextnew {
-    margin-left: -10%;
-  }
-  .whitebg {
-    margin-top: -8%;
-  }
-
-  @media screen and (max-width: 1080px) {
-    ul.navbar-nav {
-      margin-left: -40%;
-    }
-    svg.think {
-      margin-left: 10%;
-    }
-    .whitebg {
-      margin-top: -18%;
-    }
-    .learn-more {
-      margin-top: 90%;
-    }
-
-    img.bluebg {
-      margin-top: -25%;
-    }
-    h1.ACMT {
-      margin-top: 25%;
-      font-size: 9vh;
-    }
-    .maintext {
-      margin-top: 40%;
-      font-size: 2.4vh;
-    }
-    section.landpagetwo {
-      margin-top: -15%;
-    }
-  }
-}
-@media screen and (max-width: 989px) {
-  ul.navbar-nav {
-    margin-left: 0;
-  }
-  h1.ACMT {
-    font-size: 8.7vh;
-    margin-top: 30%;
   }
 }
