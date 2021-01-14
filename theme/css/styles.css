@@ -686,3 +686,15 @@ p.copyright {
     margin-left: -30%;
   }
 }
+
+@media screen and (max-width: 1400px) {
+  h1.ACMT {
+    font-size: 11vh;
+  }
+  .learn-more {
+    margin-top: 75%;
+  }
+  .maintext {
+    font-size: 2.8vh;
+  }
+}
