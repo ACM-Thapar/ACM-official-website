@@ -512,20 +512,20 @@ p.copyright {
 /* Team Page */
 
 .team-page-headings-div {
-  height: 100vh;
+  height: 100%;
 }
 .team-page-head {
-  padding-top: 25vh;
+  padding-top: 15%;
   color: black;
   text-align: center;
   font-weight: 700;
-  font-size: 5vw;
+  font-size: 5rem;
 }
 .team-page-subhead {
   color: black;
   text-align: center;
   font-weight: 300;
-  font-size: 2.5vw;
+  font-size: 2.5rem;
 }
 .presidents,
 .society-heads,
@@ -533,58 +533,58 @@ p.copyright {
   text-align: center;
   overflow: hidden;
   margin: auto;
-  margin-bottom: 20vh;
+  margin-bottom: 20%;
 }
 
 .president-heading,
 .society-heads-heading,
 .department-heads-heading {
   text-align: center;
-  font-size: 3vw;
+  font-size: 3rem;
   font-weight: 540;
-  margin-top: 5vh;
-  margin-bottom: 4vw;
+  margin-top: 5%;
+  margin-bottom: 4%;
   color: black;
 }
 .president-img-div {
   display: inline-block;
-  width: 38vw;
+  width: 38%;
   margin: auto;
 }
 .president-img {
-  width: 24vw;
+  width: 25.875rem;
   border-radius: 50%;
-  height: 24vw;
+  height: 25.875rem;
   padding: 0;
-  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.3));
   display: inline;
 }
 .society-heads-img-div {
   display: inline-block;
-  width: 30vw;
+  width: 30%;
   margin: auto;
 }
 .society-heads-img {
-  width: 24vw;
+  width: 21.75rem;
   border-radius: 50%;
-  height: 24vw;
+  height: 21.75rem;
   padding: 0;
-  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.3));
   display: inline;
 }
 .position {
-  margin-top: 2vw;
-  font-size: 1.7vw;
-  margin-bottom: 0.2vw;
+  margin-top: 2%;
+  font-size: 1.7rem;
+  margin-bottom: 0.2%;
   padding: 10px;
 }
 .name {
-  font-size: 2.2vw;
+  font-size: 2.2rem;
   font-weight: bold;
 }
 .fa {
   padding: 0 10px;
-  font-size: 1.9vw;
+  font-size: 1.9rem;
   color: black;
   transition: 0.4s;
 }
@@ -592,17 +592,17 @@ p.copyright {
   color: #006494;
 }
 .fa-arrow-down {
-  font-size: 6vw;
-  margin-top: 10vh;
+  font-size: 6rem;
+  margin-top: 10%;
   color: black;
   transition: 0.4s;
 }
 
 .carousel {
   font-family: Arial;
-  width: 95vw;
+  width: 95%;
   display: block;
-  margin: 10vh auto;
+  margin: 10% auto;
 }
 .slick-slide {
   height: auto;
@@ -610,14 +610,14 @@ p.copyright {
   align-items: center;
 }
 .slick-slide img {
-  margin: 10vh auto;
+  margin: 20% auto;
   padding: 0;
   border-radius: 50%;
-  width: 20vw;
-  height: 20vw;
+  width: 20rem;
+  height: 20rem;
   text-align: center;
   filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.45));
-  margin-bottom: 2vh;
+  margin-bottom: 2%;
 }
 
 .slick-arrow {
@@ -625,61 +625,213 @@ p.copyright {
   border-radius: 50%;
 }
 .slick-center {
-  transform: scale(1.15, 1.15);
+  transform: scale(1.2, 1.2);
   transform-origin: 50% 50%;
+  margin-bottom: 2%;
 }
 .carousel-credentials {
-  margin-bottom: 10vh;
+  margin-bottom: 10%;
 }
 .hero-figure img {
   margin-top: 36%;
-  margin-left: 2vh;
+  margin-left: 2%;
 }
 .hide {
   display: none;
 }
 .hero {
-  max-width: 100vw;
+  max-width: 100%;
   overflow: hidden;
 }
-.fa-caret-down {
-  margin-top: 5vh;
-  font-size: 6vw;
+@media (max-width: 1280px) {
+  .president-img {
+    width: 24.875rem;
+    height: 24.875rem;
+  }
+  .society-heads-img {
+    width: 20.75rem;
+    height: 20.75rem;
+  }
+  .slick-slide img {
+    width: 19rem;
+    height: 19rem;
+  }
+}
+@media (max-width: 1180px) {
+  .president-img {
+    width: 23.875rem;
+    height: 23.875rem;
+  }
+  .society-heads-img {
+    width: 19.75rem;
+    height: 19.75rem;
+  }
+  .slick-slide img {
+    width: 17rem;
+    height: 17rem;
+  }
+}
+@media (max-width: 1080px) {
+  .president-img {
+    width: 21rem;
+    height: 21rem;
+  }
+  .society-heads-img {
+    width: 18rem;
+    height: 18rem;
+  }
+  .slick-slide img {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media (max-width: 980px) {
+  .president-img {
+    width: 19rem;
+    height: 19rem;
+  }
+  .society-heads-img {
+    width: 15rem;
+    height: 15rem;
+  }
+  .slick-slide img {
+    width: 13rem;
+    height: 13rem;
+  }
+  .position {
+    font-size: 1.3rem;
+  }
+  .name {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 850px) {
+  .president-img {
+    width: 17rem;
+    height: 17rem;
+  }
+  .society-heads-img {
+    width: 13.5rem;
+    height: 13.5rem;
+  }
+  .slick-slide img {
+    width: 10rem;
+    height: 10rem;
+  }
 }
 
-@media (max-width: 1024px) {
-  .hero {
-    display: none;
-  }
-  .hide {
-    display: block;
-  }
-}
 @media (max-width: 768px) {
   .presidents,
   .society-heads,
   .carousel {
-    margin-bottom: 5vw;
+    margin-bottom: 5rem;
   }
   .team-page-headings-div {
-    height: 60vh;
+    height: 60%;
   }
   .fa-arrow-down {
     display: none;
   }
   .slick-slide img {
-    margin: 10vw auto;
+    margin: 10% auto;
+    height: 10rem;
+    width: 10rem;
+  }
+  .slick-slide {
+    margin: 1% auto;
   }
   .carousel {
-    margin: 10vw auto;
-    width: 100vw;
+    margin: 10% auto;
+    width: 100%;
+  }
+  .carousel .position {
+    font-size: 0.9rem;
+  }
+  .carousel .name {
+    font-size: 1.3rem;
+  }
+  .carousel .fa {
+    font-size: 1.3rem;
   }
   .president-heading,
   .society-heads-heading,
   .department-heads-heading {
-    font-size: 5vw;
+    font-size: 5rem;
+  }
+  .society-heads-img-div {
+    width: 45%;
+    margin: 2.5% auto;
+  }
+  .president-img-div {
+    margin: 5%;
+  }
+  .president-heading,
+  .society-heads-heading,
+  .department-heads-heading {
+    font-size: 3rem;
+  }
+  .president-img {
+    height: 13.5rem;
+    width: 13.5rem;
   }
 }
+@media (max-width: 650px) {
+  .president-img-div {
+    min-width: 90%;
+  }
+  .president-img {
+    height: 18rem;
+    width: 18rem;
+  }
+  .slick-slide img {
+    height: 9rem;
+    width: 9rem;
+  }
+  .team-page-head {
+    font-size: 3.3rem;
+  }
+  .team-page-subhead {
+    font-size: 2.2rem;
+  }
+  .carousel .name {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 560px) {
+  .society-heads-img-div {
+    min-width: 90%;
+  }
+  .society-heads-img {
+    height: 16rem;
+    width: 16rem;
+  }
+  .slick-slide img {
+    height: 7.5rem;
+    width: 7.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .carousel .fa {
+    font-size: 1rem;
+  }
+  .team-page-subhead {
+    font-size: 1.7rem;
+  }
+  .team-page-head {
+    font-size: 2.2rem;
+  }
+  .president-heading,
+  .society-heads-heading,
+  .department-heads-heading {
+    font-size: 2.2rem;
+  }
+  .slick-slide img {
+    height: 8rem;
+    width: 8rem;
+  }
+}
+/* Team-page styles end */
+
 @media screen and (max-width: 1490px) {
   svg.think {
     margin-left: -30%;
