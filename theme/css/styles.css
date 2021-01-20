@@ -95,6 +95,9 @@ button:hover .button-text {
   margin-bottom: 1rem;
   margin-left: 11vw;
 }
+i.fa {
+  color: #ffffff;
+}
 .social-icon {
   display: flex;
   align-items: center;
@@ -832,11 +835,14 @@ p.copyright {
 }
 /* Team-page styles end */
 
+/*LANDING PAGE RESPONSIVITY*/
+
 @media screen and (max-width: 1490px) {
   svg.think {
     margin-left: -30%;
   }
 }
+
 @media screen and (max-width: 1400px) {
   h1.ACMT {
     font-size: 11vh;
@@ -848,6 +854,7 @@ p.copyright {
     font-size: 2.8vh;
   }
 }
+
 @media screen and (max-width: 1300px) {
   ul.navbar-nav {
     margin-left: -30%;
@@ -872,7 +879,7 @@ p.copyright {
 
 @media screen and (max-width: 1220px) {
   .learn-more {
-    margin-top: 75%;
+    margin-top: 85%;
   }
 
   .membershiptextnew {
@@ -881,37 +888,64 @@ p.copyright {
   .whitebg {
     margin-top: -8%;
   }
-
-  @media screen and (max-width: 1080px) {
-    ul.navbar-nav {
-      margin-left: -40%;
-    }
-    svg.think {
-      margin-left: 10%;
-    }
-    .whitebg {
-      margin-top: -18%;
-    }
-    .learn-more {
-      margin-top: 90%;
-    }
-
-    img.bluebg {
-      margin-top: -25%;
-    }
-    h1.ACMT {
-      margin-top: 25%;
-      font-size: 9vh;
-    }
-    .maintext {
-      margin-top: 40%;
-      font-size: 2.4vh;
-    }
-    section.landpagetwo {
-      margin-top: -15%;
-    }
+  img.bluebg {
+    margin-top: -5%;
   }
 }
+
+@media screen and (max-width: 1170px) {
+  .whitebg {
+    margin-top: -11%;
+  }
+  img.bluebg {
+    margin-top: -10%;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .whitebg {
+    margin-top: -13%;
+  }
+  img.bluebg {
+    margin-top: -12%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  ul.navbar-nav {
+    margin-left: -40%;
+  }
+  svg.think {
+    margin-left: 10%;
+  }
+  .whitebg {
+    margin-top: -18%;
+  }
+  .learn-more {
+    margin-top: 90%;
+  }
+  img.bluebg {
+    margin-top: -25%;
+  }
+  h1.ACMT {
+    margin-top: 25%;
+    font-size: 9vh;
+  }
+  .maintext {
+    margin-top: 40%;
+    font-size: 2.4vh;
+  }
+  section.landpagetwo {
+    margin-top: -15%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .learn-more {
+    margin-top: 95%;
+  }
+}
+
 @media screen and (max-width: 989px) {
   ul.navbar-nav {
     margin-left: 0;
@@ -919,5 +953,450 @@ p.copyright {
   h1.ACMT {
     font-size: 8.7vh;
     margin-top: 30%;
+  }
+  .maintext {
+    font-size: 2.2vh;
+    line-height: 3.5vh;
+    margin-top: 50%;
+  }
+  .whitebg {
+    margin-top: -25%;
+  }
+  img.bluebg {
+    margin-top: -30%;
+  }
+}
+
+@media screen and (max-width: 943px) {
+  h1.ACMT {
+    font-size: 8.4vh;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  svg.think {
+    width: 250px;
+    margin-top: -100%;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  h1.ACMT {
+    font-size: 8.2vh;
+    margin-top: 35%;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  h1.ACMT {
+    font-size: 8vh;
+  }
+  .maintext {
+    font-size: 2vh;
+    line-height: 3.3vh;
+  }
+  .whitebg {
+    margin-top: -30%;
+  }
+  img.bluebg {
+    margin-top: -40%;
+  }
+}
+@media screen and (max-width: 869px) {
+  h1.ACMT {
+    font-size: 7.8vh;
+  }
+}
+@media screen and (max-width: 848px) {
+  h1.ACMT {
+    font-size: 7.6vh;
+  }
+  .whitebg {
+    margin-top: -35%;
+  }
+  img.bluebg {
+    margin-top: -45%;
+  }
+}
+@media screen and (max-width: 827px) {
+  h1.ACMT {
+    font-size: 7.3vh;
+  }
+  .learn-more {
+    margin-top: 100%;
+  }
+  .whitebg {
+    margin-top: -40%;
+  }
+  img.bluebg {
+    margin-top: -50%;
+  }
+  svg.think {
+    width: 230px;
+  }
+}
+
+@media screen and (max-width: 796px) {
+  h1.ACMT {
+    font-size: 7.1vh;
+  }
+  .whitebg {
+    margin-top: -45%;
+  }
+  img.bluebg {
+    margin-top: -55%;
+  }
+  section.landpagetwo {
+    margin-top: -25%;
+  }
+}
+@media screen and (max-width: 773px) {
+  h1.ACMT {
+    font-size: 6.9vh;
+  }
+  svg.think {
+    width: 210px;
+  }
+}
+@media screen and (max-width: 767px) {
+  img.whitebg {
+    width: 60%;
+    margin-top: -20%;
+  }
+  img.bluebg {
+    width: 60%;
+    margin-top: -125%;
+  }
+  h1.ACMT {
+    margin-top: 20%;
+    font-size: 6.7vh;
+  }
+  .maintext {
+    margin-top: 30%;
+    width: 50%;
+    font-size: 1.8vh;
+  }
+  .learn-more {
+    margin-top: 55%;
+  }
+  .membershiph1 {
+    font-size: 5vh;
+    margin-left: -10%;
+  }
+  .membershiptext {
+    width: 50%;
+    margin-left: -8%;
+  }
+  .membershiptextnew {
+    width: 50%;
+    margin-left: 65%;
+    margin-top: -50%;
+  }
+  .learnmorenew {
+    height: 2.3rem;
+    margin-left: -10%;
+  }
+  svg.think {
+    display: none;
+  }
+  section.landpagetwo {
+    margin-top: -30%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+  }
+  h1.whatwedo {
+    margin-left: 10%;
+  }
+  .social-icons {
+    margin-left: 25%;
+  }
+  .copyright {
+    margin-left: 21%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  img.whitebg {
+    margin-top: -20%;
+  }
+  img.bluebg {
+    margin-top: -128%;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  img.whitebg {
+    margin-top: -25%;
+  }
+  img.bluebg {
+    margin-top: -130%;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  img.bluebg {
+    margin-top: -135%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  img.bluebg {
+    margin-top: -140%;
+  }
+  h1.ACMT {
+    margin-top: 17%;
+    font-size: 6.5vh;
+  }
+  .maintext {
+    margin-top: 25%;
+  }
+}
+@media screen and (max-width: 680px) {
+  img.whitebg {
+    margin-top: -30%;
+  }
+  .membershiptextnew {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  img.bluebg {
+    margin-top: -150%;
+  }
+}
+@media screen and (max-width: 610px) {
+  img.whitebg {
+    margin-top: -35%;
+    width: 110%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  img.bluebg {
+    display: none;
+  }
+  i.fa {
+    font-size: 1.5rem;
+  }
+  h1.ACMT {
+    margin-left: 25%;
+    font-size: 7vh;
+    margin-top: -90%;
+  }
+  .maintext {
+    width: 80%;
+    text-align: center;
+    margin-left: 13%;
+    font-size: 2.5vh;
+    margin-top: -80%;
+  }
+  .learn-more {
+    margin-top: -50%;
+    margin-left: 40%;
+  }
+  section.landpagetwo {
+    margin-top: 0%;
+  }
+  .membershiph1 {
+    margin-left: 20%;
+  }
+  .membershiptext {
+    margin-left: 0%;
+  }
+  .learnmorenew {
+    margin-left: 0%;
+  }
+  .membershiptextnew {
+    margin-top: -47.5%;
+    margin-left: 55%;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1.ACMT {
+    margin-left: 20%;
+    font-size: 7vh;
+    margin-top: -105%;
+  }
+  .maintext {
+    width: 80%;
+    text-align: center;
+    margin-left: 11%;
+    font-size: 2.5vh;
+    margin-top: -90%;
+  }
+  .learn-more {
+    margin-top: -50%;
+    margin-left: 35%;
+  }
+  .membershiptextnew {
+    margin-left: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1.ACMT {
+    margin-top: -120%;
+    margin-left: 15%;
+  }
+  .maintext {
+    width: 80%;
+    text-align: center;
+    margin-left: 9%;
+    font-size: 2.5vh;
+    margin-top: -105%;
+  }
+  .learn-more {
+    margin-top: -60%;
+    margin-left: 30%;
+  }
+  h1.whatwedo {
+    margin-left: 0%;
+  }
+  .membershiptextnew {
+    display: none;
+  }
+  .membershiptext {
+    width: 100%;
+    text-align: center;
+    margin-left: 0%;
+  }
+  .membershiph1 {
+    margin-left: 12%;
+  }
+  button.learnmorenew {
+    margin-left: 35%;
+  }
+  .social-icons {
+    margin-left: 13%;
+  }
+  .copyright {
+    margin-left: 7%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1.ACMT {
+    margin-top: -135%;
+    margin-left: 10%;
+  }
+  .maintext {
+    width: 80%;
+    text-align: center;
+    margin-left: 9%;
+    font-size: 2.5vh;
+    margin-top: -120%;
+  }
+  .learn-more {
+    margin-top: -70%;
+    margin-left: 30%;
+  }
+  .copyright {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 430px) {
+  h1.ACMT {
+    margin-top: -140%;
+    margin-left: 10%;
+    font-size: 6.5vh;
+  }
+  .maintext {
+    width: 80%;
+    text-align: center;
+    margin-left: 9%;
+    font-size: 2.1vh;
+    margin-top: -125%;
+  }
+  .learn-more {
+    margin-top: -75%;
+    margin-left: 25%;
+  }
+  .copyright {
+    margin-left: 0%;
+  }
+  h1.whatwedo {
+    font-size: 6vh;
+    display: inline;
+  }
+  .membershiph1 {
+    margin-left: 5%;
+  }
+  .social-icons {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  img.whitebg {
+    margin-top: -45%;
+  }
+  h1.ACMT {
+    margin-top: -150%;
+    margin-left: 5%;
+    font-size: 6.5vh;
+  }
+  .maintext {
+    width: 80%;
+    text-align: center;
+    margin-left: 7%;
+    font-size: 2.1vh;
+    margin-top: -135%;
+  }
+  .learn-more {
+    margin-top: -80%;
+    margin-left: 20%;
+  }
+  .copyright {
+    margin-left: -5%;
+  }
+  h1.whatwedo {
+    font-size: 5.8vh;
+    display: inline;
+  }
+  .membershiph1 {
+    margin-left: 0%;
+  }
+  .social-icons {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  img.whitebg {
+    margin-top: -45%;
+    width: 150%;
+    margin-left: -20%;
+  }
+  h1.ACMT {
+    margin-top: -155%;
+    margin-left: 5%;
+    font-size: 6.3vh;
+  }
+  .maintext {
+    width: 80%;
+    text-align: center;
+    margin-left: 7%;
+    font-size: 2vh;
+    margin-top: -140%;
+  }
+  .learn-more {
+    margin-top: -80%;
+    margin-left: 20%;
+  }
+  .copyright {
+    margin-left: -5%;
+    font-size: 90%;
+  }
+  h1.whatwedo {
+    font-size: 5.5vh;
+    display: inline;
+  }
+  .membershiph1 {
+    margin-left: 5%;
+    font-size: 4.5vh;
+  }
+  .social-icons {
+    margin-left: 0%;
   }
 }
