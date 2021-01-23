@@ -18,7 +18,7 @@
 <a> <img src="https://badgen.net/dependabot/thepracticaldev/dev.to?icon=dependabot" alt="Dependabot Badge"></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -65,6 +65,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/specter25"><img src="https://avatars1.githubusercontent.com/u/56391382?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ujjwal Agarwal</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=specter25" title="Code">💻</a> <a href="#infra-specter25" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-specter25" title="Maintenance">🚧</a> <a href="#projectManagement-specter25" title="Project Management">📆</a></td>
     <td align="center"><a href="https://github.com/priyanshi0714"><img src="https://avatars.githubusercontent.com/u/68701467?v=4?s=100" width="100px;" alt=""/><br /><sub><b>priyanshi0714</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=priyanshi0714" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Samikmalhotra"><img src="https://avatars.githubusercontent.com/u/72279316?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samik Malhotra</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=Samikmalhotra" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/SupritBehera"><img src="https://avatars.githubusercontent.com/u/17498636?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Suprit Behera</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=SupritBehera" title="Code">💻</a></td>
   </tr>
 </table>
 
