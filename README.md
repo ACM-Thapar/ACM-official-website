@@ -18,9 +18,7 @@
 <a> <img src="https://badgen.net/dependabot/thepracticaldev/dev.to?icon=dependabot" alt="Dependabot Badge"></a>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -61,14 +59,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/gunjeevsingh"><img src="https://avatars3.githubusercontent.com/u/65218249?v=4" width="100px;" alt=""/><br /><sub><b>Gunjeev Singh</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=gunjeevsingh" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/ishita4416"><img src="https://avatars3.githubusercontent.com/u/72693136?v=4" width="100px;" alt=""/><br /><sub><b>ishita4416</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=ishita4416" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Esha-Sherring"><img src="https://avatars0.githubusercontent.com/u/66880336?v=4" width="100px;" alt=""/><br /><sub><b>Esha-Sherring</b></sub></a><br /><a href="#design-Esha-Sherring" title="Design">🎨</a></td>
-    <td align="center"><a href="https://github.com/specter25"><img src="https://avatars1.githubusercontent.com/u/56391382?v=4" width="100px;" alt=""/><br /><sub><b>Ujjwal Agarwal</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=specter25" title="Code">💻</a> <a href="#infra-specter25" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-specter25" title="Maintenance">🚧</a> <a href="#projectManagement-specter25" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/gunjeevsingh"><img src="https://avatars3.githubusercontent.com/u/65218249?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gunjeev Singh</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=gunjeevsingh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ishita4416"><img src="https://avatars3.githubusercontent.com/u/72693136?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ishita4416</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=ishita4416" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Esha-Sherring"><img src="https://avatars0.githubusercontent.com/u/66880336?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Esha-Sherring</b></sub></a><br /><a href="#design-Esha-Sherring" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/specter25"><img src="https://avatars1.githubusercontent.com/u/56391382?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ujjwal Agarwal</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=specter25" title="Code">💻</a> <a href="#infra-specter25" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-specter25" title="Maintenance">🚧</a> <a href="#projectManagement-specter25" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/priyanshi0714"><img src="https://avatars.githubusercontent.com/u/68701467?v=4?s=100" width="100px;" alt=""/><br /><sub><b>priyanshi0714</b></sub></a><br /><a href="https://github.com/ACM-Thapar/ACM-official-website/commits?author=priyanshi0714" title="Code">💻</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
