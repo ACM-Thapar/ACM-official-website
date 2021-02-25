@@ -2194,3 +2194,224 @@ img.rounded-corners {
     font-size: 1px;
   }
 }
+
+/* Events Page */
+
+/* animation */
+.hero {
+  background-color: #f4f4f4;
+  padding-top: 224px;
+  overflow: hidden;
+}
+h1.evtxt {
+  color: #363636;
+  position: absolute;
+  width: 120rem;
+  height: 120rem;
+  left: -4vw;
+  top: -14vh;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 5rem;
+  letter-spacing: -3px;
+}
+p.subtxt {
+  position: absolute;
+  width: 428px;
+  height: 45px;
+  left: -3vw;
+  top: 2vh;
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 45px;
+  color: #363636;
+}
+
+#player span {
+  display: block;
+}
+#player .player-info {
+  font-size: 14px;
+  text-decoration: none;
+}
+input.progress {
+  cursor: ew-resize;
+}
+input.progress[value] {
+  position: relative;
+  width: 100%;
+  height: 27px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: #0270d7;
+}
+input.progress[value]:focus {
+  outline: none;
+}
+input.progress[value]:after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+}
+input.progress[value]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: currentColor;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+
+/* card */
+
+.evecards {
+  background-color: #f4f4f4;
+}
+
+.container {
+  margin: 0;
+}
+.cardmid {
+  margin-bottom: 30%;
+  margin-left: 60%;
+  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+  background-color: white !important;
+}
+.cardleft {
+  margin-bottom: 30%;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+  margin-left: 35%;
+}
+.cardright {
+  margin-bottom: 30%;
+  background-color: white;
+  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+  margin-left: 85%;
+}
+.card-title {
+  margin-top: -25%;
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+}
+.card-text {
+  margin-left: 25%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+}
+p.month {
+  font-size: 0.8rem;
+  margin-top: 5%;
+  font-family: Poppins;
+  color: #363636;
+}
+h4.date {
+  font-family: Poppins;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: -5%;
+}
+/* backlight */
+.cardmid,
+.cardright,
+.cardleft {
+  animation: textColor 10s ease infinite;
+}
+.cardmid:after,
+.cardleft:after,
+.cardright:after {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.75);
+  -webkit-filter: blur(5vw);
+  -moz-filter: blur(5vw);
+  -ms-filter: blur(5vw);
+  filter: blur(5vw);
+  background: linear-gradient(270deg, #0fffc1, #7e0fff);
+  background-size: 200% 200%;
+  animation: animateGlow 10s ease infinite;
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes textColor {
+  0% {
+    color: #7e0fff;
+  }
+  50% {
+    color: #0fffc1;
+  }
+  100% {
+    color: #7e0fff;
+  }
+}
+
+/* Event Modal */
+.modal-eve {
+  background-color: white;
+  margin-left: -20%;
+}
+.etitle {
+  color: #000;
+  font-family: Poppins;
+  margin-top: 8%;
+  margin-left: 16%;
+  font-size: 140%;
+  font-weight: bold;
+}
+.emonth {
+  margin-left: 5.2%;
+  margin-top: -4%;
+  font-size: 74%;
+  font-family: Poppins;
+  color: #636262;
+}
+.edate {
+  margin-left: 5%;
+  margin-top: -3%;
+  font-size: 130%;
+  font-weight: 1000;
+  font-family: Poppins;
+}
+.etime {
+  margin-left: 16%;
+  margin-top: -7%;
+  margin-bottom: 6%;
+  color: #636262;
+  font-family: Poppins;
+  font-size: 85%;
+}
+.eparas {
+  margin-left: 16%;
+  font-family: Poppins;
+  color: #636262;
+  font-size: 85%;
+}
