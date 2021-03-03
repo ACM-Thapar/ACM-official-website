@@ -1,0 +1,794 @@
+.front img {
+  position: relative;
+  left: 380px;
+  top: -150px;
+}
+.front h1 {
+  position: relative;
+  white-space: pre;
+  left: 130px;
+  top: 210px;
+}
+.front p {
+  position: relative;
+  left: 130px;
+  top: 210px;
+}
+.container {
+  position: relative;
+  top: -270px;
+}
+.card-img-top {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+  margin-left: -0.5px;
+}
+.card-title {
+  padding-top: 13.5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.card-text {
+  padding-top: 5px;
+  font-size: 11.5px;
+  color: rgb(95, 93, 93);
+}
+.col-md-4 {
+  position: relative;
+  left: 25px;
+}
+.heading-project {
+  font-weight: bold;
+  font-size: 52px;
+}
+.tagline {
+  font-size: 22px;
+}
+.btn {
+  font-size: 14px;
+  font-weight: 570;
+  position: relative;
+  left: 170px;
+  top: 10px;
+}
+.card-body button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-color: transparent;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.faces {
+  position: absolute;
+  display: inline-block;
+  padding-top: 13px;
+}
+.faces img {
+  height: 20px;
+  width: 20px;
+}
+.more {
+  color: rgb(165, 165, 165);
+  font-size: 10px;
+}
+.more:hover {
+  text-decoration: none;
+}
+.rec {
+  position: absolute;
+  height: 25px;
+  width: 48.5px;
+  top: 12px;
+  left: 12px;
+}
+img.rounded-corners {
+  border-radius: 6px;
+}
+.modal {
+  width: 100%;
+  height: 200vh;
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: absolute;
+  top: 60px;
+  right: 115px;
+  min-width: 750px;
+  height: 1340px;
+  background-color: #ffffff;
+}
+.modal-img {
+  position: relative;
+  top: -2px;
+  left: -2px;
+  height: 400px;
+  width: 750px;
+}
+.close {
+  position: absolute;
+}
+.modal-heading {
+  position: relative;
+  left: 132.5px;
+  top: 50px;
+}
+.date {
+  position: relative;
+  left: 26px;
+}
+.dt {
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+  bottom: 10px;
+  left: 17px;
+}
+.month {
+  position: relative;
+  left: 23px;
+  top: 15px;
+  font-size: 13px;
+  color: rgb(71, 71, 71);
+}
+.paras {
+  position: relative;
+  left: 132.5px;
+  bottom: 32.5px;
+  font-size: 15.6px;
+  color: rgb(71, 71, 71);
+}
+.rowmodal {
+  display: flex;
+}
+.col-md-2 img {
+  height: 50px;
+  width: 50px;
+}
+.team {
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+.col-md-2 p {
+  white-space: nowrap;
+  position: relative;
+  right: 29px;
+}
+.random {
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  top: 5px;
+}
+.position {
+  font-size: 13px;
+  position: relative;
+  bottom: 14px;
+}
+.team h2 {
+  position: relative;
+  left: 110.5px;
+  bottom: 12px;
+  color: rgb(116, 112, 112);
+  font-size: 28px;
+}
+.resources h2 {
+  position: relative;
+  left: 124.5px;
+  top: 60px;
+  color: rgb(116, 112, 112);
+  font-size: 28px;
+}
+.rect {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 130px;
+  height: 60px;
+}
+.student {
+  width: 400px;
+  margin: 4% auto;
+  position: relative;
+}
+.srvc_icon {
+  width: 29px;
+  position: absolute;
+}
+.openBookIcon {
+  top: 20%;
+  right: 0;
+}
+@media screen and (max-width: 1218px) {
+  .front img {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1009px) {
+  .front h1 {
+    font-size: 46px;
+    position: relative;
+    left: 180px;
+  }
+  .front p {
+    font-size: 20px;
+    position: relative;
+    left: 180px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .leftcardproject {
+    margin-left: -50%;
+  }
+  .card {
+    width: 17rem !important;
+    height: 22.5rem;
+  }
+  .midcardproject {
+    margin-left: -20%;
+  }
+  .rightcardproject {
+    margin-left: 12%;
+  }
+  .card-body h5,
+  p {
+    margin-top: -6%;
+  }
+  .btn {
+    margin-left: -8%;
+  }
+  .front img,
+  h1,
+  p {
+    margin-left: -6%;
+  }
+  .card-body p {
+    padding-left: 5%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .leftcardproject {
+    margin-left: -55%;
+  }
+  .midcardproject {
+    margin-left: -25%;
+  }
+  .rightcardproject {
+    margin-left: 4%;
+  }
+  .card-body h5,
+  p {
+    margin-top: -6%;
+  }
+  .btn {
+    margin-left: -8%;
+  }
+  .front img,
+  h1,
+  p {
+    margin-left: -8%;
+  }
+  .card-body p {
+    padding-left: 8%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card {
+    width: 16.5rem !important;
+    height: 22rem;
+  }
+  .card-body p {
+    margin-left: -8%;
+  }
+  .faces {
+    margin-top: -3%;
+  }
+  .btn {
+    margin-top: -6%;
+  }
+  .front h1,
+  p,
+  img {
+    margin-top: -2%;
+  }
+}
+@media screen and (max-width: 888px) {
+  .leftcardproject {
+    margin-right: -30%;
+  }
+  .midcardproject {
+    margin-left: -30%;
+  }
+  .rightcardproject {
+    margin-left: -5%;
+  }
+  .card {
+    width: 16rem !important;
+    height: 21.25rem;
+  }
+  .faces {
+    margin-top: -6%;
+  }
+  .btn {
+    margin-top: -9%;
+    margin-left: -12%;
+  }
+}
+@media screen and (max-width: 882px) {
+  .midcardproject {
+    margin-left: -20%;
+  }
+  .leftcardproject {
+    margin-left: -35%;
+  }
+  .rightcardproject {
+    margin-right: -30%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .front h1,
+  p {
+    margin-top: -6%;
+  }
+  .front img {
+    margin-top: -4;
+    margin-left: -16%;
+  }
+  .front h1 {
+    font-size: 32px;
+  }
+  .front p {
+    font-size: 16px;
+  }
+  .card {
+    width: 17rem !important;
+    height: 22.5rem;
+  }
+  .card p {
+    margin-top: 10%;
+  }
+  .faces {
+    margin-top: 1px;
+  }
+  .btn {
+    margin-top: 1px;
+  }
+  .firstcd {
+    margin-left: -15%;
+    margin-top: -10%;
+  }
+  .secondcd {
+    margin-left: 50%;
+    margin-top: -70.67%;
+  }
+  .thirdcd {
+    margin-top: 10%;
+    margin-left: -15%;
+  }
+  .fourthcd {
+    margin-left: 50%;
+    margin-top: -85%;
+  }
+  .fifthcd {
+    margin-top: -4%;
+    margin-left: -79px;
+  }
+  .sixthcd {
+    margin-top: -70.65%;
+    margin-left: 50%;
+  }
+}
+@media screen and (max-width: 715px) {
+  .front img {
+    margin-left: -19%;
+  }
+  .front h1,
+  p {
+    margin-left: -12%;
+  }
+  .firstcd {
+    margin-left: -12.5%;
+  }
+  .thirdcd {
+    margin-left: -13.1%;
+  }
+  .fifthcd {
+    margin-left: -14%;
+  }
+}
+@media screen and (max-width: 654px) {
+  .front h1,
+  p {
+    margin-left: -18%;
+  }
+  .front img {
+    margin-left: -25%;
+  }
+}
+@media screen and (max-width: 615px) {
+  .front img {
+    margin-top: -6%;
+  }
+
+  .card {
+    width: 15rem !important;
+    height: 20rem;
+  }
+  .card-img-top {
+    height: 165px;
+    width: 100%;
+    overflow: hidden;
+    margin-left: -0.5px;
+  }
+  .card p {
+    margin-top: -1.5%;
+  }
+  .faces {
+    margin-top: -3%;
+  }
+  .btn {
+    margin-top: -7%;
+    margin-left: -21%;
+  }
+  .firstcd {
+    margin-left: -12px;
+    margin-top: -8%;
+  }
+  .secondcd,
+  .fourthcd,
+  .sixthcd {
+    margin-top: -320px;
+  }
+  .thirdcd {
+    margin-left: -12px;
+  }
+  .fifthcd {
+    margin-left: -12px;
+  }
+  .fourthcd {
+    margin-top: -391px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .front img {
+    margin-left: -30%;
+  }
+  .front h1,
+  p {
+    margin-left: -25%;
+  }
+  .firstcd,
+  .thirdcd,
+  .fifthcd {
+    margin-left: -20px;
+  }
+  .secondcd,
+  .fourthcd,
+  .sixthcd {
+    margin-left: 48.5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 17rem !important;
+    height: 22.5rem;
+  }
+  .faces,
+  .btn {
+    margin-top: 5%;
+  }
+  .card p {
+    margin-top: 11%;
+  }
+  .front h1,
+  p {
+    margin-top: -180px;
+  }
+  .front h1 {
+    margin-left: 1.5%;
+  }
+  .front p {
+    margin-left: -5%;
+  }
+  .btn {
+    margin-left: -12px;
+  }
+  .front img {
+    margin-top: 180px;
+    margin-left: -400px;
+    width: 90%;
+  }
+  .firstcd {
+    margin-top: -19%;
+    margin-left: 12.5%;
+  }
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd.sixthcd {
+    margin-top: 10%;
+  }
+  .secondcd {
+    margin-left: 12.5%;
+  }
+  .thirdcd {
+    margin-left: 12.5%;
+  }
+  .fourthcd {
+    margin-left: 12.5%;
+    margin-top: -5%;
+  }
+  .fifthcd {
+    margin-left: 12.5%;
+    margin-top: 10%;
+  }
+  .sixthcd {
+    margin-left: 12.5%;
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .front h1 {
+    margin-left: -6%;
+  }
+  .front p {
+    margin-left: -11%;
+  }
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: 7%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: 6%;
+  }
+  .front h1 {
+    margin-left: -11%;
+  }
+  .front p {
+    margin-left: -17%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .front h1 {
+    margin-left: -20%;
+  }
+  .front p {
+    margin-left: -27%;
+  }
+  .card {
+    width: 14rem !important;
+    height: 19.25rem;
+  }
+  .front img {
+    width: 340px;
+    margin-left: -115%;
+  }
+  .card-img-top {
+    height: 155px;
+  }
+  .card h5 {
+    font-size: 14px;
+    margin-top: -8%;
+  }
+  .card p {
+    font-size: 11px;
+    margin-top: -2%;
+  }
+  .faces,
+  .btn {
+    margin-top: -7%;
+  }
+  .faces img {
+    height: 17px;
+    width: 17px;
+  }
+  .more {
+    font-size: 8px;
+  }
+  .btn {
+    font-size: 12px !important;
+    margin-left: -20%;
+    margin-top: -12%;
+  }
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: 7%;
+  }
+  .firstcd {
+    margin-top: -30%;
+  }
+  .fourthcd {
+    margin-top: -11.5%;
+  }
+}
+@media screen and (max-width: 349px) {
+  .front h1 {
+    margin-left: -25%;
+  }
+  .front p {
+    margin-left: -32%;
+  }
+  .front img {
+    margin-left: -132%;
+  }
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: 2%;
+  }
+  .firstcd {
+    margin-top: -40%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .front h1 {
+    margin-left: -30%;
+  }
+  .front p {
+    margin-left: -40%;
+  }
+  .front img {
+    margin-left: -142%;
+  }
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: -1%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .modal-content {
+    min-width: 700px;
+  }
+  .modal-img {
+    width: 700px;
+  }
+  .date p {
+    margin-left: 0.75%;
+  }
+  .paras p {
+    margin-left: 0.5%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .modal-img {
+    width: 600px;
+    height: 25%;
+  }
+  .modal-content {
+    min-width: 599px;
+  }
+  .modal-content {
+    margin-left: 10%;
+  }
+  .modal-heading {
+    font-size: 25px;
+  }
+  .paras p {
+    font-size: 13px;
+  }
+  .rect {
+    width: 20%;
+    height: 4%;
+  }
+}
+@media screen and (max-width: 762px) {
+  .col-md-2 p {
+    margin-left: -66%;
+  }
+  .modal-content {
+    margin-left: 14%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .modal-img {
+    width: 500px;
+  }
+  .modal-content {
+    min-width: 500px;
+    margin-left: 22%;
+  }
+  .modal-img {
+    height: 20%;
+  }
+  .rect {
+    width: 17%;
+    height: 3%;
+  }
+  .date p {
+    margin-left: -2%;
+  }
+  .modal-heading {
+    margin-left: -5%;
+  }
+  .paras p {
+    margin-left: -5%;
+    font-size: 11.75px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .modal-img {
+    width: 100.5%;
+  }
+  .modal-content {
+    min-width: 250px;
+    margin-left: 26%;
+  }
+}
+@media screen and (max-width: 518px) {
+  .paras p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .modal-content {
+    margin-left: 28%;
+    min-width: 200px;
+  }
+  .modal-heading {
+    font-size: 22px;
+    margin-left: -12%;
+  }
+  .paras p {
+    margin-left: -12%;
+  }
+  .date p {
+    margin-left: -5%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .modal-content {
+    margin-left: 32%;
+  }
+  .modal-heading {
+    margin-top: -6%;
+    margin-left: -14%;
+    margin-top: -8%;
+  }
+  .dt {
+    font-size: 24px;
+  }
+  .month {
+    font-size: 10px;
+  }
+  .paras p {
+    margin-top: 7%;
+    margin-left: -14%;
+    font-size: 9px;
+  }
+}
+@media screen and(max-width:372px) {
+  .paras p {
+    font-size: 1px;
+  }
+}
