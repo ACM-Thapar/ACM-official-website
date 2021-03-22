@@ -256,19 +256,19 @@ nav {
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 8px 6px -6px #999;
   padding-bottom: 0%;
-  background-color: #fbf9ff;
+  background-color: #fbf9ff !important;
   z-index: 1;
   position: fixed;
 }
 nav a {
-  color: black;
+  color: black !important;
 }
 nav.shift ul li a {
   position: relative;
   z-index: 1;
 }
 nav.shift ul li a:hover {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 nav.shift ul li a:after {
