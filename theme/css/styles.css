@@ -1080,18 +1080,22 @@ a.learnmorenew:hover {
 
 /* Team Page */
 
+.team-page {
+  font-family: 'Poppins', sans-serif;
+}
+
 .team-page-headings-div {
-  height: 100%;
+  margin-bottom: 7%;
 }
 .team-page-head {
-  padding-top: 15%;
-  color: black;
+  padding-top: 12.5%;
+  color: rgba(67, 67, 67, 1);
   text-align: center;
   font-weight: 700;
   font-size: 5rem;
 }
 .team-page-subhead {
-  color: black;
+  color: rgba(67, 67, 67, 1);
   text-align: center;
   font-weight: 300;
   font-size: 2.5rem;
@@ -1102,18 +1106,22 @@ a.learnmorenew:hover {
   text-align: center;
   overflow: hidden;
   margin: auto;
-  margin-bottom: 20%;
+  margin-bottom: 2%;
 }
 
-.president-heading,
-.society-heads-heading,
-.department-heads-heading {
+.team-page .president-heading,
+.team-page .society-heads-heading,
+.team-page .department-heads-heading {
   text-align: center;
-  font-size: 3rem;
-  font-weight: 540;
-  margin-top: 5%;
-  margin-bottom: 4%;
-  color: black;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 2%;
+  color: rgba(67, 67, 67, 1);
+  text-transform: capitalize;
+}
+.team-page .department-heads-heading {
+  margin-top: 4%;
+  margin-bottom: 2%;
 }
 .president-img-div {
   display: inline-block;
@@ -1121,71 +1129,78 @@ a.learnmorenew:hover {
   margin: auto;
 }
 .president-img {
-  width: 25.875rem;
+  width: 16.875rem;
   border-radius: 50%;
-  height: 25.875rem;
+  height: 16.875rem;
   padding: 0;
-  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.4));
   display: inline;
 }
 .society-heads-img-div {
   display: inline-block;
-  width: 30%;
+  width: 29%;
   margin: auto;
 }
 .society-heads-img {
-  width: 21.75rem;
+  width: 12.75rem;
   border-radius: 50%;
-  height: 21.75rem;
+  height: 12.75rem;
   padding: 0;
-  filter: drop-shadow(0px 30px 60px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.4));
   display: inline;
+  position: relative;
 }
-.position {
-  margin-top: 2%;
+.team-page .position {
+  font-size: 1.2rem;
+  padding: 25px 10px 0;
+  color: black;
+  font-weight: 200;
+  text-transform: uppercase;
+
+  margin: 5% auto 0;
+  position: relative;
+  bottom: 0;
+}
+.team-page .name {
   font-size: 1.7rem;
-  margin-bottom: 0.2%;
-  padding: 10px;
+  font-weight: 500;
+  color: black;
+  text-transform: capitalize;
+  margin: 0 auto 1%;
 }
-.name {
-  font-size: 2.2rem;
-  font-weight: bold;
-}
-.fa {
+.team-page .fa {
   padding: 0 10px;
-  font-size: 1.9rem;
+  font-size: 1.2rem;
   color: black;
   transition: 0.4s;
 }
-.fa:hover {
+.team-page .fa:hover {
   color: #006494;
-}
-.fa-arrow-down {
-  font-size: 6rem;
-  margin-top: 10%;
-  color: black;
-  transition: 0.4s;
 }
 
 .carousel {
-  font-family: Arial;
   width: 95%;
   display: block;
-  margin: 10% auto;
+  margin: 10% auto 0;
+  margin-top: 1%;
 }
 .slick-slide {
   height: auto;
   text-align: center;
   align-items: center;
 }
+
+.slick-current .carousel-credentials {
+  display: block;
+}
 .slick-slide img {
   margin: 20% auto;
   padding: 0;
   border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
+  width: 14.5rem;
+  height: 14.5rem;
   text-align: center;
-  filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.4));
   margin-bottom: 2%;
 }
 
@@ -1196,10 +1211,11 @@ a.learnmorenew:hover {
 .slick-center {
   transform: scale(1.2, 1.2);
   transform-origin: 50% 50%;
-  margin-bottom: 2%;
+  margin-bottom: 0.5%;
 }
 .carousel-credentials {
   margin-bottom: 10%;
+  display: none;
 }
 .hero-figure img {
   margin-top: 36%;
@@ -1213,45 +1229,27 @@ a.learnmorenew:hover {
   overflow: hidden;
 }
 @media (max-width: 1280px) {
-  .president-img {
-    width: 24.875rem;
-    height: 24.875rem;
+  .team-page .president-img-div {
+    width: 30%;
   }
-  .society-heads-img {
-    width: 20.75rem;
-    height: 20.75rem;
-  }
-  .slick-slide img {
-    width: 19rem;
-    height: 19rem;
+  .team-page .society-heads-img-div {
+    width: 25%;
   }
 }
 @media (max-width: 1180px) {
-  .president-img {
-    width: 23.875rem;
-    height: 23.875rem;
+  .team-page .president-img-div {
+    width: 35%;
   }
-  .society-heads-img {
-    width: 19.75rem;
-    height: 19.75rem;
-  }
-  .slick-slide img {
-    width: 17rem;
-    height: 17rem;
+  .team-page .society-heads-img-div {
+    width: 27%;
   }
 }
 @media (max-width: 1080px) {
-  .president-img {
-    width: 21rem;
-    height: 21rem;
+  .team-page .president-img-div {
+    width: 40%;
   }
-  .society-heads-img {
-    width: 18rem;
-    height: 18rem;
-  }
-  .slick-slide img {
-    width: 15rem;
-    height: 15rem;
+  .team-page .society-heads-img-div {
+    width: 30%;
   }
 }
 @media (max-width: 980px) {
@@ -1267,11 +1265,11 @@ a.learnmorenew:hover {
     width: 13rem;
     height: 13rem;
   }
-  .position {
-    font-size: 1.3rem;
+  .team-page .position {
+    font-size: 1.1rem;
   }
-  .name {
-    font-size: 1.7rem;
+  .team-page .name {
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 850px) {
@@ -1322,17 +1320,14 @@ a.learnmorenew:hover {
   .carousel .fa {
     font-size: 1.3rem;
   }
-  .president-heading,
-  .society-heads-heading,
-  .department-heads-heading {
-    font-size: 5rem;
-  }
-  .society-heads-img-div {
+
+  .team-page .society-heads-img-div {
     width: 45%;
     margin: 2.5% auto;
   }
-  .president-img-div {
+  .team-page .president-img-div {
     margin: 5%;
+    width: 35%;
   }
   .president-heading,
   .society-heads-heading,
@@ -1340,17 +1335,14 @@ a.learnmorenew:hover {
     font-size: 3rem;
   }
   .president-img {
-    height: 13.5rem;
-    width: 13.5rem;
+    height: 15rem;
+    width: 15rem;
   }
 }
 @media (max-width: 650px) {
-  .president-img-div {
-    min-width: 90%;
-  }
   .president-img {
-    height: 18rem;
-    width: 18rem;
+    height: 14rem;
+    width: 14rem;
   }
   .slick-slide img {
     height: 9rem;
@@ -1366,7 +1358,10 @@ a.learnmorenew:hover {
     font-size: 1.1rem;
   }
 }
-@media (max-width: 560px) {
+@media (max-width: 590px) {
+  .president-img-div {
+    min-width: 90%;
+  }
   .society-heads-img-div {
     min-width: 90%;
   }
@@ -1387,19 +1382,23 @@ a.learnmorenew:hover {
     font-size: 1.7rem;
   }
   .team-page-head {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    padding-top: 25%;
+    margin-top: 10%;
   }
-  .president-heading,
-  .society-heads-heading,
-  .department-heads-heading {
-    font-size: 2.2rem;
+  .team-page .president-heading,
+  .team-page .society-heads-heading,
+  .team-page .department-heads-heading {
+    font-size: 1.8rem;
   }
   .slick-slide img {
     height: 8rem;
     width: 8rem;
   }
 }
+
 /* Team-page styles end */
+
 /*Project Page styles*/
 
 .topsection {

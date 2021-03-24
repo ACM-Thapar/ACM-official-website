@@ -7,7 +7,10 @@ if (viewport_width > 500) {
   var indexToGet = $('.slider .slick-slide').index($('#center_on_me'));
 
   $('.slider-nav').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     slidesToShow: 3,
+    speed: 1000,
     infinite: true,
     centerMode: true,
     slidesToScroll: 1,
@@ -19,7 +22,10 @@ if (viewport_width > 500) {
   var indexToGet = $('.slider .slick-slide').index($('#center_on_me'));
 
   $('.slider-nav').slick({
+    autoplay: true,
+    autoplaySpeed: 1500,
     slidesToShow: 1.65,
+    speed: 1000,
     infinite: true,
     centerMode: true,
     slidesToScroll: 1,
