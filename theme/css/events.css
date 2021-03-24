@@ -110,12 +110,12 @@ input.progress[value]::-webkit-slider-thumb {
   text-align: center;
   font-family: Poppins;
   font-style: normal;
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: 800;
+  font-size: 21px;
   line-height: 30px;
 }
 .evetxt {
-  margin-left: 25%;
+  margin-left: 19%;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
@@ -136,7 +136,7 @@ h4.date {
   margin-top: -5%;
 }
 /* backlight */
-
+/* 
 .mid,
 .right,
 .left {
@@ -180,10 +180,19 @@ h4.date {
   100% {
     color: #7e0fff;
   }
-}
+} */
 
 /* Event Modal */
+a.cardmodallink:link {
+  text-decoration: inherit;
+  color: inherit;
+}
 
+a.cardmodallink:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
 .modal-eve {
   background-color: white;
   margin-left: -20%;
@@ -291,9 +300,10 @@ h4.date {
   .eveti {
     width: 14rem;
     margin-top: -25%;
-    font-weight: 500;
-    font-size: 25px;
+    font-weight: 800;
+    font-size: 17px;
     line-height: 30px;
+    margin-left: 1.5rem;
   }
   .evetxt {
     margin-left: 25%;
@@ -347,7 +357,8 @@ h4.date {
     width: 17rem;
     margin-top: -35%;
     margin-left: -20%;
-    font-size: 23px;
+    font-size: 15px;
+    margin-left: -2rem;
   }
   .evetxt {
     margin-left: 20%;
@@ -527,11 +538,13 @@ h4.date {
     width: 17rem;
     margin-top: -38%;
     margin-left: -30%;
-    font-size: 21px;
+    font-size: 14px;
+    margin-left: -2.4rem;
   }
   .evetxt {
     margin-left: 20%;
     font-size: 13px;
+    margin-top: -7%;
   }
   p.month {
     font-size: 0.6rem;
