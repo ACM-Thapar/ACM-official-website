@@ -32,15 +32,15 @@
     margin-left: 12%;
   }
   .pcardbody h5,
-  p {
+  .pcardbody p {
     margin-top: -6%;
   }
   .pbtn {
     margin-left: -8%;
   }
   #student,
-  h1,
-  p {
+  .front h1,
+  .front p {
     margin-left: -6%;
   }
   #student {
@@ -65,15 +65,15 @@
     margin-left: 4%;
   }
   .pcardbody h5,
-  p {
+  .pcardbody p {
     margin-top: -6%;
   }
   .pbtn {
     margin-left: -8%;
   }
   #student,
-  h1,
-  p {
+  .front h1,
+  .front p {
     margin-left: -8%;
   }
   .pcardbody p {
@@ -102,8 +102,8 @@
     margin-top: -6%;
   }
   .front h1,
-  p,
-  img {
+  .front p,
+  .front img {
     margin-top: -2%;
   }
 }
@@ -150,7 +150,7 @@
 }
 @media screen and (max-width: 767px) {
   .front h1,
-  p {
+  .front p {
     margin-left: -15%;
   }
   #student {
@@ -207,7 +207,7 @@
     margin-left: -34%;
   }
   .front h1,
-  p {
+  .front p {
     margin-left: -12%;
   }
   .front p {
@@ -304,7 +304,7 @@
     margin-left: -49%;
   }
   .front h1,
-  p {
+  .front p {
     margin-left: -22%;
   }
   .firstcd,
@@ -330,7 +330,7 @@
     margin-left: 4%;
   }
   .front h1,
-  p {
+  .front p {
     margin-top: -30%;
   }
   #student {
@@ -349,7 +349,7 @@
     margin-left: -81%;
   }
   .front h1,
-  p {
+  .front p {
     margin-top: -32%;
   }
 }
@@ -366,7 +366,7 @@
     margin-top: 11%;
   }
   .front h1,
-  p {
+  .front p {
     margin-top: -32%;
   }
   .front h1 {
