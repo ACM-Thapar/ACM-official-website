@@ -1098,7 +1098,7 @@ a.learnmorenew:hover {
   color: rgba(67, 67, 67, 1);
   text-align: center;
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 1.85rem;
 }
 .presidents,
 .society-heads,
@@ -1123,15 +1123,18 @@ a.learnmorenew:hover {
   margin-top: 4%;
   margin-bottom: 2%;
 }
+.team-page .society-heads-heading {
+  margin-bottom: 2%;
+}
 .president-img-div {
   display: inline-block;
   width: 38%;
   margin: auto;
 }
 .president-img {
-  width: 16.875rem;
+  width: 20.875rem;
   border-radius: 50%;
-  height: 16.875rem;
+  height: 20.875rem;
   padding: 0;
   filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.4));
   display: inline;
@@ -1142,9 +1145,9 @@ a.learnmorenew:hover {
   margin: auto;
 }
 .society-heads-img {
-  width: 12.75rem;
+  width: 15.75rem;
   border-radius: 50%;
-  height: 12.75rem;
+  height: 15.75rem;
   padding: 0;
   filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.4));
   display: inline;
@@ -1179,12 +1182,13 @@ a.learnmorenew:hover {
 }
 
 .carousel {
-  width: 95%;
+  width: 100%;
   display: block;
-  margin: 10% auto 0;
+  margin: 10% auto;
   margin-top: 1%;
 }
 .slick-slide {
+  margin: 1% 0;
   height: auto;
   text-align: center;
   align-items: center;
@@ -1193,28 +1197,43 @@ a.learnmorenew:hover {
 .slick-current .carousel-credentials {
   display: block;
 }
+.slick-current .carousel-credentials .name {
+  font-size: 1.0625rem;
+}
+.slick-current .carousel-credentials .position {
+  font-size: 0.75rem;
+}
 .slick-slide img {
-  margin: 20% auto;
+  margin: 10% auto;
   padding: 0;
   border-radius: 50%;
-  width: 14.5rem;
-  height: 14.5rem;
+  width: 10.5rem;
+  height: 10.5rem;
   text-align: center;
   filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.4));
-  margin-bottom: 2%;
+  margin-bottom: 5%;
 }
-
-.slick-arrow {
+.arrow {
   background-color: green;
   border-radius: 50%;
 }
-.slick-center {
-  transform: scale(1.2, 1.2);
+.slick-track {
+  min-height: 70%;
+}
+.slick-slide {
+  transform: scale(0.9, 0.9);
+}
+.slick-active {
+  transform: scale(1.25, 1.25);
   transform-origin: 50% 50%;
-  margin-bottom: 0.5%;
+}
+.slick-center {
+  transform: scale(1.6, 1.6);
+  transform-origin: 50% 50%;
+  padding-top: 0.5%;
 }
 .carousel-credentials {
-  margin-bottom: 10%;
+  margin-bottom: 15%;
   display: none;
 }
 .hero-figure img {
@@ -1251,6 +1270,16 @@ a.learnmorenew:hover {
   .team-page .society-heads-img-div {
     width: 30%;
   }
+  .slick-slide img {
+    width: 9rem;
+    height: 9rem;
+  }
+  .slick-current .carousel-credentials .name {
+    font-size: 1.0625rem;
+  }
+  .slick-current .carousel-credentials .position {
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 980px) {
   .president-img {
@@ -1261,15 +1290,17 @@ a.learnmorenew:hover {
     width: 15rem;
     height: 15rem;
   }
-  .slick-slide img {
-    width: 13rem;
-    height: 13rem;
-  }
   .team-page .position {
     font-size: 1.1rem;
   }
   .team-page .name {
     font-size: 1.6rem;
+  }
+  .slick-current .carousel-credentials .name {
+    font-size: 1.0625rem;
+  }
+  .slick-current .carousel-credentials .position {
+    font-size: 0.75rem;
   }
 }
 @media (max-width: 850px) {
@@ -1282,8 +1313,14 @@ a.learnmorenew:hover {
     height: 13.5rem;
   }
   .slick-slide img {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .slick-current .carousel-credentials .name {
+    font-size: 1.0625rem;
+  }
+  .slick-current .carousel-credentials .position {
+    font-size: 0.75rem;
   }
 }
 
@@ -1301,8 +1338,8 @@ a.learnmorenew:hover {
   }
   .slick-slide img {
     margin: 10% auto;
-    height: 10rem;
-    width: 10rem;
+    height: 7rem;
+    width: 7rem;
   }
   .slick-slide {
     margin: 1% auto;
@@ -1338,6 +1375,12 @@ a.learnmorenew:hover {
     height: 15rem;
     width: 15rem;
   }
+  .slick-current .carousel-credentials .name {
+    font-size: 1.0625rem;
+  }
+  .slick-current .carousel-credentials .position {
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 650px) {
   .president-img {
@@ -1357,6 +1400,12 @@ a.learnmorenew:hover {
   .carousel .name {
     font-size: 1.1rem;
   }
+  .slick-current .carousel-credentials .name {
+    font-size: 1.0625rem;
+  }
+  .slick-current .carousel-credentials .position {
+    font-size: 0.75rem;
+  }
 }
 @media (max-width: 590px) {
   .president-img-div {
@@ -1372,6 +1421,15 @@ a.learnmorenew:hover {
   .slick-slide img {
     height: 7.5rem;
     width: 7.5rem;
+  }
+  .slick-current .carousel-credentials .name {
+    font-size: 1.0625rem;
+  }
+  .slick-current .carousel-credentials .position {
+    font-size: 0.75rem;
+  }
+  .slick-current {
+    transform: scale(1.4, 1.4);
   }
 }
 @media (max-width: 425px) {
@@ -1394,6 +1452,12 @@ a.learnmorenew:hover {
   .slick-slide img {
     height: 8rem;
     width: 8rem;
+  }
+  .slick-current .carousel-credentials .name {
+    font-size: 1.0625rem;
+  }
+  .slick-current .carousel-credentials .position {
+    font-size: 0.75rem;
   }
 }
 

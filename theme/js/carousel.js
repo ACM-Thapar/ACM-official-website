@@ -3,12 +3,27 @@ $(window).resize(function () {
   viewport_width = window.innerWidth;
   window.location.reload();
 });
-if (viewport_width > 500) {
+if (viewport_width > 780) {
   var indexToGet = $('.slider .slick-slide').index($('#center_on_me'));
 
   $('.slider-nav').slick({
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 5000,
+    slidesToShow: 3.68,
+    speed: 1000,
+    infinite: true,
+    centerMode: true,
+    slidesToScroll: 1,
+    initialSlide: indexToGet,
+    dots: true,
+    focusOnSelect: true,
+  });
+} else if (viewport_width > 500) {
+  var indexToGet = $('.slider .slick-slide').index($('#center_on_me'));
+
+  $('.slider-nav').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
     slidesToShow: 3,
     speed: 1000,
     infinite: true,
@@ -23,7 +38,7 @@ if (viewport_width > 500) {
 
   $('.slider-nav').slick({
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 5000,
     slidesToShow: 1.65,
     speed: 1000,
     infinite: true,
