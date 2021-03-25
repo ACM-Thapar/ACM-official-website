@@ -335,8 +335,8 @@ h1.ACMT {
   position: absolute;
 
   color: #434343;
-  margin-top: 12vw;
-  margin-left: 5vw;
+  margin-top: 24%;
+  margin-left: 10%;
   font-style: normal;
   font-weight: bolder;
   font-size: 96px;
@@ -344,8 +344,8 @@ h1.ACMT {
 .maintext {
   position: absolute;
 
-  margin-top: 19vw;
-  margin-left: 5vw;
+  margin-top: 38%;
+  margin-left: 10%;
 
   color: #434343;
   font-family: Poppins;
@@ -360,8 +360,8 @@ h1.ACMT {
 }
 .learn-more {
   position: absolute;
-  margin-top: 34vw;
-  margin-left: -50vw;
+  margin-top: 70%;
+  margin-left: -102%;
 }
 
 /* Section 2 - What we do*/
@@ -443,13 +443,13 @@ a.learnmorenew:hover {
 
 @media screen and (max-width: 1400px) {
   h1.ACMT {
-    font-size: 11vh;
+    font-size: 500%;
   }
   .learn-more {
     margin-top: 75%;
   }
   .maintext {
-    font-size: 2.8vh;
+    font-size: 150%;
   }
 }
 
@@ -458,13 +458,13 @@ a.learnmorenew:hover {
     margin-left: -30%;
   }
   h1.ACMT {
-    font-size: 10vh;
+    font-size: 480%;
   }
   .learn-more {
     margin-top: 70%;
   }
   .maintext {
-    font-size: 2.4vh;
+    font-size: 120%;
   }
   .membershiptextnew {
     width: 100%;
@@ -527,11 +527,11 @@ a.learnmorenew:hover {
   }
   h1.ACMT {
     margin-top: 25%;
-    font-size: 9vh;
+    font-size: 430%;
   }
   .maintext {
     margin-top: 40%;
-    font-size: 2.4vh;
+    font-size: 110%;
   }
   section.landpagetwo {
     margin-top: -15%;
@@ -549,12 +549,12 @@ a.learnmorenew:hover {
     margin-left: 0;
   }
   h1.ACMT {
-    font-size: 8.7vh;
+    font-size: 400%;
     margin-top: 30%;
   }
   .maintext {
-    font-size: 2.2vh;
-    line-height: 3.5vh;
+    font-size: 105%;
+    line-height: 150%;
     margin-top: 50%;
   }
   .whitebg {
@@ -567,7 +567,7 @@ a.learnmorenew:hover {
 
 @media screen and (max-width: 943px) {
   h1.ACMT {
-    font-size: 8.4vh;
+    font-size: 390%;
   }
 }
 
@@ -580,17 +580,17 @@ a.learnmorenew:hover {
 
 @media screen and (max-width: 912px) {
   h1.ACMT {
-    font-size: 8.2vh;
+    font-size: 380%;
     margin-top: 35%;
   }
 }
 
 @media screen and (max-width: 890px) {
   h1.ACMT {
-    font-size: 8vh;
+    font-size: 350%;
   }
   .maintext {
-    font-size: 2vh;
+    font-size: 97%;
     line-height: 3.3vh;
   }
   .whitebg {
@@ -602,12 +602,12 @@ a.learnmorenew:hover {
 }
 @media screen and (max-width: 869px) {
   h1.ACMT {
-    font-size: 7.8vh;
+    font-size: 330%;
   }
 }
 @media screen and (max-width: 848px) {
   h1.ACMT {
-    font-size: 7.6vh;
+    font-size: 320%;
   }
   .whitebg {
     margin-top: -35%;
@@ -618,7 +618,7 @@ a.learnmorenew:hover {
 }
 @media screen and (max-width: 827px) {
   h1.ACMT {
-    font-size: 7.3vh;
+    font-size: 330%;
   }
   .learn-more {
     margin-top: 100%;
@@ -636,7 +636,7 @@ a.learnmorenew:hover {
 
 @media screen and (max-width: 796px) {
   h1.ACMT {
-    font-size: 7.1vh;
+    font-size: 330%;
   }
   .whitebg {
     margin-top: -45%;
@@ -650,7 +650,7 @@ a.learnmorenew:hover {
 }
 @media screen and (max-width: 773px) {
   h1.ACMT {
-    font-size: 6.9vh;
+    font-size: 325%;
   }
   svg.think {
     width: 210px;
@@ -667,15 +667,18 @@ a.learnmorenew:hover {
   }
   h1.ACMT {
     margin-top: 20%;
-    font-size: 6.7vh;
+    font-size: 330%;
+    margin-left: 5%;
   }
   .maintext {
     margin-top: 30%;
     width: 50%;
-    font-size: 1.8vh;
+    font-size: 90%;
+    margin-left: 5%;
   }
   .learn-more {
     margin-top: 55%;
+    margin-left: -50%;
   }
   .membershiph1 {
     font-size: 5vh;
@@ -743,7 +746,7 @@ a.learnmorenew:hover {
   }
   h1.ACMT {
     margin-top: 17%;
-    font-size: 6.5vh;
+    font-size: 320%;
   }
   .maintext {
     margin-top: 25%;
@@ -779,14 +782,14 @@ a.learnmorenew:hover {
   }
   h1.ACMT {
     margin-left: 25%;
-    font-size: 7vh;
+    font-size: 350%;
     margin-top: -90%;
   }
   .maintext {
     width: 80%;
     text-align: center;
     margin-left: 13%;
-    font-size: 2.5vh;
+    font-size: 110%;
     margin-top: -80%;
   }
   .learn-more {
@@ -813,14 +816,14 @@ a.learnmorenew:hover {
 @media screen and (max-width: 550px) {
   h1.ACMT {
     margin-left: 20%;
-    font-size: 7vh;
+    font-size: 330%;
     margin-top: -105%;
   }
   .maintext {
     width: 80%;
     text-align: center;
     margin-left: 11%;
-    font-size: 2.5vh;
+    font-size: 120%;
     margin-top: -90%;
   }
   .learn-more {
@@ -841,7 +844,7 @@ a.learnmorenew:hover {
     width: 80%;
     text-align: center;
     margin-left: 9%;
-    font-size: 2.5vh;
+    font-size: 120%;
     margin-top: -105%;
   }
   .learn-more {
@@ -882,7 +885,7 @@ a.learnmorenew:hover {
     width: 80%;
     text-align: center;
     margin-left: 9%;
-    font-size: 2.5vh;
+    font-size: 110%;
     margin-top: -120%;
   }
   .learn-more {
@@ -897,13 +900,13 @@ a.learnmorenew:hover {
   h1.ACMT {
     margin-top: -140%;
     margin-left: 10%;
-    font-size: 6.5vh;
+    font-size: 330%;
   }
   .maintext {
     width: 80%;
     text-align: center;
     margin-left: 9%;
-    font-size: 2.1vh;
+    font-size: 100%;
     margin-top: -125%;
   }
   .learn-more {
@@ -932,13 +935,13 @@ a.learnmorenew:hover {
   h1.ACMT {
     margin-top: -150%;
     margin-left: 5%;
-    font-size: 6.5vh;
+    font-size: 320%;
   }
   .maintext {
     width: 80%;
     text-align: center;
     margin-left: 7%;
-    font-size: 2.1vh;
+    font-size: 100%;
     margin-top: -135%;
   }
   .learn-more {
@@ -969,13 +972,13 @@ a.learnmorenew:hover {
   h1.ACMT {
     margin-top: -155%;
     margin-left: 5%;
-    font-size: 6.3vh;
+    font-size: 320%;
   }
   .maintext {
     width: 80%;
     text-align: center;
     margin-left: 7%;
-    font-size: 2vh;
+    font-size: 100%;
     margin-top: -140%;
   }
   .learn-more {
