@@ -1471,23 +1471,24 @@ a.learnmorenew:hover {
 
 #student {
   position: relative;
-  left: 520px;
-  top: -150px;
+  left: 620px;
+  top: -220px;
 }
 .front h1 {
   position: relative;
   white-space: pre;
-  left: 130px;
-  top: 210px;
+  left: 115px;
+  top: 230px;
 }
 .front p {
   position: relative;
-  left: 130px;
-  top: 210px;
+  left: 115px;
+  top: 233px;
+  font-size: 12px;
 }
 .pcontainer {
   position: relative;
-  top: -270px;
+  top: -330px;
 }
 .pcardimgtop {
   height: 180px;
@@ -1698,6 +1699,697 @@ img.rounded-corners {
 }
 .cardsec {
   margin-top: 15%;
+}
+@media screen and (max-width: 1218px) {
+  #student {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1009px) {
+  .front h1 {
+    font-size: 46px;
+    position: relative;
+    left: 120px;
+    top: 218px;
+  }
+  .front p {
+    font-size: 12px;
+    position: relative;
+    left: 120px;
+    top: 220px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .leftcardproject {
+    margin-left: -50%;
+  }
+  .pcard {
+    width: 17rem !important;
+    height: 22.5rem;
+  }
+  .midcardproject {
+    margin-left: -20%;
+  }
+  .rightcardproject {
+    margin-left: 12%;
+  }
+  .pcardbody h5,
+  .pcardbody p {
+    margin-top: -6%;
+  }
+  .pbtn {
+    margin-left: -8%;
+  }
+  #student,
+  .front h1,
+  .front p {
+    margin-left: -6%;
+  }
+  #student {
+    margin-bottom: 6%;
+  }
+  .pcardbody p {
+    padding-left: 5%;
+  }
+  #student {
+    max-width: 50%;
+  }
+  .front h1 {
+    top: 150px;
+  }
+  .front p {
+    top: 153px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .leftcardproject {
+    margin-left: -55%;
+  }
+  .midcardproject {
+    margin-left: -25%;
+  }
+  .rightcardproject {
+    margin-left: 4%;
+  }
+  .pcardbody h5,
+  .pcardbody p {
+    margin-top: -6%;
+  }
+  .pbtn {
+    margin-left: -8%;
+  }
+  #student,
+  .front h1,
+  .front p {
+    margin-left: -4%;
+  }
+  .pcardbody p {
+    padding-left: 8%;
+  }
+  #student {
+    margin-top: -3%;
+    margin-bottom: 5%;
+  }
+  .front p {
+    margin-bottom: 10%;
+    font-size: 11.5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pcard {
+    width: 16.5rem !important;
+    height: 22rem;
+  }
+  .pcardbody p {
+    margin-left: -8%;
+  }
+  .faces {
+    margin-top: -3%;
+  }
+  .pbtn {
+    margin-top: -6%;
+  }
+  .front h1,
+  .front img {
+    margin-top: -2%;
+  }
+}
+@media screen and (max-width: 888px) {
+  .leftcardproject {
+    margin-right: -30%;
+  }
+  .midcardproject {
+    margin-left: -30%;
+  }
+  .rightcardproject {
+    margin-left: -5%;
+  }
+  .pcard {
+    width: 16rem !important;
+    height: 21.25rem;
+  }
+  .faces {
+    margin-top: -6%;
+  }
+  .pbtn {
+    margin-top: -9%;
+    margin-left: -12%;
+  }
+  #student {
+    margin-left: -10%;
+  }
+}
+@media screen and (max-width: 882px) {
+  .midcardproject {
+    margin-left: -20%;
+  }
+  .leftcardproject {
+    margin-left: -35%;
+  }
+  .rightcardproject {
+    margin-right: -30%;
+  }
+}
+@media screen and (max-width: 820px) {
+  #student {
+    margin-bottom: 8%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .front h1,
+  .front p {
+    margin-left: -13%;
+  }
+  #student {
+    margin-left: -32%;
+    margin-top: 5%;
+    margin-bottom: 14%;
+  }
+  .front h1 {
+    font-size: 30px;
+    top: 160px;
+  }
+  .front p {
+    font-size: 9px;
+    top: 160px;
+  }
+  .pcard {
+    width: 17rem !important;
+    height: 22.5rem;
+  }
+  .pcard p {
+    margin-top: 10%;
+  }
+  .faces {
+    margin-top: 1px;
+  }
+  .pbtn {
+    margin-top: 1px;
+  }
+  .firstcd {
+    margin-left: -15%;
+    margin-top: -10%;
+  }
+  .secondcd {
+    margin-left: 50%;
+    margin-top: -70.67%;
+  }
+  .thirdcd {
+    margin-top: 10%;
+    margin-left: -15%;
+  }
+  .fourthcd {
+    margin-left: 50%;
+    margin-top: -85%;
+  }
+  .fifthcd {
+    margin-top: -4%;
+    margin-left: -79px;
+  }
+  .sixthcd {
+    margin-top: -70.65%;
+    margin-left: 50%;
+  }
+}
+@media screen and (max-width: 715px) {
+  #student {
+    margin-left: -34%;
+  }
+  .front h1,
+  .front p {
+    margin-left: -12%;
+  }
+  .front p {
+    margin-bottom: 15%;
+  }
+  .firstcd {
+    margin-left: -12.5%;
+  }
+  .thirdcd {
+    margin-left: -13.1%;
+  }
+  .fifthcd {
+    margin-left: -14%;
+  }
+}
+@media screen and (max-width: 706px) {
+  #student {
+    margin-left: -36%;
+  }
+}
+@media screen and (max-width: 674px) {
+  #student {
+    margin-left: -38%;
+  }
+  .front h1 {
+    font-size: 28px;
+    margin-right: -100%;
+  }
+  .front p {
+    font-size: 8px;
+    margin-right: -320px;
+  }
+}
+@media screen and (max-width: 654px) {
+  .front h1 {
+    margin-left: -16%;
+  }
+  .front p {
+    margin-left: -16%;
+  }
+  #student {
+    margin-left: -44%;
+    margin-top: 8%;
+    margin-bottom: 20%;
+  }
+}
+@media screen and (max-width: 615px) {
+  #student {
+    margin-top: 10%;
+    max-width: 50%;
+    margin-left: -48%;
+  }
+  .front h1 {
+    margin-top: -6%;
+    font-size: 25px;
+  }
+  #student {
+    margin-top: 12%;
+  }
+  .front p {
+    font-size: 8px;
+  }
+  .pcard {
+    width: 15rem !important;
+    height: 20rem;
+  }
+  .pcardimgtop {
+    height: 165px;
+    width: 100%;
+    overflow: hidden;
+    margin-left: -0.5px;
+  }
+  .pcard p {
+    margin-top: -1.5%;
+  }
+  .faces {
+    margin-top: -3%;
+  }
+  .pbtn {
+    margin-top: -7%;
+    margin-left: -21%;
+  }
+  .firstcd {
+    margin-left: -12px;
+    margin-top: -8%;
+  }
+  .secondcd,
+  .fourthcd,
+  .sixthcd {
+    margin-top: -320px;
+  }
+  .thirdcd {
+    margin-left: -12px;
+  }
+  .fifthcd {
+    margin-left: -12px;
+  }
+  .fourthcd {
+    margin-top: -391px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #student {
+    margin-left: -52%;
+    max-width: 46%;
+    margin-top: 17%;
+  }
+  .front h1,
+  .front p {
+    margin-left: -17%;
+  }
+  .front p {
+    font-size: 7px;
+  }
+  .firstcd,
+  .thirdcd,
+  .fifthcd {
+    margin-left: -20px;
+  }
+  .secondcd,
+  .fourthcd,
+  .sixthcd {
+    margin-left: 48.5%;
+  }
+  .topsection {
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 576px) {
+  .front h1 {
+    font-size: 33px;
+    margin-left: 16%;
+    margin-top: -20%;
+  }
+  .front p {
+    font-size: 12px;
+    margin-left: -15%;
+  }
+  #student {
+    margin-top: 49%;
+    margin-left: -94%;
+    min-width: 65%;
+  }
+}
+@media screen and (max-width: 550px) {
+  #student {
+    margin-left: -96%;
+    min-width: 60%;
+    margin-top: 55%;
+  }
+  .front p {
+    font-size: 11px;
+    margin-top: 4%;
+  }
+  .front h1 {
+    margin-top: -15%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .pcard {
+    width: 17rem !important;
+    height: 22.5rem;
+  }
+  .faces,
+  .pbtn {
+    margin-top: 5%;
+  }
+  .pcard p {
+    margin-top: 11%;
+  }
+  .front h1 {
+    margin-left: 11%;
+  }
+  #student {
+    min-width: 65%;
+    margin-top: 62%;
+    margin-bottom: 35%;
+    margin-left: -112%;
+  }
+  .front p {
+    margin-left: -21%;
+  }
+  .firstcd {
+    margin-top: -19%;
+    margin-left: 12.5%;
+  }
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd.sixthcd {
+    margin-top: 10%;
+  }
+  .secondcd {
+    margin-left: 12.5%;
+  }
+  .thirdcd {
+    margin-left: 12.5%;
+  }
+  .fourthcd {
+    margin-left: 12.5%;
+    margin-top: -5%;
+  }
+  .fifthcd {
+    margin-left: 12.5%;
+    margin-top: 10%;
+  }
+  .sixthcd {
+    margin-left: 12.5%;
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 493px) {
+  .front p {
+    font-size: 10.5px;
+  }
+}
+@media screen and (max-width: 475px) {
+  #student {
+    margin-left: -118%;
+    margin-top: 65%;
+  }
+  .front p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: 6%;
+  }
+  .front h1 {
+    font-size: 28px;
+    margin-left: 7%;
+  }
+  .front p {
+    font-size: 9px;
+    margin-left: -25%;
+  }
+  #student {
+    margin-left: -142%;
+    min-width: 80%;
+    margin-top: 75%;
+    margin-bottom: 40%;
+  }
+}
+@media screen and (max-width: 376px) {
+  #student {
+    margin-top: 90%;
+    margin-bottom: 55%;
+    margin-left: -163%;
+  }
+  .front h1 {
+    margin-left: 3%;
+  }
+  .front p {
+    margin-left: -28%;
+    font-size: 8px;
+    margin-top: 5%;
+  }
+  .pcard {
+    width: 14rem !important;
+    height: 19.25rem;
+  }
+  .pcardimgtop {
+    height: 155px;
+  }
+  .pcard h5 {
+    font-size: 14px;
+    margin-top: -8%;
+  }
+  .pcard p {
+    font-size: 11px;
+    margin-top: -2%;
+  }
+  .faces,
+  .pbtn {
+    margin-top: -7%;
+  }
+  .faces img {
+    height: 17px;
+    width: 17px;
+  }
+  .more {
+    font-size: 8px;
+  }
+  .pbtn {
+    font-size: 12px !important;
+    margin-left: -20%;
+    margin-top: -12%;
+  }
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: 7%;
+  }
+  .firstcd {
+    margin-top: -30%;
+  }
+  .fourthcd {
+    margin-top: -11.5%;
+  }
+}
+@media screen and (max-width: 321px) {
+  .front h1 {
+    margin-left: -5%;
+    margin-top: -32%;
+  }
+  .front p {
+    margin-left: -35%;
+    font-size: 7px;
+  }
+  #student {
+    margin-left: -195%;
+    margin-top: 109%;
+    margin-bottom: 70%;
+  }
+  .firstcd,
+  .secondcd,
+  .thirdcd,
+  .fourthcd,
+  .fifthcd,
+  .sixthcd {
+    margin-left: -1%;
+  }
+  .firstcd {
+    margin-top: -40%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .mcp {
+    min-width: 700px;
+  }
+  .mip {
+    width: 700px;
+  }
+  .date p {
+    margin-left: 0.75%;
+  }
+  .paras p {
+    margin-left: 0.5%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .mip {
+    width: 600px;
+    height: 25%;
+  }
+  .mcp {
+    min-width: 599px;
+  }
+  .mcp {
+    margin-left: 10%;
+  }
+  .mhp {
+    font-size: 25px;
+  }
+  .paras p {
+    font-size: 13px;
+  }
+  .rect {
+    width: 20%;
+    height: 4%;
+  }
+}
+@media screen and (max-width: 762px) {
+  .pc2 p {
+    margin-left: -66%;
+  }
+  .mcp {
+    margin-left: 14%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .mip {
+    width: 500px;
+  }
+  .mcp {
+    min-width: 500px;
+    margin-left: 22%;
+  }
+  .mip {
+    height: 20%;
+  }
+  .rect {
+    width: 17%;
+    height: 3%;
+  }
+  .date p {
+    margin-left: -2%;
+  }
+  .mhp {
+    margin-left: -5%;
+  }
+  .paras p {
+    margin-left: -5%;
+    font-size: 11.75px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .mip {
+    width: 100.5%;
+  }
+  .mcp {
+    min-width: 250px;
+    margin-left: 26%;
+  }
+}
+@media screen and (max-width: 518px) {
+  .paras p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .mcp {
+    margin-left: 28%;
+    min-width: 200px;
+  }
+  .mhp {
+    font-size: 22px;
+    margin-left: -12%;
+  }
+  .paras p {
+    margin-left: -12%;
+  }
+  .date p {
+    margin-left: -5%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mcp {
+    margin-left: 32%;
+  }
+  .mhp {
+    margin-top: -6%;
+    margin-left: -14%;
+    margin-top: -8%;
+  }
+  .dt {
+    font-size: 24px;
+  }
+  .month {
+    font-size: 10px;
+  }
+  .paras p {
+    margin-top: 7%;
+    margin-left: -14%;
+    font-size: 9px;
+  }
+}
+@media screen and(max-width:372px) {
+  .paras p {
+    font-size: 1px;
+  }
+}
+@media screen and(max-width:321px) {
+  .heading-project {
+    margin-top: -100%;
+  }
+  .cardsec {
+    margin-top: 50%;
+  }
 }
 
 /* Blogs Page Styles */
