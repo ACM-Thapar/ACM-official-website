@@ -10,8 +10,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- <link rel="stylesheet" href="../css/styles.css" /> -->
-    <link rel="stylesheet" href="../css/event.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../js/events.js" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -37,9 +36,10 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
-    <!-- <header>
-    
+    <header>
+      <!-- //Navbar -->
       <nav
         class="navbar navbar-expand-lg shift fixed-top navbar-light bg-light"
       >
@@ -81,54 +81,60 @@
           </ul>
         </div>
       </nav>
-    </header> -->
+    </header>
+
     <!-- Solid Animation -->
     <section class="eventpagetop">
       <div class="container">
         <div class="row justify-content-end">
-          <div class="col-xl-4"></div>
-          <div class="col-auto anidiv">
-            <div class="hero-figure anime-element">
-              <svg
-                class="placeholder"
-                width="528"
-                height="396"
-                viewBox="0 0 528 396"
-              >
-                <rect width="528" height="396" style="fill: transparent" />
-              </svg>
-              <div
-                class="hero-figure-box hero-figure-box-01"
-                data-rotation="45deg"
-              ></div>
-              <div
-                class="hero-figure-box hero-figure-box-02"
-                data-rotation="-45deg"
-              ></div>
-              <div
-                class="hero-figure-box hero-figure-box-03"
-                data-rotation="0deg"
-              ></div>
-              <div
-                class="hero-figure-box hero-figure-box-04"
-                data-rotation="-135deg"
-              ></div>
-              <div class="hero-figure-box hero-figure-box-05"></div>
-              <div class="hero-figure-box hero-figure-box-06"></div>
-              <div class="hero-figure-box hero-figure-box-07"></div>
-              <div
-                class="hero-figure-box hero-figure-box-08"
-                data-rotation="-22deg"
-              ></div>
-              <div
-                class="hero-figure-box hero-figure-box-09"
-                data-rotation="-52deg"
-              ></div>
-              <div
-                class="hero-figure-box hero-figure-box-10"
-                data-rotation="-50deg"
-              ></div>
-            </div>
+          <div class="col-4">
+            <h1 class="mainsectiontitle">Upcoming Events</h1>
+            <p class="mainsectiontexteve">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+
+          <div class="hero-figure anime-element">
+            <svg
+              class="placeholder"
+              width="528"
+              height="396"
+              viewBox="0 0 528 396"
+            >
+              <rect width="528" height="396" style="fill: transparent" />
+            </svg>
+            <div
+              class="hero-figure-box hero-figure-box-01"
+              data-rotation="45deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-02"
+              data-rotation="-45deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-03"
+              data-rotation="0deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-04"
+              data-rotation="-135deg"
+            ></div>
+            <div class="hero-figure-box hero-figure-box-05"></div>
+            <div class="hero-figure-box hero-figure-box-06"></div>
+            <div class="hero-figure-box hero-figure-box-07"></div>
+            <div
+              class="hero-figure-box hero-figure-box-08"
+              data-rotation="-22deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-09"
+              data-rotation="-52deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-10"
+              data-rotation="-50deg"
+            ></div>
           </div>
         </div>
       </div>
@@ -138,38 +144,71 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-4">
-            <div class="card eventcard lecard" style="width: 18rem">
+            <div class="card eventcard lecard lecard1" style="width: 18rem">
               <img
                 src="../images/image 2.svg"
                 class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <h3 class="edate">25</h3>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Event Description...
+                </p>
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="card eventcard cecard" style="width: 18rem">
+            <div class="card eventcard cecard cecard1" style="width: 18rem">
               <img
                 src="../images/image 2.svg"
                 class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <h3 class="edate">25</h3>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Event Description...
+                </p>
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="card eventcard recard" style="width: 18rem">
+            <div class="card eventcard recard recard1" style="width: 18rem">
               <img
                 src="../images/image 2.svg"
                 class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <h3 class="edate">25</h3>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Event Description...
+                </p>
               </div>
             </div>
           </div>
@@ -177,85 +216,70 @@
 
         <div class="row justify-content-center">
           <div class="col-4">
-            <div class="card eventcard lecard" style="width: 18rem">
+            <div class="card eventcard lecard lecard2" style="width: 18rem">
               <img
                 src="../images/image 2.svg"
                 class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <h3 class="edate">25</h3>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Event Description...
+                </p>
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="card eventcard cecard" style="width: 18rem">
+            <div class="card eventcard cecard cecard2" style="width: 18rem">
               <img
                 src="../images/image 2.svg"
                 class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <h3 class="edate">25</h3>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Event Description...
+                </p>
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="card eventcard recard" style="width: 18rem">
+            <div class="card eventcard recard recard2" style="width: 18rem">
               <img
                 src="../images/image 2.svg"
                 class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <h3 class="edate">25</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-4">
-            <div class="card eventcard lecard" style="width: 18rem">
-              <img
-                src="../images/image 2.svg"
-                class="card-img-top ecimg"
-                alt="..."
-              />
-              <div class="card-body">
-                <h3 class="edate">25</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card eventcard cecard" style="width: 18rem">
-              <img
-                src="../images/image 2.svg"
-                class="card-img-top ecimg"
-                alt="..."
-              />
-              <div class="card-body">
-                <h3 class="edate">25</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card eventcard recard" style="width: 18rem">
-              <img
-                src="../images/image 2.svg"
-                class="card-img-top ecimg"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="evemonth">DEC</p>
-                <h4 class="evedate">25</h4>
-                <h5 class="card-title eveti">Flamingo - UI/UX Design</h5>
-                <p class="card-text evetxt">
-                  Time- 8:00 AM - 10:00 PM
-                  <a
-                    href="#eventModal"
-                    data-toggle="modal"
-                    class="stretched-link cardmodallink"
-                  />
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Event Description...
                 </p>
               </div>
             </div>
@@ -263,6 +287,121 @@
         </div>
       </div>
     </section>
+    <!-- Modal -->
+
+    <section class="evemodal">
+      <div
+        class="modal fade"
+        id="eventModal"
+        tabindex="-1"
+        aria-labelledby="eventModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-eve" style="width: 38rem">
+            <img src="../images/event.jpg" class="modal-img" alt="" />
+            <div class="main-content">
+              <h3 class="etitle">Flamingo- UI/UX Design</h3>
+              <p class="emonth">DEC</p>
+              <p class="edate">25</p>
+              <p class="etime">Time - 8:00 AM - 10:00 PM</p>
+            </div>
+            <div class="eparas">
+              <p>
+                Folly words widow one downs few age every seven. If miss part by
+                fact <br />
+                he park just shew. <br />
+                <br />
+                Discovered had get considered projection who favourable.
+                Necessary <br />
+                up knowledge it tolerably. Unwilling departure education is be
+                <br />
+                dashwoods or an. Use off agreeable law unwilling sir deficient
+                curiosity <br />
+                instantly. Easy mind life fact with see has bore ten. <br />
+                <br />
+                Parish any chatty can elinor direct for former. Up as meant
+                widow <br />
+                equal an share least.<br />
+                <br />
+                <br />
+                <br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="social-icons">
+              <a
+                class="social-icon social-icon--github"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-github"></i>
+                <div class="tooltip">Github</div>
+              </a>
+              <a
+                class="social-icon social-icon--twitter"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-twitter"></i>
+                <div class="tooltip">Twitter</div>
+              </a>
+              <a
+                class="social-icon social-icon--dribbble"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-dribbble"></i>
+                <div class="tooltip">Dribbble</div>
+              </a>
+              <a
+                class="social-icon social-icon--instagram"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-instagram"></i>
+                <div class="tooltip">Instagram</div>
+              </a>
+              <a
+                class="social-icon social-icon--linkedin"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-linkedin"></i>
+                <div class="tooltip">LinkedIn</div>
+              </a>
+              <a
+                class="social-icon social-icon--facebook"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-facebook"></i>
+                <div class="tooltip">Facebook</div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <p class="copyright" style="color: #ffffff">
+              <i class="fa fa-copyright" style="color: #ffffff"></i>
+              Copyright 2020 || Designed by ACM Thapar
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="../js/evan.js"></script>

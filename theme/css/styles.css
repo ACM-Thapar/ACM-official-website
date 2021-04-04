@@ -3001,3 +3001,600 @@ p.vidtext {
   }
 }
 /* video page styling ends */
+/* Event Page Styling */
+/* Event Page styling */
+/* Events Page */
+
+/* animation */
+.eventpagetop {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 70%;
+  /* background-color: #ffffff !important; */
+}
+h1.mainsectiontitle {
+  color: #000;
+  margin-left: -100%;
+  margin-top: 30%;
+  font-weight: bold;
+  font-size: 350%;
+}
+.mainsectiontexteve {
+  width: 150%;
+  margin-left: -95%;
+}
+.anidiv {
+  overflow: hidden;
+  border: hidden;
+  background-color: transparent;
+  margin-right: -17.5%;
+}
+#player span {
+  display: block;
+}
+#player .player-info {
+  font-size: 14px;
+  text-decoration: none;
+}
+input.progress {
+  cursor: ew-resize;
+}
+input.progress[value] {
+  position: relative;
+  width: 100%;
+  height: 27px;
+  -webkit-appearance: none;
+  background-color: transparent;
+  color: #0270d7;
+}
+input.progress[value]:focus {
+  outline: none;
+}
+input.progress[value]:after {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+input.progress[value]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+
+/* card */
+.eventcard {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 18rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.lecard {
+  margin-left: -15%;
+}
+.recard {
+  margin-left: 15%;
+}
+.ecimg {
+  height: 65%;
+}
+.eventdate {
+  color: #000;
+  font-weight: 500;
+  margin-top: -5%;
+}
+.eventmonth {
+  color: #767676;
+  font-size: 90%;
+  font-weight: 600;
+}
+.eventtitle {
+  color: #000;
+  font-weight: 700;
+  margin-top: -30%;
+  font-size: 105%;
+  margin-left: 20%;
+}
+.eventdescription {
+  margin-left: 20%;
+  color: #767676;
+  margin-top: -2%;
+}
+
+.eventpagecards {
+  overflow-x: hidden;
+}
+
+/* Event Modal */
+a.cardmodallink:link {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+a.cardmodallink:visited {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
+}
+.modal-eve {
+  background-color: white;
+  margin-left: -20%;
+}
+.etitle {
+  color: #000;
+  font-family: Poppins;
+  margin-top: 8%;
+  margin-left: 16%;
+  font-size: 140%;
+  font-weight: bold;
+}
+.emonth {
+  margin-left: 5.2%;
+  margin-top: -4%;
+  font-size: 74%;
+  font-family: Poppins;
+  color: #636262;
+}
+.edate {
+  margin-left: 5%;
+  margin-top: -3%;
+  font-size: 130%;
+  font-weight: 1000;
+  font-family: Poppins;
+}
+.etime {
+  margin-left: 16%;
+  margin-top: -7%;
+  margin-bottom: 6%;
+  color: #636262;
+  font-family: Poppins;
+  font-size: 85%;
+}
+.eparas {
+  margin-left: 16%;
+  font-family: Poppins;
+  color: #636262;
+  font-size: 85%;
+}
+@media screen and (max-width: 1352px) {
+  h1.mainsectiontitle {
+    margin-left: -80%;
+  }
+  .mainsectiontexteve {
+    margin-left: -75%;
+  }
+}
+
+@media screen and (max-width: 1252px) {
+  .eventcard {
+    width: 16rem !important;
+    height: 17rem;
+  }
+  .lecard {
+    margin-left: 5%;
+  }
+  .recard {
+    margin-left: 0%;
+  }
+  .eventtitle {
+    font-size: 95%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .lecard {
+    margin-left: -20%;
+  }
+  .recard {
+    margin-left: 20%;
+  }
+
+  h1.mainsectiontitle {
+    margin-left: -50%;
+    font-size: 240%;
+    margin-top: 50%;
+  }
+  .mainsectiontexteve {
+    margin-left: -50%;
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .eventcard {
+    width: 15rem !important;
+    height: 16rem;
+  }
+  .lecard {
+    margin-left: -5%;
+  }
+  .recard {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 993px) {
+  .eventcard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .lecard {
+    margin-left: 0%;
+  }
+  .recard {
+    margin-left: 2%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .eventcard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .lecard {
+    margin-left: -50%;
+  }
+  .recard {
+    margin-left: 20%;
+  }
+  .cecard {
+    margin-left: -15%;
+  }
+  .eventtitle {
+    font-size: 85%;
+    width: 95%;
+    margin-top: -40%;
+  }
+  .eventdescription {
+    font-size: 70% !important;
+  }
+  .anime-element {
+    margin-top: -40%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -280%;
+    font-size: 240%;
+    margin-top: 50%;
+  }
+  .mainsectiontexteve {
+    margin-left: -280%;
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 901px) {
+  .eventtitle {
+    font-size: 75%;
+    width: 95%;
+    margin-top: -35%;
+  }
+  .eventdescription {
+    font-size: 60% !important;
+  }
+  .eventdate {
+    font-size: 100%;
+  }
+  .eventmonth {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .eventcard {
+    width: 13rem !important;
+    height: 14rem;
+  }
+  .lecard {
+    margin-left: -40%;
+  }
+  .recard {
+    margin-left: 10%;
+  }
+  .cecard {
+    margin-left: -15%;
+  }
+  .anime-element {
+    display: none;
+  }
+  h1.mainsectiontitle {
+    margin-left: -220%;
+    font-size: 400%;
+    margin-top: 50%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -215%;
+    font-size: 130%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 875px) {
+  .lecard {
+    margin-left: -30%;
+  }
+  .recard {
+    margin-left: 0%;
+  }
+  .cecard {
+    margin-left: -15%;
+  }
+}
+@media screen and (max-width: 832px) {
+  .eventcard {
+    width: 12rem !important;
+    height: 13rem;
+  }
+  .lecard {
+    margin-left: -20%;
+  }
+  .recard {
+    margin-left: 5%;
+  }
+  .cecard {
+    margin-left: -5%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .eventcard {
+    width: 11rem !important;
+    height: 12rem;
+  }
+  .lecard {
+    margin-left: -70%;
+  }
+  .recard {
+    margin-left: 20%;
+  }
+  .cecard {
+    margin-left: -25%;
+  }
+  .eventtitle {
+    font-size: 65%;
+    width: 95%;
+    margin-top: -40%;
+  }
+  .eventdescription {
+    font-size: 50% !important;
+  }
+  .eventdate {
+    font-size: 80%;
+  }
+  .eventmonth {
+    font-size: 65%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -290%;
+    font-size: 400%;
+    margin-top: 90%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -270%;
+    font-size: 130%;
+    width: 400%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 730px) {
+  .recard {
+    display: none !important;
+  }
+  .eventcard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .cecard {
+    margin-left: 70%;
+  }
+  .lecard {
+    margin-left: -40%;
+  }
+  .eventtitle {
+    font-size: 75%;
+    width: 95%;
+    margin-top: -35%;
+  }
+  .eventdescription {
+    font-size: 60% !important;
+  }
+  .eventdate {
+    font-size: 100%;
+  }
+  .eventmonth {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .eventcard {
+    width: 17rem !important;
+    height: 18rem;
+  }
+  .cecard1 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .cecard2 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .lecard {
+    margin-left: 50%;
+  }
+  .lecard2 {
+    margin-top: 20%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  .eventdate {
+    color: #000;
+    font-weight: 500;
+    margin-top: -5%;
+  }
+  .eventmonth {
+    color: #767676;
+    font-size: 90%;
+    font-weight: 600;
+  }
+  .eventtitle {
+    color: #000;
+    font-weight: 700;
+    margin-top: -30%;
+    font-size: 105%;
+    margin-left: 20%;
+  }
+  .eventdescription {
+    margin-left: 20%;
+    color: #767676;
+    margin-top: -2%;
+    font-size: initial !important;
+  }
+  h1.mainsectiontitle {
+    margin-left: -250%;
+    font-size: 320%;
+    margin-top: 150%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -230%;
+    font-size: 110%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 535px) {
+  .cecard1 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .cecard2 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .lecard {
+    margin-left: 50%;
+  }
+  .lecard2 {
+    margin-top: 20%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -220%;
+    font-size: 250%;
+    margin-top: 170%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -230%;
+    font-size: 90%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cecard1 {
+    margin-top: 350%;
+    margin-left: -75%;
+  }
+  .cecard2 {
+    margin-top: 350%;
+    margin-left: -75%;
+  }
+  .lecard {
+    margin-left: 50%;
+  }
+  .lecard2 {
+    margin-top: 20%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .cecard1 {
+    margin-top: 380%;
+    margin-left: -95%;
+  }
+  .cecard2 {
+    margin-top: 400%;
+    margin-left: -95%;
+  }
+  .lecard {
+    margin-left: 35%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -220%;
+    font-size: 200%;
+    margin-top: 100%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -200%;
+    font-size: 100%;
+    margin-top: 50%;
+    width: 250%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cecard1 {
+    margin-top: 400%;
+    margin-left: -110%;
+  }
+  .cecard2 {
+    margin-top: 420%;
+    margin-left: -110%;
+  }
+  .lecard {
+    margin-left: 23%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 380px) {
+  h1.mainsectiontitle {
+    margin-left: -250%;
+    font-size: 300%;
+    margin-top: 170%;
+    white-space: initial;
+    text-align: center;
+  }
+  .mainsectiontexteve {
+    margin-left: -230%;
+    font-size: 90%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 370px) {
+  .cecard1 {
+    margin-top: 430%;
+    margin-left: -110%;
+  }
+  .cecard2 {
+    margin-top: 480%;
+    margin-left: -110%;
+  }
+  .lecard {
+    margin-left: 23%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+}
