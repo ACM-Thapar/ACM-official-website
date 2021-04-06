@@ -1206,6 +1206,9 @@ a.learnmorenew:hover {
 .slick-current .carousel-credentials .position {
   font-size: 0.75rem;
 }
+.slick-current .carousel-credentials .fa {
+  font-size: 0.8rem;
+}
 .slick-slide img {
   margin: 10% auto;
   padding: 0;
@@ -1223,15 +1226,15 @@ a.learnmorenew:hover {
 .slick-track {
   min-height: 70%;
 }
-.slick-slide {
+/* .slick-slide {
   transform: scale(0.9, 0.9);
-}
-.slick-active {
+} */
+/* .slick-active {
   transform: scale(1.25, 1.25);
   transform-origin: 50% 50%;
-}
+} */
 .slick-center {
-  transform: scale(1.6, 1.6);
+  transform: scale(1.5, 1.5);
   transform-origin: 50% 50%;
   padding-top: 0.5%;
 }
