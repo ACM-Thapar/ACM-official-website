@@ -3001,44 +3001,34 @@ p.vidtext {
   }
 }
 /* video page styling ends */
+/* Event Page Styling */
 /* Event Page styling */
 /* Events Page */
 
 /* animation */
-.hero {
-  background-color: #f4f4f4;
-  padding-top: 224px;
-  overflow: hidden;
+.eventpagetop {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 70%;
+  /* background-color: #ffffff !important; */
 }
-h1.evtxt {
-  color: #363636;
-  position: absolute;
-  width: 120rem;
-  height: 120rem;
-  left: -4vw;
-  top: -14vh;
-  font-family: Poppins;
-  font-style: normal;
+h1.mainsectiontitle {
+  color: #000;
+  margin-left: -100%;
+  margin-top: 30%;
   font-weight: bold;
-  font-size: 3.5rem;
-  line-height: 5rem;
-  letter-spacing: -3px;
+  font-size: 350%;
 }
-p.subtxt {
-  position: absolute;
-  width: 428px;
-  height: 45px;
-  left: -3vw;
-  top: 2vh;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 25px;
-  line-height: 45px;
-  color: #363636;
+.mainsectiontexteve {
+  width: 150%;
+  margin-left: -95%;
 }
-
+.anidiv {
+  overflow: hidden;
+  border: hidden;
+  background-color: transparent;
+  margin-right: -17.5%;
+}
 #player span {
   display: block;
 }
@@ -3067,124 +3057,58 @@ input.progress[value]:after {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: currentColor;
+  background-color: #ffffff;
 }
 input.progress[value]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background-color: currentColor;
+  background-color: #ffffff;
   border-radius: 50%;
   width: 16px;
   height: 16px;
 }
 
 /* card */
-
-.evecards {
-  background-color: #f4f4f4;
-}
-
-.custom {
-  margin: 0;
-}
-.mid {
-  width: 19rem;
-  margin-bottom: 30%;
-  margin-left: 60%;
-  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
-  background-color: white !important;
-}
-.left {
-  width: 19rem;
-  margin-bottom: 30%;
-  background-color: white;
-  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
-  margin-left: 35%;
-}
-.right {
-  width: 19rem;
-  margin-bottom: 30%;
-  background-color: white;
-  box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
-  margin-left: 85%;
-}
-.eveti {
-  width: 19rem;
-  margin-top: -25%;
-  color: #000;
-  text-align: center;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 21px;
-  line-height: 30px;
-}
-.evetxt {
-  margin-left: 19%;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 30px;
-}
-p.evemonth {
-  font-size: 0.8rem;
+.eventcard {
   margin-top: 5%;
-  font-family: Poppins;
-  color: #363636;
+  margin-bottom: 5%;
+  height: 18rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-h4.evedate {
-  font-family: Poppins;
+.lecard {
+  margin-left: -15%;
+}
+.recard {
+  margin-left: 15%;
+}
+.ecimg {
+  height: 65%;
+}
+.eventdate {
   color: #000;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 500;
   margin-top: -5%;
 }
-/* backlight */
-/* 
-.mid,
-.right,
-.left {
-  animation: textColor 10s ease infinite;
+.eventmonth {
+  color: #767676;
+  font-size: 90%;
+  font-weight: 600;
 }
-.mid:after,
-.left:after,
-.right:after {
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.75);
-  -webkit-filter: blur(5vw);
-  -moz-filter: blur(5vw);
-  -ms-filter: blur(5vw);
-  filter: blur(5vw);
-  background: linear-gradient(270deg, #0fffc1, #7e0fff);
-  background-size: 200% 200%;
-  animation: animateGlow 10s ease infinite;
+.eventtitle {
+  color: #000;
+  font-weight: 700;
+  margin-top: -30%;
+  font-size: 105%;
+  margin-left: 20%;
+}
+.eventdescription {
+  margin-left: 20%;
+  color: #767676;
+  margin-top: -2%;
 }
 
-@keyframes animateGlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.eventpagecards {
+  overflow-x: hidden;
 }
-@keyframes textColor {
-  0% {
-    color: #7e0fff;
-  }
-  50% {
-    color: #0fffc1;
-  }
-  100% {
-    color: #7e0fff;
-  }
-} */
 
 /* Event Modal */
 a.cardmodallink:link {
@@ -3237,344 +3161,440 @@ a.cardmodallink:visited {
   color: #636262;
   font-size: 85%;
 }
+@media screen and (max-width: 1352px) {
+  h1.mainsectiontitle {
+    margin-left: -80%;
+  }
+  .mainsectiontexteve {
+    margin-left: -75%;
+  }
+}
 
-/* responsivity */
-
-@media screen and (max-width: 1480px) {
-  .left {
+@media screen and (max-width: 1252px) {
+  .eventcard {
+    width: 16rem !important;
+    height: 17rem;
+  }
+  .lecard {
+    margin-left: 5%;
+  }
+  .recard {
+    margin-left: 0%;
+  }
+  .eventtitle {
+    font-size: 95%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .lecard {
+    margin-left: -20%;
+  }
+  .recard {
     margin-left: 20%;
   }
 
-  .right {
-    margin-left: 70%;
+  h1.mainsectiontitle {
+    margin-left: -50%;
+    font-size: 240%;
+    margin-top: 50%;
   }
-
-  .mid {
-    margin-left: 45%;
-  }
-}
-@media screen and (max-width: 1440px) {
-  .left {
-    margin-left: 15%;
-  }
-
-  .right {
-    margin-left: 65%;
-  }
-
-  .mid {
-    margin-left: 40%;
+  .mainsectiontexteve {
+    margin-left: -50%;
+    font-size: 90%;
   }
 }
-@media screen and (max-width: 1025px) {
-  .left {
-    width: 17rem;
-    height: 19rem;
-    margin-left: 40%;
+@media screen and (max-width: 1125px) {
+  .eventcard {
+    width: 15rem !important;
+    height: 16rem;
   }
-  .mid {
-    width: 17rem;
-    height: 19rem;
-    margin-left: 75%;
+  .lecard {
+    margin-left: -5%;
   }
-  .right {
-    display: none !important;
+  .recard {
+    margin-left: 5%;
   }
-  .hero-figure {
-    width: 16rem;
+}
+@media screen and (max-width: 993px) {
+  .eventcard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .lecard {
+    margin-left: 0%;
+  }
+  .recard {
+    margin-left: 2%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .eventcard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .lecard {
+    margin-left: -50%;
+  }
+  .recard {
+    margin-left: 20%;
+  }
+  .cecard {
+    margin-left: -15%;
+  }
+  .eventtitle {
+    font-size: 85%;
+    width: 95%;
+    margin-top: -40%;
+  }
+  .eventdescription {
+    font-size: 70% !important;
+  }
+  .anime-element {
+    margin-top: -40%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -280%;
+    font-size: 240%;
+    margin-top: 50%;
+  }
+  .mainsectiontexteve {
+    margin-left: -280%;
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 901px) {
+  .eventtitle {
+    font-size: 75%;
+    width: 95%;
+    margin-top: -35%;
+  }
+  .eventdescription {
+    font-size: 60% !important;
+  }
+  .eventdate {
+    font-size: 100%;
+  }
+  .eventmonth {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .eventcard {
+    width: 13rem !important;
     height: 14rem;
   }
-  h1.evtxt {
-    width: 100rem;
-    height: 100rem;
-    left: -1vw;
-    top: -10vh;
-    font-size: 2.8rem;
-    line-height: 5rem;
-    letter-spacing: -3px;
+  .lecard {
+    margin-left: -40%;
   }
-  p.subtxt {
-    position: absolute;
-    width: 428px;
-    height: 45px;
-    left: 1vw;
-    top: 2vh;
-  }
-
-  .eveti {
-    width: 14rem;
-    margin-top: -25%;
-    font-weight: 800;
-    font-size: 17px;
-    line-height: 30px;
-    margin-left: 1.5rem;
-  }
-  .evetxt {
-    margin-left: 25%;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 30px;
-  }
-  p.evemonth {
-    font-size: 0.8rem;
-    margin-top: 5%;
-  }
-  h4.evedate {
-    margin-top: -5%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .left {
-    width: 14rem;
-    height: 17rem;
-    margin-left: 20%;
-  }
-  .mid {
-    width: 14rem;
-    height: 17rem;
-    margin-left: 75%;
-  }
-  .right {
-    display: none !important;
-  }
-  .hero-figure {
-    margin-left: -20%;
-    width: 14rem;
-    height: 11rem;
-  }
-  h1.evtxt {
-    font-size: 2.1rem;
-    line-height: 3rem;
-    letter-spacing: -1px;
-    margin-left: 3%;
-  }
-  p.subtxt {
-    width: 428px;
-    height: 45px;
-    left: 3vw;
-    top: 2vh;
-    font-weight: 300;
-    font-size: 20px;
-  }
-  .eveti {
-    width: 17rem;
-    margin-top: -35%;
-    margin-left: -20%;
-    font-size: 15px;
-    margin-left: -2rem;
-  }
-  .evetxt {
-    margin-left: 20%;
-    font-size: 14px;
-  }
-  p.evemonth {
-    font-size: 0.65rem;
-    margin-top: 3%;
-    margin-left: -2%;
-  }
-  h4.evedate {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: -6%;
-    margin-left: -2%;
-  }
-
-  .modal-eve {
-    width: 36rem !important;
-    margin-left: -22%;
-  }
-}
-@media screen and (max-width: 426px) {
-  .left {
-    width: 14rem;
-    height: 17rem;
-    margin-left: 15%;
-    margin-bottom: 10%;
-  }
-  .mid {
-    width: 14rem;
-    height: 17rem;
-    margin-left: 15%;
-    margin-bottom: 10%;
-  }
-  .right {
-    display: none !important;
-  }
-  .hero-figure {
-    margin-left: 20%;
-    margin-top: 20%;
-    width: 10rem;
-    height: 8rem;
-    display: none !important;
-  }
-  h1.evtxt {
-    font-size: 2rem;
-    line-height: 3rem;
-    letter-spacing: -1px;
-    margin-left: -201%;
-    margin-top: 21%;
-  }
-  p.subtxt {
-    width: 428px;
-    height: 45px;
-    left: -4vw;
-    top: 9vh;
-    font-weight: 300;
-    font-size: 20px;
-    margin-bottom: 5%;
-  }
-  .modal-eve {
-    width: 18rem !important;
-    margin-left: 6%;
-  }
-  .emonth {
-    margin-left: 3%;
-    margin-top: -15%;
-    font-size: 72%;
-  }
-  .edate {
-    margin-left: 3%;
-    margin-top: -5%;
-    font-size: 120%;
-  }
-}
-@media screen and (max-width: 376px) {
-  .left {
-    width: 14rem;
-    height: 17rem;
+  .recard {
     margin-left: 10%;
-    margin-bottom: 10%;
   }
-  .mid {
-    width: 14rem;
-    height: 17rem;
-    margin-left: 10%;
-    margin-bottom: 10%;
+  .cecard {
+    margin-left: -15%;
   }
-  .right {
-    display: none !important;
+  .anime-element {
+    display: none;
   }
-  .hero-figure {
-    display: none !important;
+  h1.mainsectiontitle {
+    margin-left: -220%;
+    font-size: 400%;
+    margin-top: 50%;
+    white-space: nowrap;
   }
-  h1.evtxt {
-    font-size: 1.6rem;
-    line-height: 3rem;
-    letter-spacing: -1px;
-    margin-left: -239%;
-    margin-top: 25%;
-  }
-  p.subtxt {
-    width: 428px;
-    height: 45px;
-    left: -12vw;
-    top: 9vh;
-    font-weight: 300;
-    font-size: 18px;
-  }
-  .modal-eve {
-    width: 15rem !important;
-    margin-left: 7%;
-  }
-  .emonth {
-    margin-left: 3%;
-    margin-top: -10%;
-    font-size: 60%;
-  }
-  .edate {
-    margin-left: 3%;
-    margin-top: -5%;
-    font-size: 100%;
-  }
-  .etitle {
-    margin-top: 8%;
-    margin-left: 16%;
-    font-size: 100%;
-    font-weight: bold;
-  }
-
-  .etime {
-    margin-left: 16%;
-    margin-top: -7%;
-    margin-bottom: 6%;
-    font-size: 75%;
-  }
-  .eparas {
-    margin-left: 14%;
-    font-size: 60%;
+  .mainsectiontexteve {
+    margin-left: -215%;
+    font-size: 130%;
+    width: 300%;
+    text-align: center;
   }
 }
-@media screen and (max-width: 321px) {
-  .left {
-    width: 13rem;
-    height: 15rem;
-    margin-left: 12%;
-    margin-bottom: 10%;
-  }
-  .mid {
-    width: 13rem;
-    height: 15rem;
-    margin-left: 12%;
-    margin-bottom: 10%;
-  }
-  .right {
-    display: none !important;
-  }
-  .hero-figure {
-    display: none !important;
-  }
-  h1.evtxt {
-    font-size: 1.5rem;
-    line-height: 3rem;
-    letter-spacing: -1px;
-    margin-left: -287%;
-    margin-top: 30%;
-  }
-  p.subtxt {
-    width: 428px;
-    height: 45px;
-    left: -16vw;
-    top: 9vh;
-    font-size: 17px;
-  }
-  .eveti {
-    width: 17rem;
-    margin-top: -38%;
+@media screen and (max-width: 875px) {
+  .lecard {
     margin-left: -30%;
-    font-size: 14px;
-    margin-left: -2.4rem;
   }
-  .evetxt {
-    margin-left: 20%;
-    font-size: 13px;
-    margin-top: -7%;
+  .recard {
+    margin-left: 0%;
   }
-  p.evemonth {
-    font-size: 0.6rem;
-  }
-  h4.evedate {
-    font-size: 1rem;
-  }
-  .modal-eve {
-    width: 12rem !important;
-    margin-left: 10%;
-  }
-  .emonth {
-    margin-left: 3%;
-    margin-top: -20%;
-    font-size: 60%;
-  }
-  .edate {
-    margin-left: 3%;
-    margin-top: -10%;
-    font-size: 100%;
-  }
-  .etitle {
-    margin-top: 8%;
-    margin-left: 18%;
-    font-size: 100%;
-    font-weight: bold;
+  .cecard {
+    margin-left: -15%;
   }
 }
-/*Event page styling end*/
+@media screen and (max-width: 832px) {
+  .eventcard {
+    width: 12rem !important;
+    height: 13rem;
+  }
+  .lecard {
+    margin-left: -20%;
+  }
+  .recard {
+    margin-left: 5%;
+  }
+  .cecard {
+    margin-left: -5%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .eventcard {
+    width: 11rem !important;
+    height: 12rem;
+  }
+  .lecard {
+    margin-left: -70%;
+  }
+  .recard {
+    margin-left: 20%;
+  }
+  .cecard {
+    margin-left: -25%;
+  }
+  .eventtitle {
+    font-size: 65%;
+    width: 95%;
+    margin-top: -40%;
+  }
+  .eventdescription {
+    font-size: 50% !important;
+  }
+  .eventdate {
+    font-size: 80%;
+  }
+  .eventmonth {
+    font-size: 65%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -290%;
+    font-size: 400%;
+    margin-top: 90%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -270%;
+    font-size: 130%;
+    width: 400%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 730px) {
+  .recard {
+    display: none !important;
+  }
+  .eventcard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .cecard {
+    margin-left: 70%;
+  }
+  .lecard {
+    margin-left: -40%;
+  }
+  .eventtitle {
+    font-size: 75%;
+    width: 95%;
+    margin-top: -35%;
+  }
+  .eventdescription {
+    font-size: 60% !important;
+  }
+  .eventdate {
+    font-size: 100%;
+  }
+  .eventmonth {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .eventcard {
+    width: 17rem !important;
+    height: 18rem;
+  }
+  .cecard1 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .cecard2 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .lecard {
+    margin-left: 50%;
+  }
+  .lecard2 {
+    margin-top: 20%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  .eventdate {
+    color: #000;
+    font-weight: 500;
+    margin-top: -5%;
+  }
+  .eventmonth {
+    color: #767676;
+    font-size: 90%;
+    font-weight: 600;
+  }
+  .eventtitle {
+    color: #000;
+    font-weight: 700;
+    margin-top: -30%;
+    font-size: 105%;
+    margin-left: 20%;
+  }
+  .eventdescription {
+    margin-left: 20%;
+    color: #767676;
+    margin-top: -2%;
+    font-size: initial !important;
+  }
+  h1.mainsectiontitle {
+    margin-left: -250%;
+    font-size: 320%;
+    margin-top: 150%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -230%;
+    font-size: 110%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 535px) {
+  .cecard1 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .cecard2 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .lecard {
+    margin-left: 50%;
+  }
+  .lecard2 {
+    margin-top: 20%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -220%;
+    font-size: 250%;
+    margin-top: 170%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -230%;
+    font-size: 90%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cecard1 {
+    margin-top: 350%;
+    margin-left: -75%;
+  }
+  .cecard2 {
+    margin-top: 350%;
+    margin-left: -75%;
+  }
+  .lecard {
+    margin-left: 50%;
+  }
+  .lecard2 {
+    margin-top: 20%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .cecard1 {
+    margin-top: 380%;
+    margin-left: -95%;
+  }
+  .cecard2 {
+    margin-top: 400%;
+    margin-left: -95%;
+  }
+  .lecard {
+    margin-left: 35%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  h1.mainsectiontitle {
+    margin-left: -220%;
+    font-size: 200%;
+    margin-top: 100%;
+    white-space: nowrap;
+  }
+  .mainsectiontexteve {
+    margin-left: -200%;
+    font-size: 100%;
+    margin-top: 50%;
+    width: 250%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cecard1 {
+    margin-top: 400%;
+    margin-left: -110%;
+  }
+  .cecard2 {
+    margin-top: 420%;
+    margin-left: -110%;
+  }
+  .lecard {
+    margin-left: 23%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 380px) {
+  h1.mainsectiontitle {
+    margin-left: -250%;
+    font-size: 300%;
+    margin-top: 170%;
+    white-space: initial;
+    text-align: center;
+  }
+  .mainsectiontexteve {
+    margin-left: -230%;
+    font-size: 90%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 370px) {
+  .cecard1 {
+    margin-top: 430%;
+    margin-left: -110%;
+  }
+  .cecard2 {
+    margin-top: 480%;
+    margin-left: -110%;
+  }
+  .lecard {
+    margin-left: 23%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+}
