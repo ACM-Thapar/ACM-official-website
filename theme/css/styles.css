@@ -1474,6 +1474,10 @@ a.learnmorenew:hover {
 .topsection {
   overflow-x: hidden;
 }
+.cardsec {
+  margin-top: -5%;
+  margin-bottom: 10%;
+}
 .cardsec .row {
   margin: auto;
 }
@@ -1485,24 +1489,21 @@ a.learnmorenew:hover {
   position: relative;
   left: 52%;
   top: -13rem;
+  width: 40% !important;
 }
 .front h1 {
   position: relative;
   white-space: pre;
   left: 8%;
-  top: 10rem;
+  top: 15rem;
 }
 .front p {
   position: relative;
   left: 8%;
-  top: 10.5rem;
-  font-size: 0.8rem;
+  top: 16rem;
+  font-size: 80%;
   width: 35%;
 }
-/* .pcontainer {
-  position: relative;
-  top: -330px;
-} */
 .pcardimgtop {
   height: 180px;
   width: 100%;
@@ -1520,10 +1521,6 @@ a.learnmorenew:hover {
   font-size: 0.8rem;
   color: rgb(95, 93, 93);
 }
-/* .pc4 {
-  position: relative;
-  left: 25px;
-} */
 .heading-project {
   font-weight: bold;
   font-size: 3rem;
@@ -1546,6 +1543,7 @@ a.learnmorenew:hover {
   border-color: transparent;
 }
 .pcard {
+  width: 110%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .faces {
@@ -1589,8 +1587,9 @@ img.rounded-corners {
 }
 .mcp {
   height: 150%;
-  background-color: #ffffff;
-  margin: auto;
+  width: 150% !important;
+  background-color: rgb(255, 255, 255);
+  margin-left: -10%;
 }
 .modal-dialog {
   margin: auto !important;
@@ -1604,7 +1603,7 @@ img.rounded-corners {
 }
 .mhp {
   position: relative;
-  top: 5rem;
+  top: 1.5rem;
   padding-left: 21%;
 }
 .date {
@@ -1615,47 +1614,40 @@ img.rounded-corners {
   font-size: 2.2rem;
   font-weight: bold;
   position: relative;
-  /* bottom: 10px; */
+  bottom: 1rem;
   left: 3.5%;
 }
 .month {
   position: relative;
-  left: 4.5%;
+  left: 3.5%;
   top: 2%;
   font-size: 1rem;
   color: rgb(71, 71, 71);
 }
 .paras {
-  /* position: relative;
-  left: 132.5px;
-  bottom: 32.5px; */
-  font-size: 15.6px;
+  margin-top: -8%;
+  font-size: 95%;
   color: rgb(71, 71, 71);
   padding-left: 21%;
+  padding-right: 3%;
 }
 .rowmodal {
   display: flex;
 }
+.pc2 {
+  margin-top: 2%;
+}
+.pc2text {
+  margin-top: 5% !important;
+}
 .pc2 img {
-  padding-left: 5%;
+  padding-left: 4%;
   width: 100%;
   display: inline-block;
 }
-/* .team {
-  position: relative;
-  left: 20px;
-  top: 20px;
-} */
-/* .pc2 p {
-  white-space: nowrap;
-  position: relative;
-  right: 29px;
-} */
 .random {
   font-weight: bold;
   font-size: 1rem;
-  /* position: relative;
-  top: 5px; */
   width: 100%;
 }
 .position {
@@ -1667,19 +1659,13 @@ img.rounded-corners {
   margin-left: 4.5%;
 }
 .team h2 {
-  /* position: relative;
-  left: 110.5px;
-  bottom: 12px; */
   color: rgb(116, 112, 112);
   font-size: 1.7rem;
   padding-left: 21%;
-  margin-top: 2%;
+  margin-top: 8%;
   margin-bottom: 2%;
 }
 .resources h2 {
-  /* position: relative;
-  left: 124.5px;
-  top: 60px; */
   color: rgb(116, 112, 112);
   font-size: 1.7rem;
   padding-left: 21%;
@@ -1691,15 +1677,6 @@ img.rounded-corners {
   width: 8.5%;
   height: 4%;
 }
-/* .student {
-  width: 400px;
-  margin: 4% auto;
-  position: relative;
-}
-.srvc_icon {
-  width: 29px;
-  position: absolute;
-} */
 .openBookIcon {
   top: 20%;
   right: 0;
@@ -1709,10 +1686,6 @@ img.rounded-corners {
   margin: 4% auto;
   position: relative;
 }
-/* .srvc_icon {
-  width: 29px;
-  position: absolute;
-} */
 .openBookIcon {
   top: 20%;
   right: 0;
@@ -1720,17 +1693,7 @@ img.rounded-corners {
 #student {
   width: 38%;
 }
-/* .paras p {
-  width: 70%;
-} */
-/* .cardsec {
-  margin-top: -5%%;
-} */
-/* @media screen and (max-width: 1218px) {
-  #student {
-    width: 60%;
-  }
-}
+/* 
 
 @media screen and (max-width: 1009px) {
   .front h1 {
