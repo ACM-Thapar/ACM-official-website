@@ -3013,6 +3013,7 @@ p.vidtext {
   overflow-x: hidden;
   overflow-y: hidden;
   height: 70%;
+  margin-top: 5.5%;
   /* background-color: #ffffff !important; */
 }
 h1.mainsectiontitle {
@@ -3074,7 +3075,7 @@ input.progress[value]::-webkit-slider-thumb {
 .eventcard {
   margin-top: 5%;
   margin-bottom: 5%;
-  height: 18rem;
+  height: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .lecard {
@@ -3084,7 +3085,7 @@ input.progress[value]::-webkit-slider-thumb {
   margin-left: 15%;
 }
 .ecimg {
-  height: 65%;
+  height: 60%;
 }
 .eventdate {
   color: #000;
@@ -3099,18 +3100,20 @@ input.progress[value]::-webkit-slider-thumb {
 .eventtitle {
   color: #000;
   font-weight: 700;
-  margin-top: -30%;
+  margin-top: -28%;
   font-size: 105%;
   margin-left: 20%;
 }
 .eventdescription {
-  margin-left: 20%;
+  margin-left: 24%;
   color: #767676;
   margin-top: -2%;
 }
 
 .eventpagecards {
   overflow-x: hidden;
+  margin-bottom: 10%;
+
 }
 
 /* Event Modal */
