@@ -3203,6 +3203,9 @@ a.cardmodallink:visited {
   .recard {
     margin-left: 5%;
   }
+  .eventdescription {
+    font-size: 70% !important;
+  }
 }
 @media screen and (max-width: 993px) {
   .eventcard {
@@ -3258,7 +3261,7 @@ a.cardmodallink:visited {
     margin-top: -35%;
   }
   .eventdescription {
-    font-size: 60% !important;
+    font-size: 65% !important;
   }
   .eventdate {
     font-size: 100%;
@@ -3285,16 +3288,21 @@ a.cardmodallink:visited {
     display: none;
   }
   h1.mainsectiontitle {
-    margin-left: -220%;
-    font-size: 400%;
+    margin-left: -200%;
+    font-size: 350%;
     margin-top: 50%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
     margin-left: -215%;
-    font-size: 130%;
+    font-size: 100%;
     width: 300%;
     text-align: center;
+  }
+  .eventdescription {
+    font-size: 60% !important;
+    line-height: 90%;
+    margin-top: -5%;
   }
 }
 @media screen and (max-width: 875px) {
@@ -3352,14 +3360,14 @@ a.cardmodallink:visited {
     font-size: 65%;
   }
   h1.mainsectiontitle {
-    margin-left: -290%;
-    font-size: 400%;
+    margin-left: -260%;
+    font-size: 350%;
     margin-top: 90%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
     margin-left: -270%;
-    font-size: 130%;
+    font-size: 100%;
     width: 400%;
     text-align: center;
   }
@@ -3384,7 +3392,9 @@ a.cardmodallink:visited {
     margin-top: -35%;
   }
   .eventdescription {
-    font-size: 60% !important;
+    font-size: 70% !important;
+    line-height: 100%;
+    margin-top: -3%;
   }
   .eventdate {
     font-size: 100%;
@@ -3441,7 +3451,7 @@ a.cardmodallink:visited {
   h1.mainsectiontitle {
     margin-left: -250%;
     font-size: 320%;
-    margin-top: 150%;
+    margin-top: 40%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
@@ -3472,7 +3482,7 @@ a.cardmodallink:visited {
   h1.mainsectiontitle {
     margin-left: -220%;
     font-size: 250%;
-    margin-top: 170%;
+    margin-top: 80%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
@@ -3527,8 +3537,8 @@ a.cardmodallink:visited {
   }
   .mainsectiontexteve {
     margin-left: -200%;
-    font-size: 100%;
-    margin-top: 50%;
+    font-size: 80%;
+    margin-top: 30%;
     width: 250%;
     text-align: center;
   }
@@ -3556,15 +3566,39 @@ a.cardmodallink:visited {
   h1.mainsectiontitle {
     margin-left: -250%;
     font-size: 300%;
-    margin-top: 170%;
+    margin-top: 80%;
     white-space: initial;
     text-align: center;
   }
   .mainsectiontexteve {
-    margin-left: -230%;
-    font-size: 90%;
-    width: 300%;
+    margin-left: -250%;
+    font-size: 80%;
+    width: 350%;
     text-align: center;
+  }
+  .cecard1 {
+    margin-top: 400%;
+    margin-left: -100%;
+  }
+  .cecard2 {
+    margin-top: 420%;
+    margin-left: -100%;
+  }
+  .lecard {
+    margin-left: 33%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  .eventcard {
+    width: 14rem !important;
+    height: 16rem;
+  }
+  .eventdescription {
+    font-size: 60% !important;
   }
 }
 @media screen and (max-width: 370px) {
