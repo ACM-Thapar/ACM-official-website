@@ -3148,7 +3148,43 @@ a.cardmodallink:visited {
   font-family: Poppins;
   color: #636262;
   font-size: 85%;
+  margin-top: -70%;
 }
+.erowmodal {
+  display: flex;
+}
+.epc2 {
+  margin-top: 2%;
+}
+.epc2text {
+  margin-top: 5% !important;
+}
+.epc2 img {
+  padding-left: 4%;
+  width: 100%;
+  display: inline-block;
+}
+.erandom {
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+}
+.eposition {
+  font-size: 13px;
+  position: relative;
+  bottom: 14px;
+}
+.erowmodal .col-2 {
+  margin-left: 4.5%;
+}
+.eteam h2 {
+  color: rgb(116, 112, 112);
+  font-size: 1.7rem;
+  padding-left: 21%;
+  margin-top: 8%;
+  margin-bottom: 2%;
+}
+
 @media screen and (max-width: 1352px) {
   h1.mainsectiontitle {
     margin-left: -80%;
@@ -3618,5 +3654,21 @@ a.cardmodallink:visited {
   }
   .lecard1 {
     margin-top: 20%;
+  }
+}
+/* New Project Page */
+.projectspagegif {
+  margin-top: 5%;
+  margin-right: -10%;
+}
+@media screen and (max-width: 1200px) {
+  .projectspagegif {
+    margin-top: 12%;
+    margin-right: 0%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .projectspagegif {
+    display: none;
   }
 }
