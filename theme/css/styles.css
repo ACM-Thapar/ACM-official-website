@@ -293,7 +293,9 @@ nav.shift ul li a:hover:after {
   visibility: visible;
   height: 100%;
 }
-
+.acmlogonav {
+  max-width: 100%;
+}
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
