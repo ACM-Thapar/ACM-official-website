@@ -303,9 +303,22 @@ a.navbar-brand {
   margin: 0%;
   padding: 0%;
 }
+.nav-item {
+  font-size: 120%;
+}
 ul.navbar-nav {
   white-space: nowrap;
   overflow: hidden;
+}
+@media screen and (max-width: 989px) {
+  .navbar-toggler {
+    margin-left: 50%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .navbar-toggler {
+    margin-left: initial;
+  }
 }
 /* Footer */
 
