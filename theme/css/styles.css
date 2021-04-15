@@ -293,7 +293,9 @@ nav.shift ul li a:hover:after {
   visibility: visible;
   height: 100%;
 }
-
+.acmlogonav {
+  max-width: 100%;
+}
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
@@ -303,9 +305,22 @@ a.navbar-brand {
   margin: 0%;
   padding: 0%;
 }
+.nav-item {
+  font-size: 120%;
+}
 ul.navbar-nav {
   white-space: nowrap;
   overflow: hidden;
+}
+@media screen and (max-width: 989px) {
+  .navbar-toggler {
+    margin-left: 50%;
+  }
+}
+@media screen and (max-width: 760px) {
+  .navbar-toggler {
+    margin-left: initial;
+  }
 }
 /* Footer */
 
@@ -3055,6 +3070,7 @@ input.progress[value]::-webkit-slider-thumb {
 }
 
 /* card */
+
 .eventcard {
   margin-top: 5%;
   margin-bottom: 5%;
@@ -3098,6 +3114,7 @@ input.progress[value]::-webkit-slider-thumb {
   margin-bottom: 10%;
 }
 
+/* Event Modal */
 /* Event Modal */
 a.cardmodallink:link {
   text-decoration: inherit;
@@ -3148,7 +3165,43 @@ a.cardmodallink:visited {
   font-family: Poppins;
   color: #636262;
   font-size: 85%;
+  margin-top: -130%;
 }
+.erowmodal {
+  display: flex;
+}
+.epc2 {
+  margin-top: 2%;
+}
+.epc2text {
+  margin-top: 5% !important;
+}
+.epc2 img {
+  padding-left: 4%;
+  width: 100%;
+  display: inline-block;
+}
+.erandom {
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+}
+.eposition {
+  font-size: 13px;
+  position: relative;
+  bottom: 14px;
+}
+.erowmodal .col-2 {
+  margin-left: 4.5%;
+}
+.eteam h2 {
+  color: rgb(116, 112, 112);
+  font-size: 1.7rem;
+  padding-left: 21%;
+  margin-top: 8%;
+  margin-bottom: 2%;
+}
+
 @media screen and (max-width: 1352px) {
   h1.mainsectiontitle {
     margin-left: -80%;
@@ -3202,6 +3255,9 @@ a.cardmodallink:visited {
   }
   .recard {
     margin-left: 5%;
+  }
+  .eventdescription {
+    font-size: 70% !important;
   }
 }
 @media screen and (max-width: 993px) {
@@ -3258,7 +3314,7 @@ a.cardmodallink:visited {
     margin-top: -35%;
   }
   .eventdescription {
-    font-size: 60% !important;
+    font-size: 65% !important;
   }
   .eventdate {
     font-size: 100%;
@@ -3285,16 +3341,21 @@ a.cardmodallink:visited {
     display: none;
   }
   h1.mainsectiontitle {
-    margin-left: -220%;
-    font-size: 400%;
+    margin-left: -200%;
+    font-size: 350%;
     margin-top: 50%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
     margin-left: -215%;
-    font-size: 130%;
+    font-size: 100%;
     width: 300%;
     text-align: center;
+  }
+  .eventdescription {
+    font-size: 60% !important;
+    line-height: 90%;
+    margin-top: -5%;
   }
 }
 @media screen and (max-width: 875px) {
@@ -3352,14 +3413,14 @@ a.cardmodallink:visited {
     font-size: 65%;
   }
   h1.mainsectiontitle {
-    margin-left: -290%;
-    font-size: 400%;
+    margin-left: -260%;
+    font-size: 350%;
     margin-top: 90%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
     margin-left: -270%;
-    font-size: 130%;
+    font-size: 100%;
     width: 400%;
     text-align: center;
   }
@@ -3384,7 +3445,9 @@ a.cardmodallink:visited {
     margin-top: -35%;
   }
   .eventdescription {
-    font-size: 60% !important;
+    font-size: 70% !important;
+    line-height: 100%;
+    margin-top: -3%;
   }
   .eventdate {
     font-size: 100%;
@@ -3441,7 +3504,7 @@ a.cardmodallink:visited {
   h1.mainsectiontitle {
     margin-left: -250%;
     font-size: 320%;
-    margin-top: 150%;
+    margin-top: 40%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
@@ -3472,7 +3535,7 @@ a.cardmodallink:visited {
   h1.mainsectiontitle {
     margin-left: -220%;
     font-size: 250%;
-    margin-top: 170%;
+    margin-top: 80%;
     white-space: nowrap;
   }
   .mainsectiontexteve {
@@ -3527,8 +3590,8 @@ a.cardmodallink:visited {
   }
   .mainsectiontexteve {
     margin-left: -200%;
-    font-size: 100%;
-    margin-top: 50%;
+    font-size: 80%;
+    margin-top: 30%;
     width: 250%;
     text-align: center;
   }
@@ -3556,15 +3619,39 @@ a.cardmodallink:visited {
   h1.mainsectiontitle {
     margin-left: -250%;
     font-size: 300%;
-    margin-top: 170%;
+    margin-top: 80%;
     white-space: initial;
     text-align: center;
   }
   .mainsectiontexteve {
-    margin-left: -230%;
-    font-size: 90%;
-    width: 300%;
+    margin-left: -250%;
+    font-size: 80%;
+    width: 350%;
     text-align: center;
+  }
+  .cecard1 {
+    margin-top: 400%;
+    margin-left: -100%;
+  }
+  .cecard2 {
+    margin-top: 420%;
+    margin-left: -100%;
+  }
+  .lecard {
+    margin-left: 33%;
+  }
+  .lecard2 {
+    margin-top: 45%;
+  }
+  .lecard1 {
+    margin-top: 20%;
+  }
+  .eventcard {
+    width: 14rem !important;
+    height: 16rem;
+  }
+  .eventdescription {
+    font-size: 60% !important;
   }
 }
 @media screen and (max-width: 370px) {
@@ -3584,5 +3671,647 @@ a.cardmodallink:visited {
   }
   .lecard1 {
     margin-top: 20%;
+  }
+}
+
+/* New Project Page */
+.projectspagegif {
+  margin-top: 5%;
+  margin-right: -10%;
+}
+
+/* animation */
+.projectspagetop {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 70%;
+  margin-top: 5.5%;
+  /* background-color: #ffffff !important; */
+}
+h1.pmainsectiontitle {
+  color: #000;
+  margin-left: -96%;
+  margin-top: 30%;
+  font-weight: bold;
+  font-size: 350%;
+}
+.mainsectiontextpro {
+  width: 150%;
+  margin-left: -95%;
+}
+
+/* card */
+.procard {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  height: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.lpcard {
+  margin-left: -15%;
+}
+.rpcard {
+  margin-left: 15%;
+}
+.pcimg {
+  height: 60%;
+}
+.prodate {
+  color: #000;
+  font-weight: 500;
+  margin-top: -5%;
+}
+.promonth {
+  color: #767676;
+  font-size: 90%;
+  font-weight: 600;
+}
+.protitle {
+  color: #000;
+  font-weight: 700;
+  margin-top: -28%;
+  font-size: 105%;
+  margin-left: 20%;
+}
+.prodescription {
+  margin-left: 24%;
+  color: #767676;
+  margin-top: -2%;
+}
+
+.propagecards {
+  overflow-x: hidden;
+  margin-bottom: 10%;
+}
+
+/* Event Modal */
+
+.mcpro {
+  height: 150%;
+  width: 150% !important;
+  background-color: rgb(255, 255, 255);
+  margin-left: -10%;
+}
+.modal-dialog {
+  margin: auto !important;
+}
+.mipro {
+  height: 30%;
+}
+.close {
+  position: absolute;
+  right: 0;
+}
+.mhpro {
+  position: relative;
+  top: 1.5rem;
+  font-size: 200%;
+  padding-left: 21%;
+  color: #000;
+  font-weight: bolder;
+}
+.datepro {
+  position: relative;
+  left: 2%;
+}
+.dtpro {
+  font-size: 1.7rem;
+  font-weight: bold;
+  position: relative;
+  bottom: 1rem;
+  left: 3.5%;
+}
+.monthpro {
+  position: relative;
+  left: 3.5%;
+  top: 2%;
+  font-size: 1rem;
+  color: rgb(71, 71, 71);
+}
+.paraspro {
+  margin-top: -10%;
+  font-size: 90%;
+  color: rgb(71, 71, 71);
+  padding-left: 21%;
+  padding-right: 3%;
+  width: 32rem;
+}
+.rowmodal {
+  display: flex;
+}
+.pc2pro {
+  margin-top: 2%;
+}
+.pc2textpro {
+  margin-top: 5% !important;
+}
+.pc2pro img {
+  padding-left: 4%;
+  width: 100%;
+  display: inline-block;
+}
+.randompro {
+  font-weight: bold;
+  font-size: 1rem;
+  width: 100%;
+}
+.positionpro {
+  font-size: 13px;
+  position: relative;
+  bottom: 14px;
+}
+.rowmodal .col-2 {
+  margin-left: 4.5%;
+}
+.teampro h2 {
+  color: rgb(116, 112, 112);
+  font-size: 1.7rem;
+  padding-left: 21%;
+  margin-top: 8%;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 1352px) {
+  h1.pmainsectiontitle {
+    margin-left: -80%;
+  }
+  .mainsectiontextpro {
+    margin-left: -75%;
+  }
+}
+
+@media screen and (max-width: 1252px) {
+  .procard {
+    width: 16rem !important;
+    height: 17rem;
+  }
+  .lpcard {
+    margin-left: 5%;
+  }
+  .rpcard {
+    margin-left: 0%;
+  }
+  .protitle {
+    font-size: 95%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .lpcard {
+    margin-left: -20%;
+  }
+  .rpcard {
+    margin-left: 20%;
+  }
+
+  h1.pmainsectiontitle {
+    margin-left: -50%;
+    font-size: 240%;
+    margin-top: 50%;
+  }
+  .mainsectiontextpro {
+    margin-left: -50%;
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .procard {
+    width: 15rem !important;
+    height: 16rem;
+  }
+  .lpcard {
+    margin-left: -5%;
+  }
+  .rpcard {
+    margin-left: 5%;
+  }
+  .prodescription {
+    font-size: 70% !important;
+  }
+}
+@media screen and (max-width: 993px) {
+  .procard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .lpcard {
+    margin-left: 0%;
+  }
+  .rpcard {
+    margin-left: 2%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .procard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .lpcard {
+    margin-left: -50%;
+  }
+  .rpcard {
+    margin-left: 20%;
+  }
+  .cpcard {
+    margin-left: -15%;
+  }
+  .protitle {
+    font-size: 85%;
+    width: 95%;
+    margin-top: -40%;
+  }
+  .prodescription {
+    font-size: 70% !important;
+  }
+  .anime-element {
+    margin-top: -40%;
+  }
+  h1.pmainsectiontitle {
+    margin-left: -130%;
+    font-size: 400%;
+    margin-top: 50%;
+  }
+  .mainsectiontextpro {
+    margin-left: -210%;
+    font-size: 120%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 901px) {
+  .protitle {
+    font-size: 75%;
+    width: 95%;
+    margin-top: -35%;
+  }
+  .prodescription {
+    font-size: 65% !important;
+  }
+  .prodate {
+    font-size: 100%;
+  }
+  .promonth {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 930px) {
+  .procard {
+    width: 13rem !important;
+    height: 14rem;
+  }
+  .lpcard {
+    margin-left: -40%;
+  }
+  .rpcard {
+    margin-left: 10%;
+  }
+  .cpcard {
+    margin-left: -15%;
+  }
+  .anime-element {
+    display: none;
+  }
+  h1.pmainsectiontitle {
+    margin-left: -140%;
+    font-size: 400%;
+    margin-top: 50%;
+    white-space: nowrap;
+  }
+  .mainsectiontextpro {
+    margin-left: -215%;
+    font-size: 120%;
+    width: 300%;
+    text-align: center;
+  }
+  .prodescription {
+    font-size: 60% !important;
+    line-height: 90%;
+    margin-top: -5%;
+  }
+}
+@media screen and (max-width: 875px) {
+  .lpcard {
+    margin-left: -30%;
+  }
+  .rpcard {
+    margin-left: 0%;
+  }
+  .cpcard {
+    margin-left: -15%;
+  }
+}
+@media screen and (max-width: 832px) {
+  .procard {
+    width: 12rem !important;
+    height: 13rem;
+  }
+  .lpcard {
+    margin-left: -20%;
+  }
+  .rpcard {
+    margin-left: 5%;
+  }
+  .cpcard {
+    margin-left: -5%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .procard {
+    width: 11rem !important;
+    height: 12rem;
+  }
+  .lpcard {
+    margin-left: -70%;
+  }
+  .rpcard {
+    margin-left: 20%;
+  }
+  .cpcard {
+    margin-left: -25%;
+  }
+  .protitle {
+    font-size: 65%;
+    width: 95%;
+    margin-top: -40%;
+  }
+  .prodescription {
+    font-size: 50% !important;
+  }
+  .prodate {
+    font-size: 80%;
+  }
+  .promonth {
+    font-size: 65%;
+  }
+  h1.pmainsectiontitle {
+    margin-left: -160%;
+    font-size: 350%;
+    margin-top: 90%;
+    white-space: nowrap;
+  }
+  .mainsectiontextpro {
+    margin-left: -270%;
+    font-size: 100%;
+    width: 400%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 730px) {
+  .rpcard {
+    display: none !important;
+  }
+  .procard {
+    width: 14rem !important;
+    height: 15rem;
+  }
+  .cpcard {
+    margin-left: 70%;
+  }
+  .lpcard {
+    margin-left: -40%;
+  }
+  .protitle {
+    font-size: 75%;
+    width: 95%;
+    margin-top: -35%;
+  }
+  .prodescription {
+    font-size: 70% !important;
+    line-height: 100%;
+    margin-top: -3%;
+  }
+  .prodate {
+    font-size: 100%;
+  }
+  .promonth {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .procard {
+    width: 17rem !important;
+    height: 18rem;
+  }
+  .cpcard1 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .cpcard2 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .lpcard {
+    margin-left: 50%;
+  }
+  .lpcard2 {
+    margin-top: 20%;
+  }
+  .lpcard1 {
+    margin-top: 20%;
+  }
+  .prodate {
+    color: #000;
+    font-weight: 500;
+    margin-top: -5%;
+  }
+  .promonth {
+    color: #767676;
+    font-size: 90%;
+    font-weight: 600;
+  }
+  .protitle {
+    color: #000;
+    font-weight: 700;
+    margin-top: -30%;
+    font-size: 105%;
+    margin-left: 20%;
+  }
+  .prodescription {
+    margin-left: 20%;
+    color: #767676;
+    margin-top: -2%;
+    font-size: initial !important;
+  }
+  h1.pmainsectiontitle {
+    margin-left: -160%;
+    font-size: 320%;
+    margin-top: 40%;
+    white-space: nowrap;
+  }
+  .mainsectiontextpro {
+    margin-left: -230%;
+    font-size: 110%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 535px) {
+  .cpcard1 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .cpcard2 {
+    margin-top: 300%;
+    margin-left: -70%;
+  }
+  .lpcard {
+    margin-left: 50%;
+  }
+  .lpcard2 {
+    margin-top: 20%;
+  }
+  .lpcard1 {
+    margin-top: 20%;
+  }
+  h1.pmainsectiontitle {
+    margin-left: -145%;
+    font-size: 300%;
+    margin-top: 80%;
+    white-space: nowrap;
+  }
+  .mainsectiontextpro {
+    margin-left: -230%;
+    font-size: 90%;
+    width: 300%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cpcard1 {
+    margin-top: 350%;
+    margin-left: -75%;
+  }
+  .cpcard2 {
+    margin-top: 350%;
+    margin-left: -75%;
+  }
+  .lpcard {
+    margin-left: 50%;
+  }
+  .lpcard2 {
+    margin-top: 20%;
+  }
+  .lpcard1 {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .cpcard1 {
+    margin-top: 380%;
+    margin-left: -95%;
+  }
+  .cpcard2 {
+    margin-top: 400%;
+    margin-left: -95%;
+  }
+  .lpcard {
+    margin-left: 35%;
+  }
+  .lpcard2 {
+    margin-top: 45%;
+  }
+  .lpcard1 {
+    margin-top: 20%;
+  }
+  h1.pmainsectiontitle {
+    margin-left: -160%;
+    font-size: 250%;
+    margin-top: 100%;
+    white-space: nowrap;
+  }
+  .mainsectiontextpro {
+    margin-left: -200%;
+    font-size: 80%;
+    margin-top: 30%;
+    width: 250%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .cpcard1 {
+    margin-top: 400%;
+    margin-left: -110%;
+  }
+  .cpcard2 {
+    margin-top: 420%;
+    margin-left: -110%;
+  }
+  .lpcard {
+    margin-left: 23%;
+  }
+  .lpcard2 {
+    margin-top: 45%;
+  }
+  .lpcard1 {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 380px) {
+  h1.pmainsectiontitle {
+    margin-left: -250%;
+    font-size: 300%;
+    margin-top: 80%;
+    white-space: initial;
+    text-align: center;
+  }
+  .mainsectiontextpro {
+    margin-left: -250%;
+    font-size: 80%;
+    width: 350%;
+    text-align: center;
+  }
+  .cpcard1 {
+    margin-top: 400%;
+    margin-left: -100%;
+  }
+  .cpcard2 {
+    margin-top: 420%;
+    margin-left: -100%;
+  }
+  .lpcard {
+    margin-left: 33%;
+  }
+  .lpcard2 {
+    margin-top: 45%;
+  }
+  .lpcard1 {
+    margin-top: 20%;
+  }
+  .procard {
+    width: 14rem !important;
+    height: 16rem;
+  }
+  .prodescription {
+    font-size: 60% !important;
+  }
+}
+@media screen and (max-width: 370px) {
+  .cpcard1 {
+    margin-top: 430%;
+    margin-left: -110%;
+  }
+  .cpcard2 {
+    margin-top: 480%;
+    margin-left: -110%;
+  }
+  .lpcard {
+    margin-left: 23%;
+  }
+  .lpcard2 {
+    margin-top: 45%;
+  }
+  .lpcard1 {
+    margin-top: 20%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .projectspagegif {
+    margin-top: 12%;
+    margin-right: 0%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .projectspagegif {
+    display: none;
   }
 }
