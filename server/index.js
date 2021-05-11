@@ -1,9 +1,9 @@
 const express = require('express');
-//const dbConnect = require(".config/db");
-
-//dbConnect();
+const connectDB = require('./config/db');
 
 const app = express();
+
+connectDB();
 
 const PORT = process.env.PORT || 5000;
 app.use(express.json({ extended: false }));
