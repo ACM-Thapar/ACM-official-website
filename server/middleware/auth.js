@@ -2,8 +2,8 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 require('dotenv').config();
 
-module.exports = function (req, res, next) {
-  const token = req.header('x-auth-token');
+const auth = async (req, res, next) => {
+  const token = req.header('Authorization').replace('Bearer ', '');
 
   if (!token) {
     return res.status(401).json({ msg: 'No token, authorisation denied ' });
@@ -11,9 +11,20 @@ module.exports = function (req, res, next) {
 
   try {
     const decoded = jwt.verify(token, config.get('jwtSecret'));
-    req.user = decoded.user;
+    const user = await User.findOne({
+      _id: decoded._id,
+      'tokens.token': token,
+    });
+
+    if (!user) {
+      throw new Error();
+    }
+
+    req.token = token;
+    req.user = user;
     next();
   } catch (err) {
     res.status(401).json({ msg: 'Token is not valid' });
   }
 };
+module.exports = auth;
