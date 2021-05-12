@@ -1,4 +1,5 @@
 const express = require('express');
+const router = require('express').Router({ mergeParams: true });
 const connectDB = require('./config/db');
 
 const app = express();
@@ -17,3 +18,6 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log('Server running on port ', PORT);
 });
+
+app.use('/auth', require('./routes/auth'));
+app.use('/user', require('./routes/user'));
