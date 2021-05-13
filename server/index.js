@@ -1,5 +1,4 @@
 const express = require('express');
-const router = require('express').Router({ mergeParams: true });
 const connectDB = require('./config/db');
 const auth = require('./routes/auth');
 
