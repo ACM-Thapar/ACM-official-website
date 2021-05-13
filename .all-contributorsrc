@@ -79,6 +79,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Kriti-bit",
+      "name": "Kriti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69788174?v=4",
+      "profile": "https://github.com/Kriti-bit",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
