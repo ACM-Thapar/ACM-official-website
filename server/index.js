@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const auth = require('./routes/auth');
 
 const app = express();
 
@@ -17,3 +18,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log('Server running on port ', PORT);
 });
+
+app.use('/auth', auth);
