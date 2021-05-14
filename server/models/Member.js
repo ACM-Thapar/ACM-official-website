@@ -78,6 +78,6 @@ const MemberSchema = new mongoose.Schema({
   },
 });
 
-UserSchema.set('timestamps', true);
+MemberSchema.set('timestamps', true);
 
 module.exports = Member = mongoose.model('member', MemberSchema);
