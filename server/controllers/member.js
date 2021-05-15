@@ -61,7 +61,6 @@ exports.memberProfile = async (req, res) => {
         { $set: memberFields },
         { new: true },
       );
-      profile.social_handles.unshift(newMember);
       return res.json(profile);
     }
 
