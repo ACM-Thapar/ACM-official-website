@@ -4,6 +4,8 @@ const auth = require('../middleware/auth');
 
 const { memberProfile } = require('../controllers/member');
 
-router.post('/profile', auth, memberProfile);
+const { validMemberProfile } = require('../utils/validation-checks');
+
+router.post('/profile', [auth, validMemberProfile], memberProfile);
 
 module.exports = router;

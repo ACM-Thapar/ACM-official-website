@@ -32,23 +32,10 @@ exports.login = async (req, res) => {
       return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
     }
 
-    // jwt.sign({ user: user._id }, process.env.JWT_SECRET, {
-    //   expiresIn: process.env.JWT_EXPIRESIN,
-    // });
-    // res.json('User logged in successfully');
-    jwt.sign(
-      { user: user._id },
-      process.env.JWT_SECRET,
-      {
-        /////////////
-        expiresIn: process.env.JWT_EXPIRESIN,
-      },
-      (err, token) => {
-        if (err) throw err;
-        res.json({ token });
-        res.json('User logged in successfully');
-      },
-    ); ///////////////
+    jwt.sign({ user: user._id }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_EXPIRESIN,
+    });
+    res.json('User logged in successfully');
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
