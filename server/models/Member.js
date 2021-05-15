@@ -6,13 +6,12 @@ const MemberSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user',
   },
-
   name: {
     type: String,
     required: [true, 'Name field is empty'],
   },
 
-  grad_year: {
+  gradYear: {
     type: Number,
     trim: true,
     required: [true, 'Graduation Year is Required'],
@@ -23,7 +22,7 @@ const MemberSchema = new mongoose.Schema({
     required: [true, 'Branch is Required'],
   },
 
-  social_handles: [
+  socialHandles: [
     {
       github: {
         type: String,
@@ -49,6 +48,26 @@ const MemberSchema = new mongoose.Schema({
         type: String,
         trim: true,
       },
+
+      CodeForces: {
+        type: String,
+        trim: true,
+      },
+
+      CodeChef: {
+        type: String,
+        trim: true,
+      },
+
+      HackerRank: {
+        type: String,
+        trim: true,
+      },
+
+      gfg: {
+        type: String,
+        trim: true,
+      },
     },
   ],
 
@@ -60,12 +79,12 @@ const MemberSchema = new mongoose.Schema({
     type: String,
   },
 
-  roll_no: {
+  rollNo: {
     type: Number,
     required: true,
   },
 
-  personal_email: {
+  personalEmail: {
     type: String,
     required: true,
     unique: true,
@@ -76,7 +95,7 @@ const MemberSchema = new mongoose.Schema({
     },
   },
 
-  college_email: {
+  collegeEmail: {
     type: String,
     required: true,
     unique: true,

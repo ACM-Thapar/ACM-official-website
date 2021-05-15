@@ -17,19 +17,23 @@ exports.memberProfile = async (req, res) => {
   // destructure the request
   const {
     name,
-    grad_year,
+    gradYear,
     branch,
     tagline,
     department,
-    roll_no,
-    personal_email,
-    college_email,
+    rollNo,
+    personalEmail,
+    collegeEmail,
 
     github,
     LinkedIn,
     Instagram,
     Facebook,
     Twitter,
+    CodeForces,
+    CodeChef,
+    HackerRank,
+    gfg,
   } = req.body;
 
   const newMember = {
@@ -38,18 +42,22 @@ exports.memberProfile = async (req, res) => {
     Instagram,
     Facebook,
     Twitter,
+    CodeForces,
+    CodeChef,
+    HackerRank,
+    gfg,
   };
 
   const memberFields = {};
   memberFields.user = req.user.id;
   if (name) memberFields.name = name;
-  if (grad_year) memberFields.grad_year = grad_year;
+  if (gradYear) memberFields.gradYear = gradYear;
   if (branch) memberFields.branch = branch;
   if (tagline) memberFields.tagline = tagline;
   if (department) memberFields.department = department;
-  if (roll_no) memberFields.roll_no = roll_no;
-  if (personal_email) memberFields.personal_email = personal_email;
-  if (college_email) memberFields.college_email = college_email;
+  if (rollNo) memberFields.rollNo = rollNo;
+  if (personalEmail) memberFields.personalEmail = personalEmail;
+  if (collegeEmail) memberFields.collegeEmail = collegeEmail;
 
   try {
     let profile = await Member.findOne({ user: req.user.id });
@@ -66,7 +74,7 @@ exports.memberProfile = async (req, res) => {
 
     //Create
     profile = new Member(memberFields);
-    profile.social_handles.unshift(newMember);
+    profile.socialHandles.unshift(newMember);
 
     await profile.save();
     res.json(profile);
