@@ -3,7 +3,16 @@ const User = require('../models/User');
 require('dotenv').config();
 
 const auth = async (req, res, next) => {
-  const token = req.header('x-auth-token').replace('Bearer ', '');
+  let token;
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith('Bearer')
+  ) {
+    // Set token from Bearer token in header
+    token = req.headers.authorization.split(' ')[1];
+  } else {
+    res.status(401).json({ msg: 'Token is not valid' });
+  }
 
   if (!token) {
     return res.status(401).json({ msg: 'No token, authorisation denied ' });
@@ -11,7 +20,6 @@ const auth = async (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
     const user = await User.findOne({
       _id: decoded.user,
     });
