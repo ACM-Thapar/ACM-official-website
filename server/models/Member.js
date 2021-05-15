@@ -2,6 +2,11 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 
 const MemberSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user',
+  },
+
   name: {
     type: String,
     required: [true, 'Name field is empty'],
@@ -36,6 +41,11 @@ const MemberSchema = new mongoose.Schema({
       },
 
       Facebook: {
+        type: String,
+        trim: true,
+      },
+
+      Twitter: {
         type: String,
         trim: true,
       },

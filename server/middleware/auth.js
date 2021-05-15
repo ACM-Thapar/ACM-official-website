@@ -1,8 +1,9 @@
 const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 require('dotenv').config();
 
 const auth = async (req, res, next) => {
-  const token = req.header('Authorization').replace('Bearer ', '');
+  const token = req.header('x-auth-token').replace('Bearer ', '');
 
   if (!token) {
     return res.status(401).json({ msg: 'No token, authorisation denied ' });
@@ -10,9 +11,9 @@ const auth = async (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
     const user = await User.findOne({
-      _id: decoded._id,
-      'tokens.token': token,
+      _id: decoded.user,
     });
 
     if (!user) {
