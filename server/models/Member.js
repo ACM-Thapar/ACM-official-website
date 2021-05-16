@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 
 const MemberSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'user',
-  },
   name: {
     type: String,
     required: [true, 'Name field is empty'],
@@ -22,54 +18,52 @@ const MemberSchema = new mongoose.Schema({
     required: [true, 'Branch is Required'],
   },
 
-  socialHandles: [
-    {
-      github: {
-        type: String,
-        trim: true,
-      },
-
-      LinkedIn: {
-        type: String,
-        trim: true,
-      },
-
-      Instagram: {
-        type: String,
-        trim: true,
-      },
-
-      Facebook: {
-        type: String,
-        trim: true,
-      },
-
-      Twitter: {
-        type: String,
-        trim: true,
-      },
-
-      CodeForces: {
-        type: String,
-        trim: true,
-      },
-
-      CodeChef: {
-        type: String,
-        trim: true,
-      },
-
-      HackerRank: {
-        type: String,
-        trim: true,
-      },
-
-      gfg: {
-        type: String,
-        trim: true,
-      },
+  socialHandles: {
+    github: {
+      type: String,
+      trim: true,
     },
-  ],
+
+    linkedIn: {
+      type: String,
+      trim: true,
+    },
+
+    instagram: {
+      type: String,
+      trim: true,
+    },
+
+    facebook: {
+      type: String,
+      trim: true,
+    },
+
+    twitter: {
+      type: String,
+      trim: true,
+    },
+
+    codeForces: {
+      type: String,
+      trim: true,
+    },
+
+    codeChef: {
+      type: String,
+      trim: true,
+    },
+
+    hackerRank: {
+      type: String,
+      trim: true,
+    },
+
+    gfg: {
+      type: String,
+      trim: true,
+    },
+  },
 
   tagline: {
     type: String,
