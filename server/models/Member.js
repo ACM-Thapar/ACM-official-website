@@ -82,6 +82,7 @@ const MemberSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    sparse: true,
     validate(value) {
       if (!validator.isEmail(value)) {
         throw new Error('Email is invalid');
@@ -93,6 +94,7 @@ const MemberSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    sparse: true,
     validate(value) {
       if (!validator.isEmail(value)) {
         throw new Error('Email is invalid');
