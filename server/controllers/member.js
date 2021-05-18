@@ -81,37 +81,9 @@ exports.updateMemberProfile = async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const {
-    name,
-    gradYear,
-    branch,
-    tagline,
-    department,
-    rollNo,
-    personalEmail,
-    collegeEmail,
+  const memberFields = { ...req.body };
 
-    github,
-    linkedIn,
-    instagram,
-    facebook,
-    twitter,
-    codeForces,
-    codeChef,
-    hackerRank,
-    gfg,
-  } = req.body;
-
-  const memberFields = {};
   memberFields._id = req.query._id;
-  if (name) memberFields.name = name;
-  if (gradYear) memberFields.gradYear = gradYear;
-  if (branch) memberFields.branch = branch;
-  if (tagline) memberFields.tagline = tagline;
-  if (department) memberFields.department = department;
-  if (rollNo) memberFields.rollNo = rollNo;
-  if (personalEmail) memberFields.personalEmail = personalEmail;
-  if (collegeEmail) memberFields.collegeEmail = collegeEmail;
 
   try {
     let profile = await Member.findById(req.query._id);
@@ -122,16 +94,6 @@ exports.updateMemberProfile = async (req, res) => {
         { $set: memberFields },
         { new: true },
       );
-
-      if (github) profile.socialHandles.github = github;
-      if (linkedIn) profile.socialHandles.linkedIn = linkedIn;
-      if (instagram) profile.socialHandles.instagram = instagram;
-      if (facebook) profile.socialHandles.facebook = facebook;
-      if (twitter) profile.socialHandles.twitter = twitter;
-      if (codeForces) profile.socialHandles.codeForces = codeForces;
-      if (codeChef) profile.socialHandles.codeChef = codeChef;
-      if (hackerRank) profile.socialHandles.hackerRank = hackerRank;
-      if (gfg) profile.socialHandles.gfg = gfg;
 
       return res.json(profile);
     } else {
