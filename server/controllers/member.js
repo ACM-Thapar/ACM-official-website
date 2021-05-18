@@ -81,7 +81,30 @@ exports.updateMemberProfile = async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const memberFields = { ...req.body };
+  const {
+    github,
+    linkedIn,
+    instagram,
+    facebook,
+    twitter,
+    codeForces,
+    codeChef,
+    hackerRank,
+    gfg,
+    ...memberFields
+  } = req.body;
+
+  memberFields.socialHandles = {};
+
+  if (github) memberFields.socialHandles.github = github;
+  if (linkedIn) memberFields.socialHandles.linkedIn = linkedIn;
+  if (instagram) memberFields.socialHandles.instagram = instagram;
+  if (facebook) memberFields.socialHandles.facebook = facebook;
+  if (twitter) memberFields.socialHandles.twitter = twitter;
+  if (codeForces) memberFields.socialHandles.codeForces = codeForces;
+  if (codeChef) memberFields.socialHandles.codeChef = codeChef;
+  if (hackerRank) memberFields.socialHandles.hackerRank = hackerRank;
+  if (gfg) memberFields.socialHandles.gfg = gfg;
 
   memberFields._id = req.query._id;
 
