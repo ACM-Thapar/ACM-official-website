@@ -69,60 +69,22 @@ exports.memberProfile = async (req, res) => {
   }
 };
 
-//@route    POST member/profile?_id=
-//@desc     Update a user's profile
-//@access   Private
+//@route    GET member/profile/:_id
+//@desc     Get profile (using user id)
+//@access   Public
 
-exports.updateMemberProfile = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    // In case errors exist
-    console.errors(errors);
-    return res.status(400).json({ errors: errors.array() });
-  }
-
-  const {
-    github,
-    linkedIn,
-    instagram,
-    facebook,
-    twitter,
-    codeForces,
-    codeChef,
-    hackerRank,
-    gfg,
-    ...memberFields
-  } = req.body;
-
-  memberFields.socialHandles = {};
-
-  if (github) memberFields.socialHandles.github = github;
-  if (linkedIn) memberFields.socialHandles.linkedIn = linkedIn;
-  if (instagram) memberFields.socialHandles.instagram = instagram;
-  if (facebook) memberFields.socialHandles.facebook = facebook;
-  if (twitter) memberFields.socialHandles.twitter = twitter;
-  if (codeForces) memberFields.socialHandles.codeForces = codeForces;
-  if (codeChef) memberFields.socialHandles.codeChef = codeChef;
-  if (hackerRank) memberFields.socialHandles.hackerRank = hackerRank;
-  if (gfg) memberFields.socialHandles.gfg = gfg;
-
-  memberFields._id = req.query._id;
-
+exports.getMemberById = async (req, res) => {
   try {
-    let profile = await Member.findById(req.query._id);
+    const profile = await Member.findOne({ _id: req.params._id });
 
-    if (profile) {
-      profile = await Member.findOneAndUpdate(
-        { _id: req.query._id },
-        { $set: memberFields },
-        { new: true },
-      );
+    if (!profile) return res.status(400).json({ msg: 'Profile Not found' });
 
-      return res.json(profile);
-    } else {
-      console.log('Profile not found');
-    }
+    res.json(profile);
   } catch (err) {
+    if (err.kind == 'ObjectId') {
+      return res.status(400).json({ msg: 'Profile Not found' });
+    }
+
     console.error(err.message);
     res.status(500).send('Server Error');
   }
