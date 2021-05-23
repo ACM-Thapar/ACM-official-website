@@ -1,5 +1,5 @@
 import React from 'react';
-import landscape from '../../images/landscape.jpg';
+import landscape from '.././images/landscape.jpg';
 
 const Team = () => {
   return (

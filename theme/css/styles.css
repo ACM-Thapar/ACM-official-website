@@ -1024,7 +1024,7 @@ a.learnmorenew:hover {
   position: fixed;
   left: 45vw;
   top: 35vh;
-  background: url('../images/acm.png');
+  background: url('./images/acm.png');
   background-size: cover;
   width: 200px;
   height: 200px;
