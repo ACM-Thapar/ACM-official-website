@@ -1,7 +1,6 @@
 var viewport_width = window.innerWidth;
 $(window).resize(function () {
   viewport_width = window.innerWidth;
-  window.location.reload();
 });
 if (viewport_width > 780) {
   var indexToGet = $('.slider .slick-slide').index($('#center_on_me'));
