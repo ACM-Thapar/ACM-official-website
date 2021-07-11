@@ -13,7 +13,7 @@ const BlogSchema = new mongoose.Schema({
 
   WrittenBy: [
     {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'member',
     },
   ],
@@ -21,4 +21,4 @@ const BlogSchema = new mongoose.Schema({
 
 BlogSchema.set('timestamps', true);
 
-module.exports = Blog = mongoose.model('blog', BlogSchema);
+module.exports = Blog = mongoose.model('Blog', BlogSchema);

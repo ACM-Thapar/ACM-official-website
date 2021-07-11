@@ -105,4 +105,4 @@ const MemberSchema = new mongoose.Schema({
 
 MemberSchema.set('timestamps', true);
 
-module.exports = Member = mongoose.model('member', MemberSchema);
+module.exports = Member = mongoose.model('Member', MemberSchema);

@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const auth = require('./routes/auth');
 const member = require('./routes/member');
+const team = require('./routes/team');
 
 const app = express();
 
@@ -22,3 +23,4 @@ app.listen(PORT, () => {
 
 app.use('/auth', auth);
 app.use('/member', member);
+app.use('/team', team);
