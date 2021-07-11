@@ -24,4 +24,4 @@ const TeamSchema = new mongoose.Schema({
   ],
 });
 
-module.exports = mongoose.model('team', TeamSchema);
+module.exports = Event = mongoose.model('team', TeamSchema);
