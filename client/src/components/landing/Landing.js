@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Ellipse from '../../images/Ellipse.svg';
-import Group1 from '../../images/Group1.svg';
+import Ellipse from '.././images/Ellipse.svg';
+import Group1 from '.././images/Group1.svg';
 import Navbar from '../navbar/Navbar';
 import Footer from '../footer/Footer';
 class Landing extends Component {

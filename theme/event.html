@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects Page</title>
+    <title>Events Page</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -10,8 +10,8 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../js/events.js" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./js/events.js" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
@@ -43,8 +43,8 @@
       <nav
         class="navbar navbar-expand-lg shift fixed-top navbar-light bg-light"
       >
-        <a class="navbar-brand acmlogonav" href="#">
-          <img src="../images/logo.svg" alt="ACM Logo" />
+        <a class="navbar-brand acmlogonav" href="./index.html">
+          <img src="./images/logo.svg" alt="ACM Logo" />
         </a>
         <button
           class="navbar-toggler"
@@ -64,16 +64,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Team</a>
+              <a class="nav-link" href="./team.html">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="./project.html">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Events</a>
+              <a class="nav-link" href="./event.html">Events</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
+              <a class="nav-link" href="./blogs.html">Blogs</a>
             </li>
             <li class="nav-item main">
               <a class="nav-link" href="#">Achievements</a>
@@ -84,12 +84,12 @@
     </header>
 
     <!-- Solid Animation -->
-    <section class="projectspagetop">
+    <section class="eventpagetop">
       <div class="container">
         <div class="row justify-content-end">
           <div class="col-4">
-            <h1 class="pmainsectiontitle">Projects</h1>
-            <p class="mainsectiontextpro">
+            <h1 class="mainsectiontitle">Upcoming Events</h1>
+            <p class="mainsectiontexteve">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ... tempor
               incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit
               amet, consectetur adipiscing elit ... tempor incididunt ut labore
@@ -98,33 +98,72 @@
               aliqua.
             </p>
           </div>
-          <div class="projectspagegif col-6">
-            <img src="../images/web_developing.gif" alt="" />
+
+          <div class="hero-figure anime-element">
+            <svg
+              class="placeholder"
+              width="528"
+              height="396"
+              viewBox="0 0 528 396"
+            >
+              <rect width="528" height="396" style="fill: transparent" />
+            </svg>
+            <div
+              class="hero-figure-box hero-figure-box-01"
+              data-rotation="45deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-02"
+              data-rotation="-45deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-03"
+              data-rotation="0deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-04"
+              data-rotation="-135deg"
+            ></div>
+            <div class="hero-figure-box hero-figure-box-05"></div>
+            <div class="hero-figure-box hero-figure-box-06"></div>
+            <div class="hero-figure-box hero-figure-box-07"></div>
+            <div
+              class="hero-figure-box hero-figure-box-08"
+              data-rotation="-22deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-09"
+              data-rotation="-52deg"
+            ></div>
+            <div
+              class="hero-figure-box hero-figure-box-10"
+              data-rotation="-50deg"
+            ></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="propagecards">
+    <section class="eventpagecards">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-4">
-            <div class="card procard lpcard lpcard1" style="width: 18rem">
+            <div class="card eventcard lecard lecard1" style="width: 18rem">
               <img
-                src="../images/project.png"
-                class="card-img-top pcimg"
+                src="./images/image 2.svg"
+                class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <p class="card-title promonth">DEC</p>
-                <h4 class="card-title prodate">25</h4>
-                <h4 class="card-title protitle">Website Design Project</h4>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
                 <a
-                  href="#exampleModal"
+                  href="#eventModal"
                   data-toggle="modal"
                   class="stretched-link cardmodallinkevent"
                 ></a>
-                <p class="card-text prodescription small">
+                <p class="card-text eventdescription small">
                   Time - 8:00 AM - 10:00 PM <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
                 </p>
@@ -132,22 +171,22 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card procard cpcard cpcard1" style="width: 18rem">
+            <div class="card eventcard cecard cecard1" style="width: 18rem">
               <img
-                src="../images/project.png"
-                class="card-img-top pcimg"
+                src="./images/image 2.svg"
+                class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <p class="card-title promonth">DEC</p>
-                <h4 class="card-title prodate">25</h4>
-                <h4 class="card-title protitle">Website Design Project</h4>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
                 <a
-                  href="#exampleModal"
+                  href="#eventModal"
                   data-toggle="modal"
                   class="stretched-link cardmodallinkevent"
                 ></a>
-                <p class="card-text prodescription small">
+                <p class="card-text eventdescription small">
                   Time - 8:00 AM - 10:00 PM <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
                 </p>
@@ -155,22 +194,22 @@
             </div>
           </div>
           <div class="col-4">
-            <div class="card procard rpcard rpcard1" style="width: 18rem">
+            <div class="card eventcard recard recard1" style="width: 18rem">
               <img
-                src="../images/project.png"
-                class="card-img-top pcimg"
+                src="./images/image 2.svg"
+                class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <p class="card-title promonth">DEC</p>
-                <h4 class="card-title prodate">25</h4>
-                <h4 class="card-title protitle">Website Design Project</h4>
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
                 <a
-                  href="#exampleModal"
+                  href="#eventModal"
                   data-toggle="modal"
                   class="stretched-link cardmodallinkevent"
                 ></a>
-                <p class="card-text prodescription small">
+                <p class="card-text eventdescription small">
                   Time - 8:00 AM - 10:00 PM <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
                 </p>
@@ -181,68 +220,68 @@
 
         <div class="row justify-content-center">
           <div class="col-4">
-            <div class="card procard lpcard lpcard2" style="width: 18rem">
+            <div class="card eventcard lecard lecard2" style="width: 18rem">
               <img
-                src="../images/project.png"
-                class="card-img-top pcimg"
+                src="./images/image 2.svg"
+                class="card-img-top ecimg"
                 alt="..."
               />
               <div class="card-body">
-                <p class="card-title promonth">DEC</p>
-                <h4 class="card-title prodate">25</h4>
-                <h4 class="card-title protitle">Website Design Project</h4>
-                <a
-                  href="#exampleModal"
-                  data-toggle="modal"
-                  class="stretched-link cardmodallinkevent"
-                ></a>
-                <p class="card-text prodescription small">
-                  Time - 8:00 AM - 10:00 PM <br />
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card procard cpcard cpcard2" style="width: 18rem">
-              <img
-                src="../images/project.png"
-                class="card-img-top pcimg"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-title promonth">DEC</p>
-                <h4 class="card-title prodate">25</h4>
-                <h4 class="card-title protitle">Website Design Project</h4>
-                <a
-                  href="#exampleModal"
-                  data-toggle="modal"
-                  class="stretched-link cardmodallinkevent"
-                ></a>
-                <p class="card-text prodescription small">
-                  Time - 8:00 AM - 10:00 PM <br />
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card procard rpcard rpcard2" style="width: 18rem">
-              <img
-                src="../images/project.png"
-                class="card-img-top pcimg"
-                alt="..."
-              />
-              <div class="card-body">
-                <p class="card-title promonth">DEC</p>
+                <p class="card-title eventmonth">DEC</p>
                 <h4 class="card-title eventdate">25</h4>
-                <h4 class="card-title protitle">Website Design Project</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
                 <a
-                  href="#exampleModal"
+                  href="#eventModal"
                   data-toggle="modal"
                   class="stretched-link cardmodallinkevent"
                 ></a>
-                <p class="card-text prodescription small">
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card eventcard cecard cecard2" style="width: 18rem">
+              <img
+                src="./images/image 2.svg"
+                class="card-img-top ecimg"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
+                  Time - 8:00 AM - 10:00 PM <br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card eventcard recard recard2" style="width: 18rem">
+              <img
+                src="./images/image 2.svg"
+                class="card-img-top ecimg"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-title eventmonth">DEC</p>
+                <h4 class="card-title eventdate">25</h4>
+                <h4 class="card-title eventtitle">Flamingo - UI/UX Design</h4>
+                <a
+                  href="#eventModal"
+                  data-toggle="modal"
+                  class="stretched-link cardmodallinkevent"
+                ></a>
+                <p class="card-text eventdescription small">
                   Time - 8:00 AM - 10:00 PM <br />
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
                 </p>
@@ -254,82 +293,51 @@
     </section>
 
     <!-- Modal -->
-    <div
-      class="modal fade pmodal"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered justify-content-center">
-        <div class="modal-content mcpro">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <img src="../images/image 4.png" class="modal-img mipro" alt="" />
 
-          <div class="main-content">
-            <h3 class="modal-heading mhpro">Web Design Project</h3>
-            <div class="datepro">
-              <p class="monthpro">DEC</p>
-              <p class="dtpro">25</p>
+    <section class="evemodal">
+      <div
+        class="modal fade"
+        id="eventModal"
+        tabindex="-1"
+        aria-labelledby="eventModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-eve" style="width: 38rem">
+            <img src="./images/event.jpg" class="modal-img" alt="" />
+            <div class="main-content">
+              <h3 class="etitle">Flamingo- UI/UX Design</h3>
+              <p class="emonth">DEC</p>
+              <p class="edate">25</p>
+              <p class="etime">Time - 8:00 AM - 10:00 PM</p>
             </div>
-            <div class="paraspro">
+
+            <div class="eparas">
               <p>
                 Folly words widow one downs few age every seven. If miss part by
-                fact he park just shew.
-                <br />
+                fact <br />
+                he park just shew. <br />
                 <br />
                 Discovered had get considered projection who favourable.
-                Necessary up knowledge it tolerably. Unwilling departure
-                education is be dashwoods or an. Use off agreeable law unwilling
-                sir deficient curiosity instantly. Easy mind life fact with see
-                has bore ten.
+                Necessary <br />
+                up knowledge it tolerably. Unwilling departure education is be
                 <br />
+                dashwoods or an. Use off agreeable law unwilling sir deficient
+                curiosity <br />
+                instantly. Easy mind life fact with see has bore ten. <br />
                 <br />
                 Parish any chatty can elinor direct for former. Up as meant
-                widow equal an share least.
+                widow <br />
+                equal an share least.<br />
+                <br />
+                <br />
+                <br />
               </p>
-            </div>
-            <div class="teampro">
-              <h2>TEAM</h2>
-              <div class="rowmodal">
-                <div class="col-2 pc2pro">
-                  <img src="../images/face1.png" alt="" />
-                </div>
-                <div class="pc2textpro">
-                  <p class="randompro">Random Name</p>
-                  <p class="positionpro">POSITION</p>
-                </div>
-              </div>
-              <div class="rowmodal">
-                <div class="col-2 pc2pro">
-                  <img src="../images/face2.png" alt="" />
-                </div>
-                <div class="pc2textpro">
-                  <p class="randompro">Random Name</p>
-                  <p class="positionpro">POSITION</p>
-                </div>
-              </div>
-              <div class="rowmodal">
-                <div class="col-2 pc2pro">
-                  <img src="../images/face3.png" alt="" />
-                </div>
-                <div class="pc2textpro">
-                  <p class="randompro">Random Name</p>
-                  <p class="positionpro">POSITION</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <footer>
       <div class="container-fluid">
@@ -403,7 +411,7 @@
     </footer>
 
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="../js/evan.js"></script>
+    <script src="./js/evan.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
