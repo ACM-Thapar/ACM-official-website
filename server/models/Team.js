@@ -2,20 +2,26 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 
 const TeamSchema = new mongoose.Schema({
-  President: {
-    type: [String],
-    required: [true, 'President field cannot be empty'],
-  },
+  President: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'member',
+    },
+  ],
 
-  SocietyHead: {
-    type: [String],
-    required: [true, 'SocietyHead field cannot be empty'],
-  },
+  SocietyHead: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'member',
+    },
+  ],
 
-  DepartmentHead: {
-    type: [String],
-    required: [true, 'DepartmentHead field cannot be empty'],
-  },
+  DepartmentHead: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'member',
+    },
+  ],
 });
 
 module.exports = mongoose.model('team', TeamSchema);
