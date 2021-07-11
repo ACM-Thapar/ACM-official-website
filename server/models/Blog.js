@@ -15,4 +15,4 @@ const BlogSchema = new mongoose.Schema({
 
 BlogSchema.set('timestamps', true);
 
-module.exports = User = mongoose.model('event', BlogSchema);
+module.exports = Blog = mongoose.model('event', BlogSchema);
