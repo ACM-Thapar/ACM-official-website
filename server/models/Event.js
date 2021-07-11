@@ -1,10 +1,14 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
 
 const EventSchema = new mongoose.Schema({
-  DateOfEvent: {
+  StartDate: {
     type: Date,
-    required: [true, 'Date of event is required'],
+    required: [true, 'Start Date of event is required'],
+  },
+
+  EndDate: {
+    type: Date,
+    required: [true, 'End Date of event is required'],
   },
 
   Time: {

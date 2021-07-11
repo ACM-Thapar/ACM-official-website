@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
 
 const BlogSchema = new mongoose.Schema({
   Title: {
@@ -11,6 +10,13 @@ const BlogSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Description is required'],
   },
+
+  WrittenBy: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Member',
+    },
+  ],
 });
 
 BlogSchema.set('timestamps', true);
