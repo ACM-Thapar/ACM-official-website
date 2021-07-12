@@ -4,21 +4,21 @@ const TeamSchema = new mongoose.Schema({
   President: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'member',
+      ref: 'Member',
     },
   ],
 
   SocietyHead: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'member',
+      ref: 'Member',
     },
   ],
 
   DepartmentHead: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'member',
+      ref: 'Member',
     },
   ],
 });

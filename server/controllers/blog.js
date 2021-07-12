@@ -14,3 +14,25 @@ exports.getBlog = async (req, res) => {
     res.status(500).send('Server Error');
   }
 };
+
+//@route    POST /blog/add
+//@desc     Add a blog
+//@access   Private
+
+exports.postBlog = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select('-password');
+
+    const newBlog = new Blog({
+      Title: req.body.Title,
+      Description: req.body.Description,
+      WrittenBy: req.user.id,
+    });
+
+    const blog = await newBlog.save();
+    res.json(blog);
+  } catch (err) {
+    console.error(err.message);
+    return res.status(500).send('Server Error');
+  }
+};
