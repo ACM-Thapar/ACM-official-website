@@ -7,8 +7,10 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg shift fixed-top navbar-light bg-light">
-        <a className="navbar-brand acmlogonav" href="./index.html">
-          <img src={logo} alt="ACM Logo" />
+        <a className="navbar-brand acmlogonav">
+          <Link to="/landing">
+            <img src={logo} alt="ACM Logo" />
+          </Link>
         </a>
         <button
           className="navbar-toggler"

@@ -9,7 +9,6 @@ import dummyImage from '../../images/face4.png';
 const Team = () => {
   return (
     <div>
-      <Navbar />
       <div className="team-page">
         <div className="team-page-headings-div">
           <h1 className="team-page-head">Meet the team</h1>
@@ -178,7 +177,6 @@ const Team = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

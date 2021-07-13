@@ -1,12 +1,16 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Navbar from './components/navbar/Navbar';
 import Team from './components/team/Team';
 import Landing from './components/landing/Landing';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Navbar />
         <section>
           <Switch>
             <Route exact path="/team" component={Team} />
@@ -14,6 +18,7 @@ function App() {
           </Switch>
         </section>
       </div>
+      <Footer />
     </Router>
   );
 }
