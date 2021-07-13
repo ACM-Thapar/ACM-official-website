@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import logo from '../../images/logo.svg';
+
 const Navbar = () => {
   return (
     <div>
@@ -22,28 +25,28 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="./team.html">
-                Team
+              <a className="nav-link">
+                <Link to="/team">Team</Link>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="./project.html">
-                Projects
+              <a className="nav-link">
+                <Link to="/projects">Projects</Link>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="./event.html">
-                Events
+              <a className="nav-link">
+                <Link to="/events">Events</Link>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="./blogs.html">
-                Blogs
+              <a className="nav-link">
+                <Link to="/blogs">Blogs</Link>
               </a>
             </li>
             <li className="nav-item main">
-              <a className="nav-link" href="#">
-                Achievements
+              <a className="nav-link">
+                <Link to="/achievements">Achievements</Link>
               </a>
             </li>
           </ul>
