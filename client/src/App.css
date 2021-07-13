@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap'); */
+
 /* General stylerules for the entire page. */
 html {
   scroll-behavior: smooth;
@@ -1099,7 +1102,7 @@ a.learnmorenew:hover {
 /* Team Page */
 
 .team-page {
-  font-family: 'Poppins', sans-serif;
+  font-family: sans-serif;
 }
 
 .team-page-headings-div {
