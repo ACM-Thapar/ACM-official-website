@@ -18,3 +18,20 @@ exports.getTeam = async (req, res) => {
     res.status(500).send('Server Error');
   }
 };
+
+//@route    POST /team/add
+//@desc     Add team
+//@access   Private
+
+exports.addTeam = async (req, res) => {
+  try {
+    const newTeam = new Team({ ...req.body });
+    const team = await newTeam.save();
+    res.json(team);
+
+    res.json();
+  } catch (err) {
+    console.error(err.message);
+    return res.status(500).send('Server Error');
+  }
+};
