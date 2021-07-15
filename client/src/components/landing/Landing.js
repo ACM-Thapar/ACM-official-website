@@ -12,7 +12,12 @@ class Landing extends Component {
               <div
                 className="col-md-6 whitecircle"
                 style={{ paddingLeft: '0%' }}>
-                <img src={Ellipse} className="whitebg" align="left" alt />
+                <img
+                  src={Ellipse}
+                  className="whitebg"
+                  align="left"
+                  alt="White Circle"
+                />
                 <h1 className="ACMT">ACM THAPAR</h1>
                 <p className="maintext">
                   ACM offers the resources, access and tools to invent the
@@ -31,7 +36,12 @@ class Landing extends Component {
               <div
                 className="col-md-6 bluecircle"
                 style={{ paddingRight: '0%' }}>
-                <img className="bluebg" src={Group1} align="right" alt />
+                <img
+                  className="bluebg"
+                  src={Group1}
+                  align="right"
+                  alt="Blue circle"
+                />
               </div>
             </div>
           </div>
@@ -416,8 +426,7 @@ class Landing extends Component {
                     />
                   </svg>
                   <a href="#" className="learnmorenew">
-                    {' '}
-                    Learn More{' '}
+                    {' Learn More'}
                   </a>
                 </button>
                 <br />
