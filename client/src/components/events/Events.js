@@ -3,6 +3,7 @@ import React from 'react';
 export default function Events() {
   return (
     <div>
+      {/* Solid Animation */}
       <section className="eventpagetop">
         <div className="container">
           <div className="row justify-content-end">
@@ -72,7 +73,7 @@ export default function Events() {
                 className="card eventcard lecard lecard1"
                 style={{ width: '18rem' }}>
                 <img
-                  src="./images/image 2.svg"
+                  src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                   className="card-img-top ecimg"
                   alt="..."
                 />
@@ -99,7 +100,7 @@ export default function Events() {
                 className="card eventcard cecard cecard1"
                 style={{ width: '18rem' }}>
                 <img
-                  src="./images/image 2.svg"
+                  src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                   className="card-img-top ecimg"
                   alt="..."
                 />
@@ -126,7 +127,7 @@ export default function Events() {
                 className="card eventcard recard recard1"
                 style={{ width: '18rem' }}>
                 <img
-                  src="./images/image 2.svg"
+                  src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                   className="card-img-top ecimg"
                   alt="..."
                 />
@@ -155,7 +156,7 @@ export default function Events() {
                 className="card eventcard lecard lecard2"
                 style={{ width: '18rem' }}>
                 <img
-                  src="./images/image 2.svg"
+                  src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                   className="card-img-top ecimg"
                   alt="..."
                 />
@@ -182,7 +183,7 @@ export default function Events() {
                 className="card eventcard cecard cecard2"
                 style={{ width: '18rem' }}>
                 <img
-                  src="./images/image 2.svg"
+                  src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                   className="card-img-top ecimg"
                   alt="..."
                 />
@@ -209,7 +210,7 @@ export default function Events() {
                 className="card eventcard recard recard2"
                 style={{ width: '18rem' }}>
                 <img
-                  src="./images/image 2.svg"
+                  src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                   className="card-img-top ecimg"
                   alt="..."
                 />
