@@ -7,27 +7,10 @@ const Team = require('../models/Team');
 
 exports.getTeam = async (req, res) => {
   try {
-    const president = await Team.find().populate('President', [
-      'name',
-      'tagline',
-      'socialHandles',
-    ]);
-    const societyHead = await Team.find().populate('SocietyHead', [
-      'name',
-      'tagline',
-      'socialHandles',
-    ]);
-    const departmentHead = await Team.find().populate('DepartmentHead', [
-      'name',
-      'tagline',
-      'socialHandles',
-    ]);
-
-    const team = {
-      president,
-      societyHead,
-      departmentHead,
-    };
+    const team = await Team.find()
+      .populate('President', ['name', 'tagline', 'socialHandles'])
+      .populate('SocietyHead', ['name', 'tagline', 'socialHandles'])
+      .populate('DepartmentHead', ['name', 'tagline', 'socialHandles']);
 
     return res.json(team);
   } catch (err) {
