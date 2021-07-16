@@ -23,10 +23,12 @@ exports.postBlog = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
 
+    let writer = await User.findOne({ email: req.body.WrittenBy });
+
     const newBlog = new Blog({
       Title: req.body.Title,
       Description: req.body.Description,
-      WrittenBy: req.user.id,
+      WrittenBy: writer._id,
     });
 
     const blog = await newBlog.save();
