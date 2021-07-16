@@ -7,7 +7,7 @@ const Blog = require('../models/Blog');
 
 exports.getBlog = async (req, res) => {
   try {
-    const blog = await Blog.find().populate('Member');
+    const blog = await Blog.find().populate('WrittenBy');
     return res.json(blog);
   } catch (err) {
     console.error(err.message);

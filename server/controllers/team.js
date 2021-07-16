@@ -7,11 +7,28 @@ const Team = require('../models/Team');
 
 exports.getTeam = async (req, res) => {
   try {
-    const team = await Team.find().populate('Member', [
+    const president = await Team.find().populate('President', [
       'name',
       'tagline',
       'socialHandles',
     ]);
+    const societyHead = await Team.find().populate('SocietyHead', [
+      'name',
+      'tagline',
+      'socialHandles',
+    ]);
+    const departmentHead = await Team.find().populate('DepartmentHead', [
+      'name',
+      'tagline',
+      'socialHandles',
+    ]);
+
+    const team = {
+      president,
+      societyHead,
+      departmentHead,
+    };
+
     return res.json(team);
   } catch (err) {
     console.error(err.message);
