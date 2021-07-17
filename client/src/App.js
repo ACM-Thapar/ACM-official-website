@@ -19,8 +19,8 @@ function App() {
             <Route exact path="/events" component={Events}></Route>
           </Switch>
         </section>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
