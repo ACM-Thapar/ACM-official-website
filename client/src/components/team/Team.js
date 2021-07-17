@@ -1,9 +1,5 @@
 import React from 'react';
 
-import Navbar from '../navbar/Navbar';
-import Footer from '../footer/Footer';
-
-import landscape from '../../images/landscape.jpg';
 import dummyImage from '../../images/face4.png';
 
 const Team = () => {

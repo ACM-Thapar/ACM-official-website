@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CruipThemeWrapper } from '../external-css/CruipThemeWrapper';
 
-export default function Events() {
+const Events = () => {
   return (
     <div>
       <CruipThemeWrapper>
@@ -292,4 +292,6 @@ export default function Events() {
       </CruipThemeWrapper>
     </div>
   );
-}
+};
+
+export default Events;
