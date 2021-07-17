@@ -7,7 +7,7 @@ const Blog = require('../models/Blog');
 
 exports.getBlog = async (req, res) => {
   try {
-    const blog = await Blog.find().populate('WrittenBy');
+    const blog = await Blog.find().populate('WrittenBy', ['name', 'tagline']);
     return res.json(blog);
   } catch (err) {
     console.error(err.message);
@@ -21,7 +21,7 @@ exports.getBlog = async (req, res) => {
 
 exports.postBlog = async (req, res) => {
   try {
-    let writer = await User.findOne({ email: req.body.WrittenBy });
+    let writer = await Member.findOne({ collegeEmail: req.body.WrittenBy });
 
     const newBlog = new Blog({
       Title: req.body.Title,
