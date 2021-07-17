@@ -67,7 +67,7 @@ const Blogs = () => {
         </div>
       </section>
       {/* Cards of blogs */}
-      <section className="cardarea">
+      <section className="cardarea blogs-page-card-area">
         <div className="container">
           <div className="row justify-content-center">
             <h3 className="mightlike">You might also like</h3>

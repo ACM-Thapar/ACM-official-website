@@ -2403,7 +2403,11 @@ img.rounded-corners {
 section.bvswitch {
   margin-top: 7rem;
 }
-
+section.blogs-page-card-area {
+  /* To compensate for margin-top in the blogs page footer in the static file, 
+  which does not have a separate class of its own now */
+  margin-bottom: 2rem;
+}
 .blogswitch {
   margin-left: -2rem;
   text-decoration: underline;
