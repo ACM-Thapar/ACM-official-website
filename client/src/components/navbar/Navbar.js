@@ -8,7 +8,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg shift fixed-top navbar-light bg-light">
         <a className="navbar-brand acmlogonav">
-          <Link to="/landing">
+          <Link to="/">
             <img src={logo} alt="ACM Logo" />
           </Link>
         </a>

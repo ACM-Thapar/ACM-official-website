@@ -14,8 +14,8 @@ function App() {
         <Navbar />
         <section>
           <Switch>
+            <Route exact path="/" component={Landing} />
             <Route exact path="/team" component={Team} />
-            <Route exact path="/landing" component={Landing} />
             <Route exact path="/events" component={Events}></Route>
           </Switch>
         </section>
