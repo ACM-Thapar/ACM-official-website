@@ -1,45 +1,22 @@
-const express = require('express');
-const connectDB = require('./config/db');
-const auth = require('./routes/auth');
-const member = require('./routes/member');
-const team = require('./routes/team');
-const blog = require('./routes/blog');
-const event = require('./routes/event');
-
-const cloudiRouter = require('./routes/member');
+var express = require('express');
+//var cloudiRouter = require('./DeleteLater-imageRoutes');
+const cloudiRouter = require('../routes/member');
 var bodyParser = require('body-parser');
 var path = require('path');
 var mongoose = require('mongoose');
 
-const app = express();
-
-connectDB();
-
-const PORT = process.env.PORT || 5000;
-app.use(express.json({ extended: false }));
-
-//define routes
-
-app.get('/', (req, res) => {
-  res.send('Server running');
-});
-
-app.listen(PORT, () => {
-  console.log('Server running on port ', PORT);
-});
-
-app.use('/auth', auth);
-app.use('/member', member);
-app.use('/team', team);
-app.use('/blog', blog);
-app.use('/event', event);
-
-//Cloudinary
+var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/member/profile/addImage', express.static('uploads'));
+app.use('/uploads', express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// mongoose.connect('mongodb://localhost/cloudinaryUpload',
+// {
+//     useNewUrlParser: true
+// });
+// mongoose.connection;
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
@@ -53,7 +30,7 @@ app.use((req, res, next) => {
 });
 
 // // THIS PART HANDLES THE ROUTING/URL
-//app.use('/uploads', cloudiRouter);
+app.use('/uploads', cloudiRouter);
 
 // THE WE HANDLE THE FINAL ERRORS
 
@@ -72,3 +49,5 @@ app.use((error, req, res, next) => {
     },
   });
 });
+
+module.exports = app;

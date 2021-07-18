@@ -101,6 +101,11 @@ const MemberSchema = new mongoose.Schema({
       }
     },
   },
+
+  Img: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'imageUpload',
+  },
 });
 
 MemberSchema.set('timestamps', true);
