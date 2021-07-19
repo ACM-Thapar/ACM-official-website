@@ -8,7 +8,6 @@ var imageUpload = mongoose.Schema({
 
   cloudImage: {
     type: String,
-    required: true,
   },
 
   imageId: {

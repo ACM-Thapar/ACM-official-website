@@ -14,17 +14,21 @@ exports.createApp = (req, res) => {
           err: err,
           message: 'there was a problem uploading image',
         });
-      } else if (callback.length >= 1) {
-        res.json({
-          message: 'file already exist, rename the file and try again',
-        });
+        // } else if (callback.length >= 1) {
+        //   res.json({
+        //     message: 'file already exist, rename the file and try again',
+        //   });
       } else {
+        //var paths = req.files.map(file => file.path)
+
         var imageDetails = {
           imageName: req.body.imageName,
+          //imageName: req.files[0].originalname,
           cloudImage: req.files[0].path,
+          //cloudImage: paths,
           imageId: '',
         };
-        console.log(imageDetails.cloudImage);
+        //console.log(imageDetails.cloudImage);
         cloud.uploads(imageDetails.cloudImage).then((result) => {
           console.log(result);
           var imageDetails = {
