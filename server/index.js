@@ -52,12 +52,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// // THIS PART HANDLES THE ROUTING/URL
-//app.use('/uploads', cloudiRouter);
-
-// THE WE HANDLE THE FINAL ERRORS
-
-//HANDLE ERROR
 app.use((req, res, next) => {
   const error = new Error('NOT FOUND');
   error.status = 404;
