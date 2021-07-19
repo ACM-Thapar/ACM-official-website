@@ -9,9 +9,9 @@ var storage = multer.diskStorage({
     }
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname);
+    //cb(null, file.originalname);
     //cb(null , new Date().toISOString().replace(/:/g, '-') + file.originalname.replace(/:/g, '-'));
-    //cb(null , file.originalname.replace(/:/g, '-'));
+    cb(null, file.originalname.replace(/:/g, '-'));
   },
 });
 
