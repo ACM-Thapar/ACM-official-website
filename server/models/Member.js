@@ -102,9 +102,8 @@ const MemberSchema = new mongoose.Schema({
     },
   },
 
-  Img: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'imageUpload',
+  ImgURL: {
+    type: String,
   },
 });
 

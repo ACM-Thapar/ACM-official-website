@@ -21,14 +21,19 @@ exports.createApp = (req, res) => {
           imageId: '',
         };
         cloud.uploads(imageDetails.cloudImage).then((result) => {
-          console.log(result);
+          //console.log(result);
           var imageDetails = {
             imageName: req.body.imageName,
             cloudImage: result.url,
             imageId: result.id,
           };
-          console.log(imageDetails.cloudImage);
-          res.json(imageDetails.cloudImage);
+          //console.log(imageDetails.cloudImage);
+          var img = imageDetails.cloudImage;
+          member = Member.findOneAndUpdate(
+            { _id: req.params.id },
+            { ImgURL: img },
+          );
+          res.json(img);
         });
       }
     });

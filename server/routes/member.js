@@ -10,6 +10,11 @@ const { validMemberProfile } = require('../utils/validation-checks');
 
 router.post('/profile', [auth, validMemberProfile], memberProfile);
 router.get('/profile/:_id', [auth], getMemberById);
-router.post('/profile/addImage', upload.any(), imageController.createApp);
+router.post(
+  '/profile/addImage/:_id',
+  [auth],
+  upload.any(),
+  imageController.createApp,
+);
 
 module.exports = router;
