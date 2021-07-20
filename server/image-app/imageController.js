@@ -1,5 +1,6 @@
 var imageModel = require('./models');
 var cloud = require('./cloudinaryConfig');
+const Member = require('../models/Member');
 
 exports.createApp = (req, res) => {
   try {
@@ -21,6 +22,11 @@ exports.createApp = (req, res) => {
           imageId: '',
         };
         cloud.uploads(imageDetails.cloudImage).then(async (result) => {
+          let member = await Member.findOne({ _id: req.params._id });
+
+          if (!member)
+            return res.status(400).json({ msg: 'Profile Not found' });
+
           //console.log(result);
           var imageDetails = {
             imageName: req.body.imageName,
@@ -29,13 +35,11 @@ exports.createApp = (req, res) => {
           };
           //console.log(imageDetails.cloudImage);
 
-          let member = await Member.findOne({ _id: req.params.id });
-
           member = await Member.findOneAndUpdate(
             { _id: req.params.id },
             { $set: { ImgURL: imageDetails.cloudImage } },
           );
-          res.json(imageDetails.cloudImage);
+          //res.json(imageDetails.cloudImage);
           res.json(member);
         });
       }
