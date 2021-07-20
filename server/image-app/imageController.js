@@ -27,20 +27,17 @@ exports.createApp = (req, res) => {
           if (!member)
             return res.status(400).json({ msg: 'Profile Not found' });
 
-          //console.log(result);
           var imageDetails = {
             imageName: req.body.imageName,
             cloudImage: result.url,
             imageId: result.id,
           };
-          //console.log(imageDetails.cloudImage);
 
           member = await Member.findOneAndUpdate(
             { _id: req.params._id },
             { $set: { ImgURL: imageDetails.cloudImage } },
           );
-          //res.json(imageDetails.cloudImage);
-          res.json(member);
+          res.json(imageDetails.cloudImage);
         });
       }
     });
