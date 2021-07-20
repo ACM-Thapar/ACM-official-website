@@ -20,7 +20,7 @@ exports.createApp = (req, res) => {
           cloudImage: req.files[0].path,
           imageId: '',
         };
-        cloud.uploads(imageDetails.cloudImage).then((result) => {
+        cloud.uploads(imageDetails.cloudImage).then(async (result) => {
           //console.log(result);
           var imageDetails = {
             imageName: req.body.imageName,
@@ -28,12 +28,15 @@ exports.createApp = (req, res) => {
             imageId: result.id,
           };
           //console.log(imageDetails.cloudImage);
-          var img = imageDetails.cloudImage;
-          member = Member.findOneAndUpdate(
+
+          let member = await Member.findOne({ _id: req.params.id });
+
+          member = await Member.findOneAndUpdate(
             { _id: req.params.id },
-            { ImgURL: img },
+            { $set: { ImgURL: imageDetails.cloudImage } },
           );
-          res.json(img);
+          res.json(imageDetails.cloudImage);
+          res.json(member);
         });
       }
     });

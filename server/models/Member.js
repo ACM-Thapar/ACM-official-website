@@ -104,6 +104,7 @@ const MemberSchema = new mongoose.Schema({
 
   ImgURL: {
     type: String,
+    default: '',
   },
 });
 
