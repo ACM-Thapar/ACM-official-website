@@ -36,7 +36,7 @@ exports.createApp = (req, res) => {
           //console.log(imageDetails.cloudImage);
 
           member = await Member.findOneAndUpdate(
-            { _id: req.params.id },
+            { _id: req.params._id },
             { $set: { ImgURL: imageDetails.cloudImage } },
           );
           //res.json(imageDetails.cloudImage);
