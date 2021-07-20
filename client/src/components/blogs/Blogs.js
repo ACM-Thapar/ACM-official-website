@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
   return (
-    <div>
+    <>
       {/* Switch section */}
       <section className="bvswitch">
         <div className="container">
@@ -136,7 +136,7 @@ const Blogs = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

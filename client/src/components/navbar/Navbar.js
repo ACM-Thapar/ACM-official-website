@@ -4,7 +4,7 @@ import logo from '../../images/logo.svg';
 
 const Navbar = () => {
   return (
-    <div>
+    <>
       <nav className="navbar navbar-expand-lg shift fixed-top navbar-light bg-light">
         <a className="navbar-brand acmlogonav">
           <Link to="/">
@@ -53,7 +53,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </div>
+    </>
   );
 };
 

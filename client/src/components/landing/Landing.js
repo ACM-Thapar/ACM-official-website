@@ -4,7 +4,7 @@ import Group1 from '../../images/Group1.svg';
 
 const Landing = () => {
   return (
-    <div>
+    <>
       <section>
         <div className="container-fluid">
           <div className="row">
@@ -436,7 +436,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

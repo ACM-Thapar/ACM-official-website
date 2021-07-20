@@ -3,7 +3,7 @@ import dummyImage from '../../images/face4.png';
 
 const Team = () => {
   return (
-    <div>
+    <>
       <div className="team-page">
         <div className="team-page-headings-div">
           <h1 className="team-page-head">Meet the team</h1>
@@ -172,7 +172,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

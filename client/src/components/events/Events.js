@@ -4,7 +4,7 @@ import { CruipThemeWrapper } from '../external-css/CruipThemeWrapper';
 
 const Events = () => {
   return (
-    <div>
+    <>
       <CruipThemeWrapper>
         {/* Solid Animation */}
         <section className="eventpagetop">
@@ -294,7 +294,7 @@ const Events = () => {
           </div>
         </section>
       </CruipThemeWrapper>
-    </div>
+    </>
   );
 };
 

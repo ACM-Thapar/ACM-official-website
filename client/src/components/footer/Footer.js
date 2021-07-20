@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
+    <>
       <footer>
         <div className="container-fluid">
           <div className="row">
@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 
