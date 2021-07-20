@@ -75,9 +75,7 @@ exports.memberProfile = async (req, res) => {
 
 exports.getMemberById = async (req, res) => {
   try {
-    const profile = await Member.findOne({ _id: req.params._id }).populate(
-      'ImgURL',
-    );
+    const profile = await Member.findOne({ _id: req.params._id });
 
     if (!profile) return res.status(400).json({ msg: 'Profile Not found' });
 
