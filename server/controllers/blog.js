@@ -21,7 +21,7 @@ exports.getBlog = async (req, res) => {
 
 exports.postBlog = async (req, res) => {
   try {
-    let writer = await User.findOne({ email: req.body.WrittenBy });
+    let writer = await Member.findOne({ collegeEmail: req.body.WrittenBy });
 
     const newBlog = new Blog({
       Title: req.body.Title,
