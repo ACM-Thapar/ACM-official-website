@@ -1,5 +1,4 @@
 import React from 'react';
-
 import dummyImage from '../../images/face4.png';
 
 const Team = () => {
