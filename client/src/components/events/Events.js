@@ -78,7 +78,7 @@ const Events = () => {
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"
-                    alt="..."
+                    alt="events card image"
                   />
                   <div className="card-body">
                     <p className="card-title eventmonth">DEC</p>
@@ -106,7 +106,7 @@ const Events = () => {
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"
-                    alt="..."
+                    alt="events card image"
                   />
                   <div className="card-body">
                     <p className="card-title eventmonth">DEC</p>
@@ -134,7 +134,7 @@ const Events = () => {
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"
-                    alt="..."
+                    alt="events card image"
                   />
                   <div className="card-body">
                     <p className="card-title eventmonth">DEC</p>
@@ -164,7 +164,7 @@ const Events = () => {
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"
-                    alt="..."
+                    alt="events card image"
                   />
                   <div className="card-body">
                     <p className="card-title eventmonth">DEC</p>
@@ -192,7 +192,7 @@ const Events = () => {
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"
-                    alt="..."
+                    alt="events card image"
                   />
                   <div className="card-body">
                     <p className="card-title eventmonth">DEC</p>
@@ -220,7 +220,7 @@ const Events = () => {
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"
-                    alt="..."
+                    alt="events card image"
                   />
                   <div className="card-body">
                     <p className="card-title eventmonth">DEC</p>
@@ -254,7 +254,11 @@ const Events = () => {
             aria-hidden="true">
             <div className="modal-dialog">
               <div className="modal-eve" style={{ width: '38rem' }}>
-                <img src="./images/event.jpg" className="modal-img" alt />
+                <img
+                  src="./images/event.jpg"
+                  className="modal-img"
+                  alt="events card image"
+                />
                 <div className="main-content">
                   <h3 className="etitle">Flamingo- UI/UX Design</h3>
                   <p className="emonth">DEC</p>
