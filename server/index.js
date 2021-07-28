@@ -6,6 +6,11 @@ const team = require('./routes/team');
 const blog = require('./routes/blog');
 const event = require('./routes/event');
 
+const cloudiRouter = require('./routes/member');
+var bodyParser = require('body-parser');
+var path = require('path');
+var mongoose = require('mongoose');
+
 const app = express();
 
 connectDB();
@@ -28,3 +33,36 @@ app.use('/member', member);
 app.use('/team', team);
 app.use('/blog', blog);
 app.use('/event', event);
+
+//Cloudinary
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/member/profile/addImage', express.static('uploads'));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  if (req.method === 'OPTIONS') {
+    res.headers('Access Controll-Allow-Mthods', 'POST, PUT, GET, DELETE');
+    return res.status(200).json({});
+  }
+
+  next();
+});
+
+app.use((req, res, next) => {
+  const error = new Error('NOT FOUND');
+  error.status = 404;
+  next(error);
+});
+
+app.use((error, req, res, next) => {
+  res.status(error.status || 500);
+  res.json({
+    error: {
+      message: error.message,
+    },
+  });
+});
