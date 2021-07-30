@@ -17,6 +17,11 @@ const BlogSchema = new mongoose.Schema({
       ref: 'Member',
     },
   ],
+
+  ImgURL: {
+    type: [String],
+    default: '',
+  },
 });
 
 BlogSchema.set('timestamps', true);

@@ -25,6 +25,11 @@ const EventSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Description of event  is required'],
   },
+
+  ImgURL: {
+    type: [String],
+    default: '',
+  },
 });
 
 EventSchema.set('timestamps', true);
