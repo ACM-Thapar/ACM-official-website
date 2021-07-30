@@ -8,7 +8,7 @@ const { memberProfile, getMemberById } = require('../controllers/member');
 
 const { validMemberProfile } = require('../utils/validation-checks');
 
-router.post('/profile', [auth, validMemberProfile], memberProfile);
+router.post('/profile', validMemberProfile, memberProfile);
 router.get('/profile/:_id', [auth], getMemberById);
 router.post(
   '/profile/addImage/:_id',

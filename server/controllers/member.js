@@ -3,8 +3,8 @@ const Member = require('../models/Member');
 const { validationResult } = require('express-validator');
 
 //@route    POST member/profile
-//@desc     Create a user's profile
-//@access   Private
+//@desc     Create a members's profile
+//@access   Public
 
 exports.memberProfile = async (req, res) => {
   const errors = validationResult(req);
