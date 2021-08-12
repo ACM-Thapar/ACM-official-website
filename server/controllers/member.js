@@ -10,7 +10,6 @@ exports.memberProfile = async (req, res) => {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     // In case errors exist
-    console.errors(errors);
     return res.status(400).json({ errors: errors.array() });
   }
 
