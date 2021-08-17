@@ -6,6 +6,7 @@ const team = require('./routes/team');
 const blog = require('./routes/blog');
 const event = require('./routes/event');
 
+const cors = require('cors');
 const cloudiRouter = require('./routes/member');
 var bodyParser = require('body-parser');
 var path = require('path');
@@ -19,6 +20,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json({ extended: false }));
 
 //define routes
+
+app.options('*', cors());
 
 app.get('/', (req, res) => {
   res.send('Server running');
