@@ -21,7 +21,7 @@ app.use(express.json({ extended: false }));
 
 //define routes
 
-app.options('*', cors());
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Server running');
