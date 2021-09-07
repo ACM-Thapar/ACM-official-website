@@ -1,5 +1,6 @@
 import React from 'react';
 import dummyImage from '../../images/face4.png';
+import TeamCarousel from './TeamCarousel';
 
 const Team = () => {
   return (
@@ -25,7 +26,7 @@ const Team = () => {
             </p>
           </div>
           <div className="president-img-div">
-            <img src="./images/face6.png" className="president-img" />
+            <img src={dummyImage} className="president-img" />
             <p className="position">President</p>
             <p className="name">Anant Chaudhri</p>
             <p>
@@ -38,7 +39,7 @@ const Team = () => {
         <div className="society-heads">
           <h2 className="society-heads-heading">Society Heads</h2>
           <div className="society-heads-img-div">
-            <img src="./images/face1.png" className="society-heads-img" />
+            <img src={dummyImage} className="society-heads-img" />
             <p className="position">General secretary</p>
             <p className="name">Gopal Joshi</p>
             <p>
@@ -48,7 +49,7 @@ const Team = () => {
             </p>
           </div>
           <div className="society-heads-img-div">
-            <img src="./images/face2.png" className="society-heads-img" />
+            <img src={dummyImage} className="society-heads-img" />
             <p className="position">Academic Affairs</p>
             <p className="name">Anjali Nagarkar</p>
             <p>
@@ -58,7 +59,7 @@ const Team = () => {
             </p>
           </div>
           <div className="society-heads-img-div">
-            <img src="./images/face3.png" className="society-heads-img" />
+            <img src={dummyImage} className="society-heads-img" />
             <p className="position">External Affairs</p>
             <p className="name">Karthik Jain</p>
             <p>
@@ -70,7 +71,7 @@ const Team = () => {
         </div>
         <div className="department-heads">
           <h2 className="department-heads-heading">Department Heads</h2>
-          <div className="carousel">
+          {/* <div className="carousel">
             <div className="slider slider-nav">
               <div className="slick-slide">
                 <img src={dummyImage} />
@@ -97,7 +98,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="slick-slide">
-                <img src="./images/face2.png" />
+                <img src={dummyImage} />
                 <div className="carousel-credentials">
                   <p className="position">PR Head</p>
                   <p className="name">Meera D'Cruze</p>
@@ -109,7 +110,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="slick-slide">
-                <img src="./images/face4.png" />
+                <img src={dummyImage} />
                 <div className="carousel-credentials">
                   <p className="position">Finance Head</p>
                   <p className="name">Shivali Bachchan</p>
@@ -121,7 +122,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="slick-slide">
-                <img src="./images/face6.png" />
+                <img src={dummyImage} />
                 <div className="carousel-credentials">
                   <p className="position">Marketing Head</p>
                   <p className="name">Diksha Jain</p>
@@ -133,7 +134,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="slick-slide">
-                <img src="./images/face3.png" />
+                <img src={dummyImage} />
                 <div className="carousel-credentials">
                   <p className="position">Secretary</p>
                   <p className="name">Ishani Rao</p>
@@ -145,7 +146,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="slick-slide">
-                <img src="./images/face2.png" />
+                <img src={dummyImage} />
                 <div className="carousel-credentials">
                   <p className="position">Coordinator</p>
                   <p className="name">Jayant Gupta</p>
@@ -157,7 +158,7 @@ const Team = () => {
                 </div>
               </div>
               <div className="slick-slide" id="center_on_me">
-                <img src="./images/face4.png" />
+                <img src={dummyImage} />
                 <div className="carousel-credentials">
                   <p className="position">Content head</p>
                   <p className="name">Prashant Misra</p>
@@ -169,7 +170,8 @@ const Team = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          <TeamCarousel />
         </div>
       </div>
     </>

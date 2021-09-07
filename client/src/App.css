@@ -1205,7 +1205,7 @@ a.learnmorenew:hover {
 .carousel {
   width: 100%;
   display: block;
-  margin: 10% auto;
+  margin: 10% auto 2%;
   margin-top: 1%;
 }
 .slick-slide {
@@ -1228,14 +1228,13 @@ a.learnmorenew:hover {
   font-size: 0.8rem;
 }
 .slick-slide img {
-  margin: 10% auto;
+  margin: 0 auto !important;
   padding: 0;
   border-radius: 50%;
   width: 10.5rem;
   height: 10.5rem;
   text-align: center;
   filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.4));
-  margin-bottom: 5%;
 }
 .arrow {
   background-color: green;
@@ -1254,7 +1253,20 @@ a.learnmorenew:hover {
 .slick-center {
   transform: scale(1.5, 1.5);
   transform-origin: 50% 50%;
-  padding-top: 0.5%;
+  padding-top: 0.3%;
+}
+.slick-prev {
+  left: 5% !important;
+  top: 35% !important;
+}
+
+.slick-next {
+  right: 5% !important;
+  top: 35% !important;
+}
+.slick-next:before,
+.slick-prev:before {
+  color: black !important;
 }
 .carousel-credentials {
   margin-bottom: 15%;
