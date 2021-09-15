@@ -9,26 +9,6 @@ const Presidents = () => {
       <a name="presidents" />
       <h2 className="president-heading">Presidents</h2>
       <PresidentCard data={presidentOneDummyData} />
-      {/* <div className="president-img-div">
-        <img src={dummyImage} className="president-img" />
-        <p className="position">President</p>
-        <p className="name">Akhil Gupta</p>
-        <p>
-          <i className="fa fa-github" />
-          <i className="fa fa-linkedin" />
-          <i className="fa fa-twitter" />
-        </p>
-      </div>
-      <div className="president-img-div">
-        <img src={dummyImage} className="president-img" />
-        <p className="position">President</p>
-        <p className="name">Anant Chaudhri</p>
-        <p>
-          <i className="fa fa-github" />
-          <i className="fa fa-linkedin" />
-          <i className="fa fa-twitter" />
-        </p>
-      </div> */}
     </div>
   );
 };

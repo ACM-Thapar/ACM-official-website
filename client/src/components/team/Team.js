@@ -2,6 +2,7 @@ import React from 'react';
 import dummyImage from '../../images/face4.png';
 import TeamCarousel from './TeamCarousel';
 import Presidents from './Presidents';
+import SocietyHeads from './SocietyHeads';
 
 const Team = () => {
   return (
@@ -14,39 +15,7 @@ const Team = () => {
           </h3>
         </div>
         <Presidents />
-        <div className="society-heads">
-          <h2 className="society-heads-heading">Society Heads</h2>
-          <div className="society-heads-img-div">
-            <img src={dummyImage} className="society-heads-img" />
-            <p className="position">General secretary</p>
-            <p className="name">Gopal Joshi</p>
-            <p>
-              <i className="fa fa-github" />
-              <i className="fa fa-linkedin" />
-              <i className="fa fa-twitter" />
-            </p>
-          </div>
-          <div className="society-heads-img-div">
-            <img src={dummyImage} className="society-heads-img" />
-            <p className="position">Academic Affairs</p>
-            <p className="name">Anjali Nagarkar</p>
-            <p>
-              <i className="fa fa-github" />
-              <i className="fa fa-linkedin" />
-              <i className="fa fa-twitter" />
-            </p>
-          </div>
-          <div className="society-heads-img-div">
-            <img src={dummyImage} className="society-heads-img" />
-            <p className="position">External Affairs</p>
-            <p className="name">Karthik Jain</p>
-            <p>
-              <i className="fa fa-github" />
-              <i className="fa fa-linkedin" />
-              <i className="fa fa-twitter" />
-            </p>
-          </div>
-        </div>
+        <SocietyHeads />
         <div className="department-heads">
           <h2 className="department-heads-heading">Department Heads</h2>
           {/* <div className="carousel">
