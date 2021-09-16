@@ -3,6 +3,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import dummyImage from '../../images/face4.png';
+import DepartmentHeadCard from './DepartmentHeadCard';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -66,10 +67,68 @@ const TeamCarousel = () => {
       },
     ],
   };
+
+  const deptHeadDummyData1 = {
+    name: 'Ujjwal Aggarwal',
+    post: 'General Secretary',
+    imgSrc: dummyImage,
+  };
+  const deptHeadDummyData2 = {
+    name: 'Mahek Khowala',
+    post: 'Joint Secretary',
+    imgSrc: dummyImage,
+  };
+  const deptHeadDummyData3 = {
+    name: 'Ujjwal Aggarwal',
+    post: 'General Secretary',
+    imgSrc: dummyImage,
+  };
+  const deptHeadData = [
+    deptHeadDummyData1,
+    deptHeadDummyData2,
+    deptHeadDummyData3,
+  ];
   return (
     <Fragment>
       <div className="carousel">
         <Slider {...settings}>
+          {/* <DepartmentHeadCard data={dummyTeamData1} /> */}
+          {/* <DepartmentHeadCard data={dummyTeamData1} />
+          <DepartmentHeadCard data={dummyTeamData1} />
+          <DepartmentHeadCard data={dummyTeamData1} />
+          <DepartmentHeadCard data={dummyTeamData1} /> */}
+          {/* {2 == 2 && (
+            <div className="slick-slide">
+              <img src={dummyImage} alt="dept-head" />
+              <div className="carousel-credentials">
+                <p className="position">{post}</p>
+                <p className="name">{name}</p>
+                <p>
+                  <i className="fa fa-github" />
+                  <i className="fa fa-linkedin" />
+                  <i className="fa fa-twitter" />
+                </p>
+              </div>
+            </div>
+          )} */}
+
+          {deptHeadData.map((data) => {
+            return (
+              <div className="slick-slide">
+                <img src={data.imgSrc} alt="dept-head" />
+                <div className="carousel-credentials">
+                  <p className="position">{data.post}</p>
+                  <p className="name">{data.name}</p>
+                  <p>
+                    <i className="fa fa-github" />
+                    <i className="fa fa-linkedin" />
+                    <i className="fa fa-twitter" />
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+
           <div className="slick-slide">
             <img src={dummyImage} alt="dept-head" />
             <div className="carousel-credentials">
