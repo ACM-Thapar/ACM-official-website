@@ -3735,7 +3735,7 @@ h1.pmainsectiontitle {
   margin-left: 15%;
 }
 .pcimg {
-  height: 60%;
+  height: 60% !important;
 }
 .prodate {
   color: #000;
