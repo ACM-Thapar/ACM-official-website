@@ -1,4 +1,5 @@
 import React from 'react';
+import EventCard from './EventCard';
 
 import { CruipThemeWrapper } from '../external-css/CruipThemeWrapper';
 
@@ -71,6 +72,11 @@ const Events = () => {
         <section className="eventpagecards">
           <div className="container">
             <div className="row justify-content-center">
+              <EventCard />
+              <EventCard />
+              <EventCard />
+            </div>
+            <div className="row justify-content-center">
               <div className="col-4">
                 <div
                   className="card eventcard lecard lecard1"
@@ -102,7 +108,7 @@ const Events = () => {
               <div className="col-4">
                 <div
                   className="card eventcard cecard cecard1"
-                  style={{ width: '18rem' }}>
+                  style={{ width: '21rem' }}>
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"
@@ -130,7 +136,7 @@ const Events = () => {
               <div className="col-4">
                 <div
                   className="card eventcard recard recard1"
-                  style={{ width: '18rem' }}>
+                  style={{ width: '21rem' }}>
                   <img
                     src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
                     className="card-img-top ecimg"

@@ -7,6 +7,7 @@ import Landing from './components/landing/Landing';
 import Footer from './components/footer/Footer';
 import Events from './components/events/Events';
 import Blogs from './components/blogs/Blogs';
+import Projects from './components/projects/Projects';
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
             <Route exact path="/team" component={Team} />
             <Route exact path="/events" component={Events}></Route>
             <Route exact path="/blogs" component={Blogs}></Route>
+            <Route exact path="/projects" component={Projects}></Route>
           </Switch>
         </section>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
