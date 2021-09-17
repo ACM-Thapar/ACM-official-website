@@ -6,7 +6,7 @@ const EventCard = () => {
       <div className="col-4">
         <div
           className="card eventcard cecard cecard1"
-          style={{ width: '21rem' }}>
+          style={{ width: '18rem' }}>
           <img
             src="https://res.cloudinary.com/kriti711/image/upload/v1626162626/ACM%20Website/image_2_vbzq6k.svg"
             className="card-img-top ecimg"
