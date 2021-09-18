@@ -35,7 +35,7 @@ const Projects = () => {
       <div className="container card-cont">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
-            <ProjectCard />
+            <ProjectCard className='procard' />
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
           <ProjectCard />

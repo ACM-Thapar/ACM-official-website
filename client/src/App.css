@@ -3725,6 +3725,7 @@ h1.pmainsectiontitle {
 .procard {
   margin-top: 5%;
   margin-bottom: 5%;
+  margin-left: 15%;
   height: 70%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -3735,7 +3736,7 @@ h1.pmainsectiontitle {
   margin-left: 15%;
 }
 .pcimg {
-  height: 60% !important;
+  height: 13rem;
 }
 .prodate {
   color: #000;
@@ -3768,16 +3769,17 @@ h1.pmainsectiontitle {
 /* Event Modal */
 
 .mcpro {
-  height: 150%;
-  width: 150% !important;
+  height: 70rem;
+  /* width: 150% !important; */
   background-color: rgb(255, 255, 255);
-  margin-left: -10%;
+  /* margin-left: -10%; */
 }
 .modal-dialog {
   margin: auto !important;
 }
 .mipro {
-  height: 30%;
+  height: 40rem;
+  object-fit: fill;
 }
 .close {
   position: absolute;
@@ -3866,6 +3868,9 @@ h1.pmainsectiontitle {
     width: 16rem !important;
     height: 17rem;
   }
+  .pcimg{
+    height: 10rem;
+  }
   .lpcard {
     margin-left: 5%;
   }
@@ -3912,7 +3917,7 @@ h1.pmainsectiontitle {
 }
 @media screen and (max-width: 993px) {
   .procard {
-    width: 14rem !important;
+    width: 18rem !important;
     height: 15rem;
   }
   .lpcard {
@@ -3924,10 +3929,10 @@ h1.pmainsectiontitle {
 }
 @media screen and (max-width: 992px) {
   .procard {
-    width: 14rem !important;
-    height: 15rem;
+    width: 18rem !important;
+    height: 16rem;
   }
-  .lpcard {
+  /* .lpcard {
     margin-left: -50%;
   }
   .rpcard {
@@ -3943,7 +3948,7 @@ h1.pmainsectiontitle {
   }
   .prodescription {
     font-size: 70% !important;
-  }
+  } */
   .anime-element {
     margin-top: -40%;
   }
@@ -3959,7 +3964,7 @@ h1.pmainsectiontitle {
     text-align: center;
   }
 }
-@media screen and (max-width: 901px) {
+/* @media screen and (max-width: 901px) {
   .protitle {
     font-size: 75%;
     width: 95%;
@@ -3974,9 +3979,9 @@ h1.pmainsectiontitle {
   .promonth {
     font-size: 80%;
   }
-}
+} */
 @media screen and (max-width: 930px) {
-  .procard {
+  /* .procard {
     width: 13rem !important;
     height: 14rem;
   }
@@ -3991,7 +3996,7 @@ h1.pmainsectiontitle {
   }
   .anime-element {
     display: none;
-  }
+  } */
   h1.pmainsectiontitle {
     margin-left: -140%;
     font-size: 400%;
@@ -4004,11 +4009,11 @@ h1.pmainsectiontitle {
     width: 300%;
     text-align: center;
   }
-  .prodescription {
+  /* .prodescription {
     font-size: 60% !important;
     line-height: 90%;
     margin-top: -5%;
-  }
+  } */
 }
 @media screen and (max-width: 875px) {
   .lpcard {
@@ -4022,7 +4027,7 @@ h1.pmainsectiontitle {
   }
 }
 @media screen and (max-width: 832px) {
-  .procard {
+  /* .procard {
     width: 12rem !important;
     height: 13rem;
   }
@@ -4034,10 +4039,10 @@ h1.pmainsectiontitle {
   }
   .cpcard {
     margin-left: -5%;
-  }
+  } */
 }
 @media screen and (max-width: 769px) {
-  .procard {
+  /* .procard {
     width: 11rem !important;
     height: 12rem;
   }
@@ -4063,7 +4068,7 @@ h1.pmainsectiontitle {
   }
   .promonth {
     font-size: 65%;
-  }
+  } */
   h1.pmainsectiontitle {
     margin-left: -160%;
     font-size: 350%;
@@ -4143,7 +4148,7 @@ h1.pmainsectiontitle {
   .protitle {
     color: #000;
     font-weight: 700;
-    margin-top: -30%;
+    margin-top: -20%;
     font-size: 105%;
     margin-left: 20%;
   }
@@ -4301,6 +4306,9 @@ h1.pmainsectiontitle {
   .procard {
     width: 14rem !important;
     height: 16rem;
+  }
+  .protitle{
+    margin-top: -30%;
   }
   .prodescription {
     font-size: 60% !important;

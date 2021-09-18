@@ -3,6 +3,10 @@ import { useState } from 'react';
 import { Card, Button, Modal } from 'react-bootstrap';
 import DummyProjectImage from '../../images/project.png';
 import './projects.css';
+import Face1 from '../../images/face1.png';
+import Face2 from '../../images/face2.png';
+import Face3 from '../../images/face3.png';
+
 
 export default function ProjectCard() {
   const [show, setShow] = useState(false);
@@ -15,6 +19,7 @@ export default function ProjectCard() {
         <img
           src={DummyProjectImage}
           className="card-img-top pcimg "
+
         />
         <div className="card-body">
           <p className="card-title promonth">DEC</p>
@@ -35,7 +40,7 @@ export default function ProjectCard() {
 
       <Modal show={show} onHide={handleClose}>
         <div className="modal-content mcpro">
-          <img src={DummyProjectImage} classNamw="modal-img mipro" alt="" />
+          <img src={DummyProjectImage} className="modal-img mipro" alt="" />
           <div className="main-content">
             <h3 className="modal-heading mhpro">Web Design Project</h3>
             <div className="datepro">
@@ -63,7 +68,7 @@ export default function ProjectCard() {
               <h2>TEAM</h2>
               <div className="rowmodal">
                 <div className="col-2 pc2pro">
-                  <img src="./images/face1.png" alt />
+                  <img src={Face1} alt />
                 </div>
                 <div className="pc2textpro">
                   <p className="randompro">Random Name</p>
@@ -72,7 +77,7 @@ export default function ProjectCard() {
               </div>
               <div className="rowmodal">
                 <div className="col-2 pc2pro">
-                  <img src="./images/face2.png" alt />
+                  <img src={Face2} alt />
                 </div>
                 <div className="pc2textpro">
                   <p className="randompro">Random Name</p>
@@ -81,7 +86,7 @@ export default function ProjectCard() {
               </div>
               <div className="rowmodal">
                 <div className="col-2 pc2pro">
-                  <img src="./images/face3.png" alt />
+                  <img src={Face3} alt />
                 </div>
                 <div className="pc2textpro">
                   <p className="randompro">Random Name</p>
