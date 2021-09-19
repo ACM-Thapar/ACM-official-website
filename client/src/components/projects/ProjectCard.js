@@ -7,7 +7,7 @@ import Face1 from '../../images/face1.png';
 import Face2 from '../../images/face2.png';
 import Face3 from '../../images/face3.png';
 
-export default function ProjectCard() {
+export default function ProjectCard(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
