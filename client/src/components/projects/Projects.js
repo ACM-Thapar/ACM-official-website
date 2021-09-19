@@ -13,7 +13,7 @@ const Projects = () => {
   const dummyData = {
     month: 'DEC',
     date: '25',
-    title: 'Website Design Project',
+    cardTitle: 'Website Design Project',
     cardBriefDescription:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     cardImageSrc: ProjectDummyImage,
