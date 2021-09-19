@@ -7,7 +7,6 @@ import Face1 from '../../images/face1.png';
 import Face2 from '../../images/face2.png';
 import Face3 from '../../images/face3.png';
 
-
 export default function ProjectCard() {
   const [show, setShow] = useState(false);
 
@@ -16,11 +15,7 @@ export default function ProjectCard() {
   return (
     <div>
       <Card style={{ width: '18rem' }} className="card procard">
-        <img
-          src={DummyProjectImage}
-          className="card-img-top pcimg "
-
-        />
+        <img src={DummyProjectImage} className="card-img-top pcimg " />
         <div className="card-body">
           <p className="card-title promonth">DEC</p>
           <h4 className="card-title prodate">25</h4>
