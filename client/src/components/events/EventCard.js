@@ -16,7 +16,7 @@ export default function EventCard({ data }) {
         <div className="card-body" style={{ padding: '2rem 1.2rem' }}>
           <p className="card-title promonth">{data.month}</p>
           <h4 className="card-title prodate">{data.date}</h4>
-          <h4 className="card-title protitle">{data.title}</h4>
+          <h4 className="card-title protitle">{data.cardTitle}</h4>
           <a
             href="#exampleModal"
             data-toggle="modal"
