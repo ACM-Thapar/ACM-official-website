@@ -38,7 +38,7 @@ export default function EventCard({ data }) {
               <p className="monthpro">{data.month}</p>
               <p className="dtpro">{data.date}</p>
             </div>
-            <div className="paraspro">
+            <div className="paraspro" style={{ paddingRight: '2rem' }}>
               <p>{data.mainDescription}</p>
             </div>
           </div>
