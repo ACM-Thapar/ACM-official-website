@@ -1515,6 +1515,7 @@ a.learnmorenew:hover {
   width: 27%;
   margin: auto;
 }
+
 #student {
   position: relative;
   left: 52%;
@@ -3707,6 +3708,7 @@ a.cardmodallink:visited {
   overflow-y: hidden;
   height: 70%;
   margin-top: 5.5%;
+  padding-bottom: 2%;
   /* background-color: #ffffff !important; */
 }
 h1.pmainsectiontitle {
@@ -3868,7 +3870,7 @@ h1.pmainsectiontitle {
     width: 16rem !important;
     height: 17rem;
   }
-  .pcimg{
+  .pcimg {
     height: 10rem;
   }
   .lpcard {
@@ -4307,7 +4309,7 @@ h1.pmainsectiontitle {
     width: 14rem !important;
     height: 16rem;
   }
-  .protitle{
+  .protitle {
     margin-top: -30%;
   }
   .prodescription {

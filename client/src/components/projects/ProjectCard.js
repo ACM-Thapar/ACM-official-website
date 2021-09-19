@@ -16,7 +16,7 @@ export default function ProjectCard() {
     <div>
       <Card style={{ width: '18rem' }} className="card procard">
         <img src={DummyProjectImage} className="card-img-top pcimg " />
-        <div className="card-body">
+        <div className="card-body" style={{ padding: '2rem 1.2rem' }}>
           <p className="card-title promonth">DEC</p>
           <h4 className="card-title prodate">25</h4>
           <h4 className="card-title protitle">Website Design Project</h4>
