@@ -1612,10 +1612,11 @@ img.rounded-corners {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 25rem;
 }
-.main-content {
-  min-height: 150% !important;
-}
+/* .main-content {
+  min-height: 100% !important;
+} */
 .mcp {
   height: 150%;
   width: 150% !important;
@@ -1627,6 +1628,7 @@ img.rounded-corners {
 }
 .mip {
   height: 30%;
+  width: 50rem;
 }
 .close {
   position: absolute;
@@ -3773,7 +3775,8 @@ h1.pmainsectiontitle {
 /* Event Modal */
 
 .mcpro {
-  height: 70rem;
+  height: 80rem;
+  width: 45rem;
   /* width: 150% !important; */
   background-color: rgb(255, 255, 255);
   /* margin-left: -10%; */
