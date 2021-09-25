@@ -17,25 +17,31 @@ const Blogs = () => {
           </div>
         </div>
       </section>
-      <section className="recent">
+      <center>
+        <section className="recent">
+          <div className="container">
+            <div className="row justify-content-center">
+              <center>
+                <h1 className="recentb">Recent Blogs</h1>
+              </center>
+            </div>
+          </div>
+        </section>
         <div className="container">
           <div className="row justify-content-center">
-            <h1 className="recentb">Recent Blogs</h1>
+            <p className="recentp">
+              Read the latest blogs from the content team of ACM Thapar.
+            </p>
           </div>
         </div>
-      </section>
-      <div className="container">
-        <div className="row justify-content-center">
-          <p className="recentp">
-            Read the latest blogs from the content team of ACM Thapar.
-          </p>
+      </center>
+      <center>
+        <div className="container">
+          <div className="row justify-content-center">
+            <h3 className="latestb">Latest Upload</h3>
+          </div>
         </div>
-      </div>
-      <div className="container">
-        <div className="row justify-content-center">
-          <h3 className="latestb">Latest Upload</h3>
-        </div>
-      </div>
+      </center>
       {/* Main Blog Display */}
       <section className="latestupload">
         <div className="container">
@@ -70,7 +76,9 @@ const Blogs = () => {
       <section className="cardarea blogs-page-card-area">
         <div className="container">
           <div className="row justify-content-center">
-            <h3 className="mightlike">You might also like</h3>
+            <center>
+              <h3 className="mightlike">You might also like</h3>
+            </center>
           </div>
           <div className="row">
             <div className="col-md-4">
