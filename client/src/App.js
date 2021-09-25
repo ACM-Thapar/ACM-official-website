@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer';
 import Events from './components/events/Events';
 import Blogs from './components/blogs/Blogs';
 import Projects from './components/projects/Projects';
+import Videos from './components/videos/Videos';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/events" component={Events}></Route>
             <Route exact path="/blogs" component={Blogs}></Route>
             <Route exact path="/projects" component={Projects}></Route>
+            <Route exact path="/videos" component={Videos}></Route>
           </Switch>
         </section>
         <Footer />
