@@ -439,11 +439,11 @@ svg.think {
   margin-top: 4vw;
 }
 
-.learnmorenew {
+button.learnmorenew {
   color: #1b97de;
   background-color: #ffffff;
   border-radius: 2vw;
-  height: 3vw;
+  height: 2.5rem;
 }
 
 a.learnmorenew:hover {
