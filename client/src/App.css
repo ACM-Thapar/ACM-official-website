@@ -2419,7 +2419,8 @@ section.bvswitch {
 section.blogs-page-card-area {
   /* To compensate for margin-top in the blogs page footer in the static file, 
   which does not have a separate class of its own now */
-  margin-bottom: 2rem;
+  margin-bottom: 4.2rem;
+  margin-left: 4.2rem;
 }
 .blogswitch {
   margin-left: -2rem;
@@ -2431,7 +2432,7 @@ section.blogs-page-card-area {
 }
 .recentb {
   margin-top: 2rem;
-  margin-left: 2rem;
+  margin-left: rem;
   font-weight: 1000;
 }
 .latestb {
@@ -2443,7 +2444,7 @@ section.blogs-page-card-area {
   height: 18rem;
   margin-top: 1.5rem;
   border-radius: 3% 3% 3% 3%;
-  margin-left: -0.5rem;
+  margin-left: 2rem;
   overflow: hidden;
 }
 .mbtitle {
