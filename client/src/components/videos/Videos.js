@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Videos = () => {
   return (
@@ -10,10 +11,14 @@ const Videos = () => {
             <div className="row">
               <div className="col-md-3" />
               <div className="col-md-4">
-                <h4 className="vblogswitch">BLOGS</h4>
+                <Link to="/blogs">
+                  <h4 className="vblogswitch">BLOGS</h4>
+                </Link>
               </div>
               <div className="col-md-4">
-                <h4 className="vvideoswitch">VIDEOS</h4>
+                <Link to="/blogs">
+                  <h4 className="vvideoswitch">VIDEOS</h4>
+                </Link>
               </div>
             </div>
           </div>
