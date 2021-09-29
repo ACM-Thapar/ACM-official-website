@@ -2,7 +2,7 @@ import React from 'react';
 import dummyImage from '../../images/face4.png';
 
 const PresidentCard = ({ data }) => {
-  let imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
+  const imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
 
   return (
     <>

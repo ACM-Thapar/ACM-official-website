@@ -27,7 +27,7 @@ function SamplePrevArrow(props) {
   );
 }
 
-const TeamCarousel = () => {
+const TeamCarousel = ({ data }) => {
   const settings = {
     dots: true,
     speed: 500,
@@ -112,22 +112,24 @@ const TeamCarousel = () => {
             </div>
           )} */}
 
-          {deptHeadData.map((data) => {
-            return (
-              <div className="slick-slide">
-                <img src={data.imgSrc} alt="dept-head" />
-                <div className="carousel-credentials">
-                  <p className="position">{data.post}</p>
-                  <p className="name">{data.name}</p>
-                  <p>
-                    <i className="fa fa-github" />
-                    <i className="fa fa-linkedin" />
-                    <i className="fa fa-twitter" />
-                  </p>
+          {data &&
+            data.map((deptHead) => {
+              const imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
+              return (
+                <div className="slick-slide">
+                  <img src={imgSrc} alt="dept-head" />
+                  <div className="carousel-credentials">
+                    <p className="position">{deptHead.post}</p>
+                    <p className="name">{deptHead.name}</p>
+                    <p>
+                      <i className="fa fa-github" />
+                      <i className="fa fa-linkedin" />
+                      <i className="fa fa-twitter" />
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
 
           <div className="slick-slide">
             <img src={dummyImage} alt="dept-head" />
@@ -153,7 +155,7 @@ const TeamCarousel = () => {
               </p>
             </div>
           </div>
-          <div className="slick-slide">
+          {/* <div className="slick-slide">
             <img src={dummyImage} alt="dept-head" />
             <div className="carousel-credentials">
               <p className="position">PR Head</p>
@@ -236,7 +238,7 @@ const TeamCarousel = () => {
                 <i className="fa fa-twitter" />
               </p>
             </div>
-          </div>
+          </div> */}
         </Slider>
       </div>
     </Fragment>

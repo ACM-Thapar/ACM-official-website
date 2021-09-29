@@ -15,7 +15,7 @@ const Team = () => {
   }, []);
   let presidentData = data['President'];
   const societyHeadData = data['SocietyHead'];
-  const departmentHeaddata = data['DepartmentHead'];
+  const departmentHeadData = data['DepartmentHead'];
   return (
     <>
       <div className="team-page">
@@ -27,6 +27,8 @@ const Team = () => {
         </div>
         {presidentData && <Presidents data={presidentData} />}
         {societyHeadData && <SocietyHeads data={societyHeadData} />}
+
+        {/* <TeamCarousel /> */}
 
         <div className="department-heads">
           <h2 className="department-heads-heading">Department Heads</h2>
@@ -130,7 +132,7 @@ const Team = () => {
               </div>
             </div>
           </div> */}
-          <TeamCarousel />
+          {departmentHeadData && <TeamCarousel data={departmentHeadData} />}
         </div>
       </div>
     </>
