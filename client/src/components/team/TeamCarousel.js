@@ -122,9 +122,15 @@ const TeamCarousel = ({ data }) => {
                     <p className="position">{deptHead.post}</p>
                     <p className="name">{deptHead.name}</p>
                     <p>
-                      <i className="fa fa-github" />
-                      <i className="fa fa-linkedin" />
-                      <i className="fa fa-twitter" />
+                      <a href={data.socialHandles.github} alt="">
+                        <i className="fa fa-github" />
+                      </a>
+                      <a href={data.socialHandles.linkedin} alt="">
+                        <i className="fa fa-linkedin" />
+                      </a>
+                      <a href={data.socialHandles.twitter} alt="">
+                        <i className="fa fa-twitter" />
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -142,9 +148,15 @@ const TeamCarousel = ({ data }) => {
                     <p className="position">{deptHead.post}</p>
                     <p className="name">{deptHead.name}</p>
                     <p>
-                      <i className="fa fa-github" />
-                      <i className="fa fa-linkedin" />
-                      <i className="fa fa-twitter" />
+                      <a href={data.socialHandles.github} alt="">
+                        <i className="fa fa-github" />
+                      </a>
+                      <a href={data.socialHandles.linkedin} alt="">
+                        <i className="fa fa-linkedin" />
+                      </a>
+                      <a href={data.socialHandles.twitter} alt="">
+                        <i className="fa fa-twitter" />
+                      </a>
                     </p>
                   </div>
                 </div>
