@@ -4,6 +4,10 @@ const DepartmentHeadCard = ({ index, data }) => {
   const name = data.name;
   const post = data.post;
   const imgSrc = data.imgSrc;
+  console.log('====================================');
+  console.log(data.socialHandles.github);
+  console.log('====================================');
+
   return (
     <>
       <div className="slick-slide">
@@ -12,7 +16,7 @@ const DepartmentHeadCard = ({ index, data }) => {
           <p className="position">{post}</p>
           <p className="name">{name}</p>
           <p>
-            <a href="" alt="">
+            <a href={data.socialHandles.github} alt="">
               <i className="fa fa-github" />
             </a>
             <a href="" alt="">

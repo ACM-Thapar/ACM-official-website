@@ -13,9 +13,9 @@ const Team = () => {
       setData(response.data[3]);
     });
   }, []);
-  let presidentData = data['President'];
-  const societyHeadData = data['SocietyHead'];
-  const departmentHeadData = data['DepartmentHead'];
+  const presidentData = data && data['President'];
+  const societyHeadData = data && data['SocietyHead'];
+  const departmentHeadData = data && data['DepartmentHead'];
   return (
     <>
       <div className="team-page">
