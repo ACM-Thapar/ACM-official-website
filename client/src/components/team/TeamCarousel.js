@@ -92,26 +92,6 @@ const TeamCarousel = ({ data }) => {
     <Fragment>
       <div className="carousel">
         <Slider {...settings}>
-          {/* <DepartmentHeadCard data={dummyTeamData1} /> */}
-          {/* <DepartmentHeadCard data={dummyTeamData1} />
-          <DepartmentHeadCard data={dummyTeamData1} />
-          <DepartmentHeadCard data={dummyTeamData1} />
-          <DepartmentHeadCard data={dummyTeamData1} /> */}
-          {/* {2 == 2 && (
-            <div className="slick-slide">
-              <img src={dummyImage} alt="dept-head" />
-              <div className="carousel-credentials">
-                <p className="position">{post}</p>
-                <p className="name">{name}</p>
-                <p>
-                  <i className="fa fa-github" />
-                  <i className="fa fa-linkedin" />
-                  <i className="fa fa-twitter" />
-                </p>
-              </div>
-            </div>
-          )} */}
-
           {data &&
             data.map((deptHead) => {
               const imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
@@ -122,13 +102,13 @@ const TeamCarousel = ({ data }) => {
                     <p className="position">{deptHead.post}</p>
                     <p className="name">{deptHead.name}</p>
                     <p>
-                      <a href={data.socialHandles.github} alt="">
+                      <a href={deptHead.socialHandles.github} alt="">
                         <i className="fa fa-github" />
                       </a>
-                      <a href={data.socialHandles.linkedin} alt="">
+                      <a href={deptHead.socialHandles.linkedin} alt="">
                         <i className="fa fa-linkedin" />
                       </a>
-                      <a href={data.socialHandles.twitter} alt="">
+                      <a href={deptHead.socialHandles.twitter} alt="">
                         <i className="fa fa-twitter" />
                       </a>
                     </p>
@@ -148,13 +128,13 @@ const TeamCarousel = ({ data }) => {
                     <p className="position">{deptHead.post}</p>
                     <p className="name">{deptHead.name}</p>
                     <p>
-                      <a href={data.socialHandles.github} alt="">
+                      <a href={deptHead.socialHandles.github} alt="">
                         <i className="fa fa-github" />
                       </a>
-                      <a href={data.socialHandles.linkedin} alt="">
+                      <a href={deptHead.socialHandles.linkedin} alt="">
                         <i className="fa fa-linkedin" />
                       </a>
-                      <a href={data.socialHandles.twitter} alt="">
+                      <a href={deptHead.socialHandles.twitter} alt="">
                         <i className="fa fa-twitter" />
                       </a>
                     </p>
@@ -162,115 +142,6 @@ const TeamCarousel = ({ data }) => {
                 </div>
               );
             })}
-
-          {/* <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">Tech Head</p>
-              <p className="name">Mohinder Das</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div> */}
-          {/* <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">Jr. Tech Head</p>
-              <p className="name">Sanjana Gadhavi</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div> */}
-          {/* <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">PR Head</p>
-              <p className="name">Meera D'Cruze</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div>
-          <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">Tech Head</p>
-              <p className="name">Mohinder Das</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div>
-          <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">Jr. Tech Head</p>
-              <p className="name">Sanjana Gadhavi</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div>
-          <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">PR Head</p>
-              <p className="name">Meera D'Cruze</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div>
-          <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">Tech Head</p>
-              <p className="name">Mohinder Das</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div>
-          <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">Jr. Tech Head</p>
-              <p className="name">Sanjana Gadhavi</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div>
-          <div className="slick-slide">
-            <img src={dummyImage} alt="dept-head" />
-            <div className="carousel-credentials">
-              <p className="position">PR Head</p>
-              <p className="name">Meera D'Cruze</p>
-              <p>
-                <i className="fa fa-github" />
-                <i className="fa fa-linkedin" />
-                <i className="fa fa-twitter" />
-              </p>
-            </div>
-          </div> */}
         </Slider>
       </div>
     </Fragment>

@@ -31,38 +31,6 @@ const SocietyHeads = ({ data }) => {
         {data.map((socHead) => {
           return <SocietyHeadCard data={socHead} />;
         })}
-
-        {/* <div className="society-heads-img-div">
-          <img src={dummyImage} className="society-heads-img" />
-          <p className="position">General secretary</p>
-          <p className="name">Gopal Joshi</p>
-          <p>
-            <i className="fa fa-github" />
-            <i className="fa fa-linkedin" />
-            <i className="fa fa-twitter" />
-          </p>
-        </div>
-
-        <div className="society-heads-img-div">
-          <img src={dummyImage} className="society-heads-img" />
-          <p className="position">Academic Affairs</p>
-          <p className="name">Anjali Nagarkar</p>
-          <p>
-            <i className="fa fa-github" />
-            <i className="fa fa-linkedin" />
-            <i className="fa fa-twitter" />
-          </p>
-        </div>
-        <div className="society-heads-img-div">
-          <img src={dummyImage} className="society-heads-img" />
-          <p className="position">External Affairs</p>
-          <p className="name">Karthik Jain</p>
-          <p>
-            <i className="fa fa-github" />
-            <i className="fa fa-linkedin" />
-            <i className="fa fa-twitter" />
-          </p>
-        </div> */}
       </div>
     </>
   );
