@@ -11,15 +11,17 @@ const DepartmentHeadCard = ({ index, data }) => {
         <div className="carousel-credentials">
           <p className="position">{post}</p>
           <p className="name">{name}</p>
-          <a href="">
-            <i className="fa fa-github" />
-          </a>
-          <a href="">
-            <i className="fa fa-linkedin" />
-          </a>
-          <a href="">
-            <i className="fa fa-twitter" />
-          </a>
+          <p>
+            <a href="" alt="">
+              <i className="fa fa-github" />
+            </a>
+            <a href="" alt="">
+              <i className="fa fa-linkedin" />
+            </a>
+            <a href="" alt="">
+              <i className="fa fa-twitter" />
+            </a>
+          </p>
         </div>
       </div>
     </>

@@ -9,13 +9,13 @@ const SocietyHeadCard = ({ data }) => {
         <p className="position">{data.post}</p>
         <p className="name">{data.name}</p>
         <p>
-          <a href="">
+          <a href="" alt="">
             <i className="fa fa-github" />
           </a>
-          <a href="">
+          <a href="" alt="">
             <i className="fa fa-linkedin" />
           </a>
-          <a href="">
+          <a href="" alt="">
             <i className="fa fa-twitter" />
           </a>
         </p>

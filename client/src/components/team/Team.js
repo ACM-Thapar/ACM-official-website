@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import dummyImage from '../../images/face4.png';
 import TeamCarousel from './TeamCarousel';
 import Presidents from './Presidents';
 import SocietyHeads from './SocietyHeads';
+import axios from 'axios';
 
 const Team = () => {
+  let [data, setData] = useState(null);
+  let baseUrl = 'https://acm-official-website.herokuapp.com/team';
+  useEffect(() => {
+    axios.get(baseUrl).then((response) => {
+      setData(response.data[3]);
+    });
+  }, []);
+  const presidentData = data['President'];
+  const societyHeadData = data['SocietyHead'];
+  const departmentHeaddata = data['DepartmentHead'];
   return (
     <>
       <div className="team-page">
