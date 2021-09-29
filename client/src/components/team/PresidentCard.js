@@ -1,10 +1,13 @@
 import React from 'react';
+import dummyImage from '../../images/face4.png';
 
 const PresidentCard = ({ data }) => {
+  let imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
+
   return (
     <>
       <div className="president-img-div">
-        <img src={data.imgSrc} className="president-img" />
+        <img src={imgSrc} className="president-img" />
         <p className="position">President</p>
         <p className="name">{data.name}</p>
         <p>

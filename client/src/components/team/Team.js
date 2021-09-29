@@ -6,14 +6,14 @@ import SocietyHeads from './SocietyHeads';
 import axios from 'axios';
 
 const Team = () => {
-  let [data, setData] = useState(null);
+  let [data, setData] = useState(1);
   let baseUrl = 'https://acm-official-website.herokuapp.com/team';
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       setData(response.data[3]);
     });
   }, []);
-  const presidentData = data['President'];
+  let presidentData = data['President'];
   const societyHeadData = data['SocietyHead'];
   const departmentHeaddata = data['DepartmentHead'];
   return (
@@ -25,7 +25,8 @@ const Team = () => {
             The people who will help you in your journey!
           </h3>
         </div>
-        <Presidents />
+        {presidentData && <Presidents data={presidentData} />}
+
         <SocietyHeads />
         <div className="department-heads">
           <h2 className="department-heads-heading">Department Heads</h2>
