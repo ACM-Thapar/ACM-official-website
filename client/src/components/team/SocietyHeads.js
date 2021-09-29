@@ -2,7 +2,7 @@ import React from 'react';
 import dummyImage from '../../images/face4.png';
 import SocietyHeadCard from './SocietyHeadCard';
 
-const SocietyHeads = () => {
+const SocietyHeads = ({ data }) => {
   const societyHeadDummyData1 = {
     name: 'Ujjwal Aggarwal',
     post: 'General Secretary',
@@ -28,8 +28,8 @@ const SocietyHeads = () => {
       <div className="society-heads">
         <h2 className="society-heads-heading">Society Heads</h2>
 
-        {societyHeadData.map((data) => {
-          return <SocietyHeadCard data={data} />;
+        {data.map((socHead) => {
+          return <SocietyHeadCard data={socHead} />;
         })}
 
         {/* <div className="society-heads-img-div">

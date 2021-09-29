@@ -26,8 +26,8 @@ const Team = () => {
           </h3>
         </div>
         {presidentData && <Presidents data={presidentData} />}
+        {societyHeadData && <SocietyHeads data={societyHeadData} />}
 
-        <SocietyHeads />
         <div className="department-heads">
           <h2 className="department-heads-heading">Department Heads</h2>
           {/* <div className="carousel">
