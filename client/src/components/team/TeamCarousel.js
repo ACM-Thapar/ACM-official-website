@@ -130,8 +130,28 @@ const TeamCarousel = ({ data }) => {
                 </div>
               );
             })}
+          {/* The Carousel only seems to work properly when there are more than two entries, remove the below duplicated code block
+              when there are more than two department head entries in the backend */}
+          {data &&
+            data.map((deptHead) => {
+              const imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
+              return (
+                <div className="slick-slide">
+                  <img src={imgSrc} alt="dept-head" />
+                  <div className="carousel-credentials">
+                    <p className="position">{deptHead.post}</p>
+                    <p className="name">{deptHead.name}</p>
+                    <p>
+                      <i className="fa fa-github" />
+                      <i className="fa fa-linkedin" />
+                      <i className="fa fa-twitter" />
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
 
-          <div className="slick-slide">
+          {/* <div className="slick-slide">
             <img src={dummyImage} alt="dept-head" />
             <div className="carousel-credentials">
               <p className="position">Tech Head</p>
@@ -142,8 +162,8 @@ const TeamCarousel = ({ data }) => {
                 <i className="fa fa-twitter" />
               </p>
             </div>
-          </div>
-          <div className="slick-slide">
+          </div> */}
+          {/* <div className="slick-slide">
             <img src={dummyImage} alt="dept-head" />
             <div className="carousel-credentials">
               <p className="position">Jr. Tech Head</p>
@@ -154,7 +174,7 @@ const TeamCarousel = ({ data }) => {
                 <i className="fa fa-twitter" />
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <div className="slick-slide">
             <img src={dummyImage} alt="dept-head" />
             <div className="carousel-credentials">
