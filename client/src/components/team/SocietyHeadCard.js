@@ -9,9 +9,15 @@ const SocietyHeadCard = ({ data }) => {
         <p className="position">{data.post}</p>
         <p className="name">{data.name}</p>
         <p>
-          <i className="fa fa-github" />
-          <i className="fa fa-linkedin" />
-          <i className="fa fa-twitter" />
+          <a href="">
+            <i className="fa fa-github" />
+          </a>
+          <a href="">
+            <i className="fa fa-linkedin" />
+          </a>
+          <a href="">
+            <i className="fa fa-twitter" />
+          </a>
         </p>
       </div>
     </>

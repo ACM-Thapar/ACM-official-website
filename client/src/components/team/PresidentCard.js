@@ -7,11 +7,15 @@ const PresidentCard = ({ data }) => {
         <img src={data.imgSrc} className="president-img" />
         <p className="position">President</p>
         <p className="name">{data.name}</p>
-        <p>
+        <a href="">
           <i className="fa fa-github" />
+        </a>
+        <a href="">
           <i className="fa fa-linkedin" />
+        </a>
+        <a href="">
           <i className="fa fa-twitter" />
-        </p>
+        </a>
       </div>
     </>
   );
