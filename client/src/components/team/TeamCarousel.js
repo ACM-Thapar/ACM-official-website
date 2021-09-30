@@ -105,7 +105,7 @@ const TeamCarousel = ({ data }) => {
                       <a href={deptHead.socialHandles.github} alt="">
                         <i className="fa fa-github" />
                       </a>
-                      <a href={deptHead.socialHandles.linkedin} alt="">
+                      <a href={deptHead.socialHandles.linkedIn} alt="">
                         <i className="fa fa-linkedin" />
                       </a>
                       <a href={deptHead.socialHandles.twitter} alt="">

@@ -13,7 +13,7 @@ const SocietyHeadCard = ({ data }) => {
           <a href={data.socialHandles.github} alt="">
             <i className="fa fa-github" />
           </a>
-          <a href={data.socialHandles.linkedin} alt="">
+          <a href={data.socialHandles.linkedIn} alt="">
             <i className="fa fa-linkedin" />
           </a>
           <a href={data.socialHandles.twitter} alt="">
