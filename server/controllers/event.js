@@ -7,7 +7,7 @@ const Event = require('../models/Event');
 
 exports.getEvent = async (req, res) => {
   try {
-    const event = await Blog.find();
+    const event = await Event.find();
     return res.json(event);
   } catch (err) {
     console.error(err.message);
