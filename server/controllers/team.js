@@ -8,9 +8,9 @@ const Team = require('../models/Team');
 exports.getTeam = async (req, res) => {
   try {
     const team = await Team.find()
-      .populate('President', ['name', 'tagline', 'socialHandles'])
-      .populate('SocietyHead', ['name', 'tagline', 'socialHandles'])
-      .populate('DepartmentHead', ['name', 'tagline', 'socialHandles']);
+      .populate('President', ['name', 'tagline', 'socialHandles', 'ImgURL'])
+      .populate('SocietyHead', ['name', 'tagline', 'socialHandles', 'ImgURL'])
+      .populate('DepartmentHead', ['name', 'tagline', 'socialHandles', 'ImgURL']);
 
     return res.json(team);
   } catch (err) {
