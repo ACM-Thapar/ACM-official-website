@@ -7,15 +7,19 @@ import axios from 'axios';
 
 const Team = () => {
   let [data, setData] = useState(1);
-  let baseUrl = 'https://acm-official-website.herokuapp.com/team';
-  useEffect(() => {
-    axios.get(baseUrl).then((response) => {
-      setData(response.data[3]);
-    });
-  }, []);
-  const presidentData = data && data['President'];
-  const societyHeadData = data && data['SocietyHead'];
-  const departmentHeadData = data && data['DepartmentHead'];
+  // let baseUrl = 'https://acm-official-website.herokuapp.com/team';
+  // useEffect(async() => {
+  //   axios.get(baseUrl).then((response) => {
+  //     setData(response.data[3]);
+  //   });
+  // }, []);
+  useEffect(async() => {
+    const res = await axios.get('http://localhost:5000/team');
+    setData(res.data);
+  },[])
+  const presidentData = data[0] && data[0].President;
+  const societyHeadData = data[0] && data[0].SocietyHead;
+  const departmentHeadData = data[0] && data[0].DepartmentHead;
   return (
     <>
       <div className="team-page">

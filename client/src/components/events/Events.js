@@ -1,10 +1,17 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProjectDummyImage from '../../images/project.png';
 import ProjectGif from '../../images/web_developing.gif';
 import { Card } from 'react-bootstrap';
 import EventCard from './EventCard';
+import axios from 'axios';
 const Events = () => {
+  let [data, setData] = useState(null);
+  useEffect(async() => {
+    const res = await axios.get('http://localhost:5000/event');
+    setData(res.data);
+  },[])
+  console.log(data)
   const dummyData = {
     month: 'DEC',
     date: '25',
@@ -42,7 +49,14 @@ const Events = () => {
 
       <div className="container card-cont">
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
+          {data && data.map(eventData => {
+            return(
+              <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
+                <EventCard data={eventData} />
+              </div>
+            )
+          })}
+          {/* <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
             <EventCard data={dummyData} />
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
@@ -60,7 +74,7 @@ const Events = () => {
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
             <EventCard data={dummyData} />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

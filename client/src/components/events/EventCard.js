@@ -12,11 +12,11 @@ export default function EventCard({ data }) {
   return (
     <div>
       <Card style={{ width: '18rem' }} className="card procard">
-        <img src={DummyProjectImage} className="card-img-top pcimg " />
+        <img src={data.ImgURL} className="card-img-top pcimg " />
         <div className="card-body" style={{ padding: '2rem 1.2rem' }}>
-          <p className="card-title promonth">{data.month}</p>
-          <h4 className="card-title prodate">{data.date}</h4>
-          <h4 className="card-title protitle">{data.cardTitle}</h4>
+          <p className="card-title promonth">{data.StartDate}</p>
+          <h4 className="card-title prodate">{data.Time}</h4>
+          <h4 className="card-title protitle">{data.Name}</h4>
           <a
             href="#exampleModal"
             data-toggle="modal"
@@ -24,22 +24,22 @@ export default function EventCard({ data }) {
             onClick={handleShow}
           />
           <p className="card-text prodescription small">
-            {data.cardBriefDescription}
+            {data.Description}
           </p>
         </div>
       </Card>
 
       <Modal show={show} onHide={handleClose}>
         <div className="modal-content mcpro">
-          <img src={DummyProjectImage} className="modal-img mipro" alt="" />
+          <img src={data.ImgURL} className="modal-img mipro" alt="" />
           <div className="main-content">
-            <h3 className="modal-heading mhpro">{data.cardTitle}</h3>
+            <h3 className="modal-heading mhpro">{data.Name}</h3>
             <div className="datepro">
-              <p className="monthpro">{data.month}</p>
-              <p className="dtpro">{data.date}</p>
+              <p className="monthpro">{data.StartDate}</p>
+              <p className="dtpro">{data.Time}</p>
             </div>
             <div className="paraspro" style={{ paddingRight: '2rem' }}>
-              <p>{data.mainDescription}</p>
+              <p>{data.Description}</p>
             </div>
           </div>
         </div>
