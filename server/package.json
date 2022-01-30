@@ -11,6 +11,9 @@
     "start": "node index.js",
     "dev-node": "node index.js"
   },
+  "engines": {
+    "node": "16.13.2"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
