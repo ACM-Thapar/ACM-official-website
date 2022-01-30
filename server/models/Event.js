@@ -1,21 +1,14 @@
 const mongoose = require('mongoose');
 
 const EventSchema = new mongoose.Schema({
-  StartDate: {
-    type: Date,
-    required: [true, 'Start Date of event is required'],
-  },
-
-  EndDate: {
-    type: Date,
-    required: [true, 'End Date of event is required'],
-  },
-
-  Time: {
+  Month:{
     type: String,
-    required: [true, 'Time of event is required'],
+    required: true
   },
-
+  Day:{
+    type: String,
+    required: true
+  },
   Name: {
     type: String,
     required: [true, 'Name of event  is required'],

@@ -8,6 +8,8 @@ const connectDB = async () => {
       useCreateIndex: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
+      server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+      replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
     });
     console.log('MongoDB Connected');
   } catch (err) {
