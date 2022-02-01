@@ -20,6 +20,7 @@ const Team = () => {
   const presidentData = data[0] && data[0].President;
   const societyHeadData = data[0] && data[0].SocietyHead;
   const departmentHeadData = data[0] && data[0].DepartmentHead;
+  console.log(departmentHeadData)
   return (
     <>
       <div className="team-page">
