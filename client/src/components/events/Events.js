@@ -8,7 +8,7 @@ import axios from 'axios';
 const Events = () => {
   let [data, setData] = useState(null);
   useEffect(async() => {
-    const res = await axios.get('http://localhost:5000/event');
+    const res = await axios.get('https://acm-official-website.herokuapp.com/event');
     setData(res.data);
   },[])
   console.log(data)
