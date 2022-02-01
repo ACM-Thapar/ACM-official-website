@@ -14,7 +14,7 @@ const Team = () => {
   //   });
   // }, []);
   useEffect(async() => {
-    const res = await axios.get('http://localhost:5000/team');
+    const res = await axios.get('https://acm-official-website.herokuapp.com/team');
     setData(res.data);
   },[])
   const presidentData = data[0] && data[0].President;
