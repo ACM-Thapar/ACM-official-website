@@ -115,32 +115,7 @@ const TeamCarousel = ({ data }) => {
                 </div>
               );
             })}
-          {/* The Carousel only seems to work properly when there are more than two entries, remove the below duplicated code block
-              when there are more than two department head entries in the backend */}
-          {data &&
-            data.map((deptHead) => {
-              const imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
-              return (
-                <div className="slick-slide">
-                  <img src={imgSrc} alt="dept-head" />
-                  <div className="carousel-credentials">
-                    <p className="position">{deptHead.post}</p>
-                    <p className="name">{deptHead.name}</p>
-                    <p>
-                      <a href={deptHead.socialHandles.github} alt="">
-                        <i className="fa fa-github" />
-                      </a>
-                      <a href={deptHead.socialHandles.linkedin} alt="">
-                        <i className="fa fa-linkedin" />
-                      </a>
-                      <a href={deptHead.socialHandles.twitter} alt="">
-                        <i className="fa fa-twitter" />
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+          
         </Slider>
       </div>
     </Fragment>

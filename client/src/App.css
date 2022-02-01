@@ -21,6 +21,10 @@ body {
   margin-left: 45px;
 }
 
+.slick-prev::before{
+  z-index: 10000 !important;
+}
+
 /* buttons */
 button.learn-more {
   position: relative;
@@ -1276,6 +1280,8 @@ a.learnmorenew:hover {
 .slick-next:before,
 .slick-prev:before {
   color: black !important;
+  z-index: 100000 !important;
+  position: relative;
 }
 .carousel-credentials {
   margin-bottom: 15%;
