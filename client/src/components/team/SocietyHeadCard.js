@@ -2,7 +2,7 @@ import React from 'react';
 import dummyImage from '../../images/face4.png';
 
 const SocietyHeadCard = ({ data }) => {
-  const imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
+  const imgSrc = data.ImgURL ? data.ImgURL : dummyImage;
   return (
     <>
       <div className="society-heads-img-div">

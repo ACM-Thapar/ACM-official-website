@@ -9,13 +9,15 @@ export default function EventCard({ data }) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // const month = ["Jan" ,"Feb" ,"Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"];
+  // let monthName = month[(data.StartDate).getMonth()];
   return (
     <div>
       <Card style={{ width: '18rem' }} className="card procard">
         <img src={data.ImgURL} className="card-img-top pcimg " />
         <div className="card-body" style={{ padding: '2rem 1.2rem' }}>
-          <p className="card-title promonth">{data.StartDate}</p>
-          <h4 className="card-title prodate">{data.Time}</h4>
+          <p className="card-title promonth">{data.Month}</p>
+          <h4 className="card-title prodate">{data.Day}</h4>
           <h4 className="card-title protitle">{data.Name}</h4>
           <a
             href="#exampleModal"

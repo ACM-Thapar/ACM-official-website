@@ -12,6 +12,15 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.amico-img{
+  width: 100%;
+  margin-bottom: 20%;
+  position: relative;
+  bottom: 50px;
+  padding: 2%;
+  margin-left: 45px;
+}
+
 /* buttons */
 button.learn-more {
   position: relative;

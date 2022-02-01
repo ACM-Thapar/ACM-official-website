@@ -93,7 +93,7 @@ const TeamCarousel = ({ data }) => {
         <Slider {...settings}>
           {data &&
             data.map((deptHead) => {
-              const imgSrc = data.imgSrc ? data.imgSrc : dummyImage;
+              const imgSrc = deptHead.ImgURL ? deptHead.ImgURL : dummyImage;
               return (
                 <div className="slick-slide">
                   <img src={imgSrc} alt="dept-head" />
