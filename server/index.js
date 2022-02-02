@@ -5,6 +5,7 @@ const member = require('./routes/member');
 const team = require('./routes/team');
 const blog = require('./routes/blog');
 const event = require('./routes/event');
+const project = require('./routes/project');
 
 const cors = require('cors');
 const cloudiRouter = require('./routes/member');
@@ -36,6 +37,7 @@ app.use('/member', member);
 app.use('/team', team);
 app.use('/blog', blog);
 app.use('/event', event);
+app.use('/project', project);
 
 //Cloudinary
 

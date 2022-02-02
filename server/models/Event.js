@@ -14,9 +14,18 @@ const EventSchema = new mongoose.Schema({
     required: [true, 'Name of event  is required'],
   },
 
+  MainDescription: {
+    type: String,
+   
+  },
+
   Description: {
     type: String,
     required: [true, 'Description of event  is required'],
+  },
+  Upcoming:{
+    type:Boolean,
+    required:true
   },
 
   ImgURL: {
