@@ -89,6 +89,15 @@
         "code",
         "maintenance"
       ]
+    },
+    {
+      "login": "prabs3257",
+      "name": "Prabhav Chopra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73053857?v=4",
+      "profile": "https://github.com/prabs3257",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
