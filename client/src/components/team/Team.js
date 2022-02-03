@@ -4,9 +4,11 @@ import TeamCarousel from './TeamCarousel';
 import Presidents from './Presidents';
 import SocietyHeads from './SocietyHeads';
 import axios from 'axios';
+import Loader from '../loader/loader';
 
 const Team = () => {
   let [data, setData] = useState(1);
+  const [load, setLoad] = useState(false)
   // let baseUrl = 'https://acm-official-website.herokuapp.com/team';
   // useEffect(async() => {
   //   axios.get(baseUrl).then((response) => {
@@ -14,8 +16,10 @@ const Team = () => {
   //   });
   // }, []);
   useEffect(async() => {
+    setLoad(true)
     const res = await axios.get('https://acm-official-website.herokuapp.com/team');
     setData(res.data);
+    setLoad(false)
   },[])
   const presidentData = data[0] && data[0].President;
   const societyHeadData = data[0] && data[0].SocietyHead;
@@ -23,6 +27,7 @@ const Team = () => {
   console.log(departmentHeadData)
   return (
     <>
+    {load? <Loader/>: 
       <div className="team-page">
         <div className="team-page-headings-div">
           <h1 className="team-page-head">Meet the team</h1>
@@ -38,6 +43,7 @@ const Team = () => {
           {departmentHeadData && <TeamCarousel data={departmentHeadData} />}
         </div>
       </div>
+    }
     </>
   );
 };

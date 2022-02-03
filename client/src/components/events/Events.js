@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import ProjectDummyImage from '../../images/project.png';
 import ProjectGif from '../../images/web_developing.gif';
 import { Card } from 'react-bootstrap';
 import EventCard from './EventCard';
 import axios from 'axios';
+import Loader from '../loader/loader';
 const Events = () => {
   let [data, setData] = useState(null);
+  const [load, setLoad] = useState(false)
+
   useEffect(async() => {
+    setLoad(true)
     const res = await axios.get('https://acm-official-website.herokuapp.com/event');
     setData(res.data);
+    setLoad(false)
+
   },[])
   console.log(data)
   const dummyData = {
@@ -26,6 +32,8 @@ const Events = () => {
   };
   return (
     <>
+    {load? <Loader/>: 
+    <Fragment>
       <section className="projectspagetop">
         <div className="container">
           <div className="row justify-content-end">
@@ -77,6 +85,8 @@ const Events = () => {
           </div> */}
         </div>
       </div>
+      </Fragment>
+      }
     </>
   );
 };
