@@ -82,6 +82,7 @@ const Projects = () => {
           <a href={project.GithubURL} target='_blank'>
           <div className='project'>
           <img src={folder} className='folder-img'/>
+          <img src={project.ImagesURL} className='project-img'/>
           <h2>{project.Title}</h2>
           <h6>{project.Description}</h6>
           <div classNme='stack-wrapper'>
