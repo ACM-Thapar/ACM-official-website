@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import ProjectDummyImage from '../../images/project.png';
 import ProjectGif from '../../images/web_developing.gif';
@@ -8,36 +8,18 @@ import './projects.css';
 import Face1 from '../../images/face1.png';
 import Face2 from '../../images/face2.png';
 import Face3 from '../../images/face3.png';
+import folder from '../../images/folder.png';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import Axios from 'axios';
 
 const Projects = () => {
-  const dummyData = {
-    month: 'DEC',
-    date: '25',
-    cardTitle: 'Website Design Project',
-    cardBriefDescription:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-    cardImageSrc: ProjectDummyImage,
-
-    mainDescription:
-      'Folly words widow one downs few age every seven. If miss part by fact he park just shew.\n\n Discovered had get considered projection who favourable. Necessary up knowledge it tolerably. Unwilling departure education is be dashwoods or an. Use off agreeable law unwilling sir deficient curiosity instantly. Easy mind life fact with see has bore ten.\n\n Parish any chatty can elinor direct for former. Up as meant widow equal an share least. \n\n Folly words widow one downs few age every seven. If miss part by fact he park just shew.',
-    team: [
-      {
-        name: 'Name 1',
-        position: 'Position 1',
-        imgSrc: Face1,
-      },
-      {
-        name: 'Name 2',
-        position: 'Position 2',
-        imgSrc: Face2,
-      },
-      {
-        name: 'Random Name 3',
-        position: 'Position 3',
-        imgSrc: Face3,
-      },
-    ],
-  };
+  const [data,setData] = useState(null)
+  useEffect(async() => {
+    const res = await Axios.get('https://acm-official-website.herokuapp.com/project/getprojects');
+    setData(res.data);
+  },[])
+  console.log(data)
 
   return (
     <>
@@ -62,7 +44,7 @@ const Projects = () => {
         </div>
       </section>
 
-      <div className="container card-cont">
+      {/* <div className="container card-cont">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
             <ProjectCard data={dummyData} />
@@ -84,6 +66,31 @@ const Projects = () => {
             <ProjectCard data={dummyData} />
           </div>
         </div>
+      </div> */}
+     
+      <div className='project-div'>
+      {data && data.data.map(project=>{
+        return(
+          <a href={project.GithubURL} target='_blank'>
+          <div className='project'>
+          <img src={folder} className='folder-img'/>
+          <h2>{project.Title}</h2>
+          <h6>{project.Description}</h6>
+          <Stack direction="row" spacing={1}>
+            {project.Languages.map(lang=>{
+              return(
+                <Chip label={lang} />
+              )
+            })}
+
+          </Stack>
+          <span></span>
+        </div>
+        </a>
+         )
+      })} 
+        
+        
       </div>
     </>
   );

@@ -4366,3 +4366,48 @@ h1.pmainsectiontitle {
     display: none;
   }
 }
+.project-div{
+  width: 75%;
+  margin: 8vh auto;
+}
+.project{
+  min-height: 22.5vh;
+  border-radius: 10px;
+  box-shadow: rgb(10 10 20 / 35%) 0px 10px 30px -15px;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5% 5%;
+  width: 100%;
+  display: inline-block;
+  margin: 2%;
+  transition: 0.3s all;
+  }
+.folder-img{
+  height: 50px ;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+}
+.project h2{
+  width: 65% !important;
+  margin: 0;
+  display: inline-block;
+  padding: 4%;
+}
+.project h6{
+  padding: 0 0 2%;
+}
+.css-w4z10b-MuiStack-root{
+  margin-bottom: 3vh;
+
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+.project:hover{
+  transform: translateY(-10px);
+}
