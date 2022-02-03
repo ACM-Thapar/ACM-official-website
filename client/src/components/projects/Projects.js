@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useState } from 'react';
 import ProjectDummyImage from '../../images/project.png';
 import ProjectGif from '../../images/web_developing.gif';
@@ -12,17 +12,25 @@ import folder from '../../images/folder.png';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Axios from 'axios';
+import Loader from '../loader/loader';
 
 const Projects = () => {
   const [data,setData] = useState(null)
+  const [load, setLoad] = useState(false)
+
   useEffect(async() => {
+    setLoad(true)
     const res = await Axios.get('https://acm-official-website.herokuapp.com/project/getprojects');
     setData(res.data);
+    setLoad(false)
+
   },[])
   console.log(data)
 
   return (
     <>
+    {load? <Loader/>:
+    <Fragment>
       <section className="projectspagetop">
         <div className="container">
           <div className="row justify-content-end">
@@ -74,8 +82,10 @@ const Projects = () => {
           <a href={project.GithubURL} target='_blank'>
           <div className='project'>
           <img src={folder} className='folder-img'/>
+          <img src={project.ImagesURL} className='project-img'/>
           <h2>{project.Title}</h2>
           <h6>{project.Description}</h6>
+          <div classNme='stack-wrapper'>
           <Stack direction="row" spacing={1}>
             {project.Languages.map(lang=>{
               return(
@@ -83,7 +93,7 @@ const Projects = () => {
               )
             })}
 
-          </Stack>
+          </Stack></div>
           <span></span>
         </div>
         </a>
@@ -92,6 +102,8 @@ const Projects = () => {
         
         
       </div>
+      </Fragment>
+}
     </>
   );
 };

@@ -25,17 +25,7 @@ const Navbar = () => {
         <div className="col-md-3" />
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            {/* <li className="nav-item">
-              <a className="nav-link">
-                <Link to="/achievements">Achievements</Link>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link">
-              <Link to="/blogs">Blogs</Link>
-
-              </a>
-            </li> */}
+            
             <li className="nav-item">
               <a className="nav-link">
                 <Link to="/team">Team</Link>
@@ -49,6 +39,17 @@ const Navbar = () => {
             <li className="nav-item main">
               <a className="nav-link">
                 <Link to="/events">Events</Link>  
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                <Link to="#!!">Videos</Link>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+              <Link to="#!!">Blogs</Link>
+
               </a>
             </li>
           </ul>

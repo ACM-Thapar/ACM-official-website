@@ -26,7 +26,7 @@ export default function EventCard({ data }) {
             onClick={handleShow}
           />
           <p className="card-text prodescription small">
-            {data.Description}
+            {data.MainDescription}
           </p>
         </div>
       </Card>

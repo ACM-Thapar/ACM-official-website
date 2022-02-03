@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import ProjectDummyImage from '../../images/project.png';
 import ProjectGif from '../../images/events-page-gif.gif';
 import { Card } from 'react-bootstrap';
 import EventCard from './EventCard';
 import axios from 'axios';
+import Loader from '../loader/loader';
+import calender from '../../images/calendar.png'
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack'
+
 const Events = () => {
   let [data, setData] = useState(null);
+  const [load, setLoad] = useState(false)
+
   useEffect(async() => {
+    setLoad(true)
     const res = await axios.get('https://acm-official-website.herokuapp.com/event');
     setData(res.data);
+    setLoad(false)
+
   },[])
   console.log(data)
   const dummyData = {
@@ -26,6 +36,8 @@ const Events = () => {
   };
   return (
     <>
+    {load? <Loader/>: 
+    <Fragment>
       <section className="projectspagetop">
         <div className="container">
           <div className="row justify-content-end">
@@ -47,13 +59,34 @@ const Events = () => {
         </div>
       </section>
 
-      <div className="container card-cont">
-        <div className="row">
+      <div className='project-div'>
           {data && data.map(eventData => {
+            const label = `${eventData.Day} ${eventData.Month}`
             return(
-              <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
-                <EventCard data={eventData} />
-              </div>
+              <a href={eventData.GithubURL} target='_blank'>
+          <div className='project'>
+          <img src={calender} className='folder-img'/>
+          <img src={eventData.ImgURL} className='project-img'/>
+          <h2>{eventData.Name}</h2>
+          <h6>{eventData.Description}</h6>
+          <div classNme='stack-wrapper'>
+            <Stack direction="row" spacing={1}>
+              <Chip label={label}/>
+              {eventData.Upcoming? <Chip label="Upcoming" color="success"/>: ' '}
+            </Stack>
+          </div>
+          {/* <div classNme='stack-wrapper'>
+          <Stack direction="row" spacing={1}>
+            {eventData.Languages.map(lang=>{
+              return(
+                <Chip label={lang} />
+              )
+            })}
+
+          </Stack></div> */}
+          <span></span>
+        </div>
+        </a>
             )
           })}
           {/* <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
@@ -75,8 +108,9 @@ const Events = () => {
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
             <EventCard data={dummyData} />
           </div> */}
-        </div>
       </div>
+      </Fragment>
+      }
     </>
   );
 };
