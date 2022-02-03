@@ -9,8 +9,14 @@ import Events from './components/events/Events';
 import Blogs from './components/blogs/Blogs';
 import Projects from './components/projects/Projects';
 import Videos from './components/videos/Videos';
+import { useEffect } from 'react';
+import Axios from 'axios';
 
 function App() {
+
+  useEffect(async() => {
+   await Axios.get('https://acm-official-website.herokuapp.com/team');
+  },[])
   return (
     <Router>
       <div className="App">
