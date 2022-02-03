@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useState, useEffect } from 'react';
 import ProjectDummyImage from '../../images/project.png';
-import ProjectGif from '../../images/web_developing.gif';
+import ProjectGif from '../../images/events-page-gif.gif';
 import { Card } from 'react-bootstrap';
 import EventCard from './EventCard';
 import axios from 'axios';
