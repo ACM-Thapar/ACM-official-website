@@ -61,7 +61,7 @@ const Footer = () => {
             <div className="col-md-4">
               <p className="copyright" style={{ color: '#ffffff' }}>
                 <i className="fa fa-copyright" style={{ color: '#ffffff' }} />
-                Copyright 2020 || Designed by ACM Thapar
+                Copyright {new Date().getFullYear()} || Designed by ACM Thapar
               </p>
             </div>
           </div>
