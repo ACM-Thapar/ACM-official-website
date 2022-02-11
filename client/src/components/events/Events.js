@@ -75,6 +75,7 @@ const Events = () => {
               {eventData.Upcoming? <Chip label="Upcoming" color="success"/>: ' '}
             </Stack>
           </div>
+          <p></p>
           {/* <div classNme='stack-wrapper'>
           <Stack direction="row" spacing={1}>
             {eventData.Languages.map(lang=>{
