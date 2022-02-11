@@ -15,7 +15,7 @@ import Axios from 'axios';
 function App() {
 
   useEffect(async() => {
-   await Axios.get('https://acm-official-website.herokuapp.com/team');
+   await Axios.get('https://acm-official-website.herokuapp.com/');
   },[])
   return (
     <Router>
