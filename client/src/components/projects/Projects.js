@@ -15,44 +15,51 @@ import Axios from 'axios';
 import Loader from '../loader/loader';
 
 const Projects = () => {
-  const [data,setData] = useState(null)
-  const [load, setLoad] = useState(false)
+  const [data, setData] = useState(null);
+  const [load, setLoad] = useState(false);
 
-  useEffect(async() => {
-    setLoad(true)
-    const res = await Axios.get('https://acm-official-website.herokuapp.com/project/getprojects');
+  useEffect(async () => {
+    setLoad(true);
+    const res = await Axios.get(
+      'https://acm-official-website.herokuapp.com/project/getprojects',
+    );
     setData(res.data);
-    setLoad(false)
-
-  },[])
-  console.log(data)
+    setLoad(false);
+  }, []);
+  console.log(data);
 
   return (
     <>
-    {load? <Loader/>:
-    <Fragment>
-      <section className="projectspagetop">
-        <div className="container">
-          <div className="row justify-content-end">
-            <div className="col-4">
-              <h1 className="pmainsectiontitle">Projects</h1>
-              <p className="mainsectiontextpro">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
-                tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit ... tempor
-                incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit ... tempor incididunt ut
-                labore et dolore magna aliqua.
-              </p>
+      {load ? (
+        <Loader />
+      ) : (
+        <Fragment>
+          <section className="projectspagetop">
+            <div className="container">
+              <div className="row justify-content-end">
+                <div className="col-4">
+                  <h1 className="pmainsectiontitle">Projects</h1>
+                  <p className="mainsectiontextpro">
+                  <p>“Innovation and research are the sole of learning and implementing.” </p>
+                    Projects serve as the platform for transforming knowledge
+                    into ideas. While enhancing various skills and management
+                    techniques in our actions and lives. Project-based learning
+                    inculcates competencies to go beyond subject knowledge,
+                    prepare and challenge the existing methods. 
+                    <br/>
+                    With this
+                    thought, ACM TIET presents various ongoing and accomplished
+                    projects under numerous domains.
+                  </p>
+                </div>
+                <div className="projectspagegif col-6">
+                  <img src={ProjectGif} style={{ width: '100%' }} />
+                </div>
+              </div>
             </div>
-            <div className="projectspagegif col-6">
-              <img src={ProjectGif} style={{ width: '100%' }} />
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* <div className="container card-cont">
+          {/* <div className="container card-cont">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
             <ProjectCard data={dummyData} />
@@ -75,36 +82,33 @@ const Projects = () => {
           </div>
         </div>
       </div> */}
-     
-      <div className='project-div'>
-      {data && data.data.map(project=>{
-        return(
-          <a href={project.GithubURL} target='_blank'>
-          <div className='project'>
-          <img src={folder} className='folder-img'/>
-          <img src={project.ImagesURL} className='project-img'/>
-          <h2>{project.Title}</h2>
-          <h6>{project.Description}</h6>
-          <div classNme='stack-wrapper'>
-          <Stack direction="row" spacing={1}>
-            {project.Languages.map(lang=>{
-              return(
-                <Chip label={lang} />
-              )
-            })}
 
-          </Stack></div>
-          <p></p>
-          <span></span>
-        </div>
-        </a>
-         )
-      })} 
-        
-        
-      </div>
-      </Fragment>
-}
+          <div className="project-div">
+            {data &&
+              data.data.map((project) => {
+                return (
+                  <a href={project.GithubURL} target="_blank">
+                    <div className="project">
+                      <img src={folder} className="folder-img" />
+                      <img src={project.ImagesURL} className="project-img" />
+                      <h2>{project.Title}</h2>
+                      <h6>{project.Description}</h6>
+                      <div classNme="stack-wrapper">
+                        <Stack direction="row" spacing={1}>
+                          {project.Languages.map((lang) => {
+                            return <Chip label={lang} />;
+                          })}
+                        </Stack>
+                      </div>
+                      <p></p>
+                      <span></span>
+                    </div>
+                  </a>
+                );
+              })}
+          </div>
+        </Fragment>
+      )}
     </>
   );
 };

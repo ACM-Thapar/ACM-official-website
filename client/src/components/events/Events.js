@@ -6,22 +6,23 @@ import { Card } from 'react-bootstrap';
 import EventCard from './EventCard';
 import axios from 'axios';
 import Loader from '../loader/loader';
-import calender from '../../images/calendar.png'
+import calender from '../../images/calendar.png';
 import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack'
+import Stack from '@mui/material/Stack';
 
 const Events = () => {
   let [data, setData] = useState(null);
-  const [load, setLoad] = useState(false)
+  const [load, setLoad] = useState(false);
 
-  useEffect(async() => {
-    setLoad(true)
-    const res = await axios.get('https://acm-official-website.herokuapp.com/event');
+  useEffect(async () => {
+    setLoad(true);
+    const res = await axios.get(
+      'https://acm-official-website.herokuapp.com/event',
+    );
     setData(res.data);
-    setLoad(false)
-
-  },[])
-  console.log(data)
+    setLoad(false);
+  }, []);
+  console.log(data);
   const dummyData = {
     month: 'DEC',
     date: '25',
@@ -36,47 +37,61 @@ const Events = () => {
   };
   return (
     <>
-    {load? <Loader/>: 
-    <Fragment>
-      <section className="projectspagetop">
-        <div className="container">
-          <div className="row justify-content-end">
-            <div className="col-4">
-              <h1 className="pmainsectiontitle">Upcoming Events</h1>
-              <p className="mainsectiontextpro">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ...
-                tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit ... tempor
-                incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit ... tempor incididunt ut
-                labore et dolore magna aliqua.
-              </p>
+      {load ? (
+        <Loader />
+      ) : (
+        <Fragment>
+          <section className="projectspagetop">
+            <div className="container">
+              <div className="row justify-content-end">
+                <div className="col-4">
+                  <h1 className="pmainsectiontitle">Events</h1>
+                  <p className="mainsectiontextpro">
+                    Events are the hub of interaction, connection-making, and
+                    learning. It serves as the medium of exchange and
+                    deliverance of thoughts with mind-boggling questions to code
+                    to work in a time-sensitive environment.
+                    <br />  
+                    At ACM Thapar, we host a variety of such events to bring
+                    together like-minded coders to collaborate, grow and have
+                    fun!. We believe that youth encompassed with appropriate
+                    technology holds the potential to revolutionize the world we
+                    perceive today.
+                  </p>
+                </div>
+                <div className="projectspagegif col-6">
+                  <img
+                    src={ProjectGif}
+                    style={{ width: '100%', height: '100%' }}
+                  />
+                </div>
+              </div>
             </div>
-            <div className="projectspagegif col-6">
-              <img src={ProjectGif} style={{ width: '100%' }} />
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <div className='project-div'>
-          {data && data.map(eventData => {
-            const label = `${eventData.Day} ${eventData.Month}`
-            return(
-              <a href={eventData.GithubURL} target='_blank'>
-          <div className='project'>
-          <img src={calender} className='folder-img'/>
-          <img src={eventData.ImgURL} className='project-img'/>
-          <h2>{eventData.Name}</h2>
-          <h6>{eventData.Description}</h6>
-          <div classNme='stack-wrapper'>
-            <Stack direction="row" spacing={1}>
-              <Chip label={label}/>
-              {eventData.Upcoming? <Chip label="Upcoming" color="success"/>: ' '}
-            </Stack>
-          </div>
-          <p></p>
-          {/* <div classNme='stack-wrapper'>
+          <div className="project-div">
+            {data &&
+              data.map((eventData) => {
+                const label = `${eventData.Day} ${eventData.Month}`;
+                return (
+                  <a href={eventData.GithubURL} target="_blank">
+                    <div className="project">
+                      <img src={calender} className="folder-img" />
+                      <img src={eventData.ImgURL} className="project-img" />
+                      <h2>{eventData.Name}</h2>
+                      <h6>{eventData.Description}</h6>
+                      <div classNme="stack-wrapper">
+                        <Stack direction="row" spacing={1}>
+                          <Chip label={label} />
+                          {eventData.Upcoming ? (
+                            <Chip label="Upcoming" color="success" />
+                          ) : (
+                            ' '
+                          )}
+                        </Stack>
+                      </div>
+                      <p></p>
+                      {/* <div classNme='stack-wrapper'>
           <Stack direction="row" spacing={1}>
             {eventData.Languages.map(lang=>{
               return(
@@ -85,12 +100,12 @@ const Events = () => {
             })}
 
           </Stack></div> */}
-          <span></span>
-        </div>
-        </a>
-            )
-          })}
-          {/* <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
+                      <span></span>
+                    </div>
+                  </a>
+                );
+              })}
+            {/* <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
             <EventCard data={dummyData} />
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
@@ -109,9 +124,9 @@ const Events = () => {
           <div className="col-lg-4 col-md-6 col-sm-12 col-12 my-5 disp-flex">
             <EventCard data={dummyData} />
           </div> */}
-      </div>
-      </Fragment>
-      }
+          </div>
+        </Fragment>
+      )}
     </>
   );
 };
