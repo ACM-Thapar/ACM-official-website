@@ -1,7 +1,7 @@
 import React from 'react';
 import Ellipse from '../../images/Ellipse.svg';
 import Group1 from '../../images/Group1.svg';
-import src from '../../images/Programmer-amico.png'
+import src from '../../images/Programmer-amico.png';
 
 const Landing = () => {
   return (
@@ -18,8 +18,12 @@ const Landing = () => {
               />
               <h1 className="ACMT">ACM THAPAR</h1>
               <p className="maintext">
-              ACM is the world’s largest computing society with the motive of “Advancing Computing as a science and profession”
-              At Thapar ACM Student Chapter, we aim towards the holistic development of our members by collaborating and engaging in a plethora of technical activities and projects where brainstorming and strategic planning is the primary key to excel.
+                ACM is the world’s largest computing society with the motive of
+                “Advancing Computing as a science and profession” At Thapar ACM
+                Student Chapter, we aim towards the holistic development of our
+                members by collaborating and engaging in a plethora of technical
+                activities and projects where brainstorming and strategic
+                planning is the primary key to excel.
               </p>
               <button className="learn-more">
                 <span className="circle" aria-hidden="true">
@@ -53,25 +57,36 @@ const Landing = () => {
             <div className="col-md-4">
               <h3 className="whatwedopoints">Classes</h3>
               <p>
-                We offer the resources, access and tools to invent the world.
+                We provide classes to our junior members particularly in the
+                field of Data Structures, Algorithms and Competitive
+                Programming.
               </p>
-              <h3 className="whatwedopoints">Bootcamp</h3>
+              <h3 className="whatwedopoints">Events</h3>
               <p>
-                ACM offers the resources, access and tools to invent the future.
+                At ACM Thapar, we host a variety of such events to bring
+                together like-minded coders to collaborate, grow and have fun!.
+                We believe that youth encompassed with appropriate technology
+                holds the potential to revolutionize the world we perceive
+                today.
               </p>
             </div>
             <div className="col-md-4">
-              <h3 className="whatwedopoints">Events</h3>
+              <h3 className="whatwedopoints">Bootcamp</h3>
               <p>
-                We offer the resources, access and tools to invent the world.
+                We have bootcamps in the fields of web development and app
+                development to upskill our members.
               </p>
               <h3 className="whatwedopoints">Projects</h3>
               <p>
-                ACM offers the resources, access and tools to invent the future.
+                Projects serve as the platform for transforming knowledge into
+                ideas. While enhancing various skills and management techniques
+                in our actions and lives. Project-based learning inculcates
+                competencies to go beyond subject knowledge, prepare and
+                challenge the existing methods.
               </p>
             </div>
             <div className="col-md-4">
-              <img src={src} className='amico-img'/>
+              <img src={src} className="amico-img" />
             </div>
           </div>
         </div>
@@ -98,7 +113,10 @@ const Landing = () => {
                     d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
                   />
                 </svg>
-                <a href="https://www.acm.org/membership" target='_blank' className="learnmorenew">
+                <a
+                  href="https://www.acm.org/membership"
+                  target="_blank"
+                  className="learnmorenew">
                   {' Learn More'}
                 </a>
               </button>
