@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 
 const MemberSchema = new mongoose.Schema({
+  member:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:'user'
+  },
   name: {
     type: String,
     required: [true, 'Name field is empty'],

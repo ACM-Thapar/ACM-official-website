@@ -21,6 +21,11 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Password field is empty'],
     trim: true,
   },
+  isAdmin: {
+    type: Boolean,
+    required: true,
+    default: false,
+  }
 });
 
 UserSchema.set('timestamps', true);

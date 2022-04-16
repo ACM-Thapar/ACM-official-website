@@ -22,7 +22,7 @@ const auth = async (req, res, next) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await User.findOne({
       _id: decoded.user,
-    });
+    }).select('-password');
 
     if (!user) {
       throw new Error();
@@ -35,4 +35,7 @@ const auth = async (req, res, next) => {
     res.status(401).json({ msg: 'Token is not valid' });
   }
 };
+
+
+// module.exports = {auth,admin};
 module.exports = auth;

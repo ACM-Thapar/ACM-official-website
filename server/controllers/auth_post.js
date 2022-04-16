@@ -3,6 +3,9 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 require('dotenv').config();
 const { validationResult } = require('express-validator');
+const uuid = require('uuid')
+const nodemailer = require('nodemailer')
+
 
 //@route    POST auth/login
 //@desc     Authenticate user & get token
@@ -32,10 +35,10 @@ exports.login = async (req, res) => {
       return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
     }
 
-    jwt.sign({ user: user._id }, process.env.JWT_SECRET, {
+    const JWT = jwt.sign({ user: user._id }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
-    res.json('User logged in successfully');
+    res.json({msg:'User logged in successfully',data:JWT});
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
@@ -52,8 +55,8 @@ exports.register = async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const { name, email, password } = req.body;
-
+  const { name, email} = req.body;
+  const password = uuid.v4();
   try {
     let user = await User.findOne({ email });
 
@@ -71,12 +74,49 @@ exports.register = async (req, res) => {
     user.password = await bcrypt.hash(password, salt);
     await user.save();
 
-    jwt.sign({ user: user._id }, process.env.JWT_SECRET, {
+    const JWT = jwt.sign({ user: user._id }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
-    res.json('User registered successfully');
+
+
+    // nodemailer
+
+    let gmailPass = process.env.gmailPass
+
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'jogeshgupta963@gmail.com',
+                pass: gmailPass
+            }
+        });
+        let info = transporter.sendMail({
+            from: '"Welcome👻" <jogeshgupta963@gmail.com>',
+            to: user.email,
+            subject: `Welcome ${user.name} .`,
+            html: `<b>You have been registered.Welcome to the ACM. Your password is ${password} </b>`,
+        });
+
+
+
+    res.json({msg:'User registered successfully',data:JWT});
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');
   }
 };
+
+//@route    GET user
+//@desc     get all user 
+//@access   private/admin
+
+exports.getAllUser = async(req,res) =>{
+
+  try{
+    const user = await User.find();
+    res.status(200).json(user);
+  }
+  catch(err){
+    res.status(400).json(err.message)
+  }
+}
