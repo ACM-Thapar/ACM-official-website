@@ -120,3 +120,31 @@ exports.getAllUser = async(req,res) =>{
     res.status(400).json(err.message)
   }
 }
+
+//@route    PUT user
+//@desc     update user password 
+//@access   private/admin
+
+exports.updatePassword = async(req,res)=>{
+  try{
+      const {currentPassword , newPassword } = req.body;
+      const {_id}  = req.user;
+      var user = await User.findById(_id).select('password')
+
+      const isMatch = await bcrypt.compare( currentPassword,user.password);
+      
+      
+      if (!isMatch) {
+        return res.status(400).json({ errors: [{ msg: 'Passwords dont match' }] });
+      }
+
+      const salt = await bcrypt.genSalt(10);
+      user.password = await bcrypt.hash(newPassword, salt);
+      user.save();
+      res.json({user})
+
+  }
+  catch(err){
+    res.status(400).json(err.message)
+  }
+}
