@@ -63,6 +63,10 @@ async function deleteAnnouncement(req,res){
     }
 }
 
+
+//@route /:announcement_id
+//@desc PUT to update  an announcement
+//@access private/admin
 async function updateAnnouncement(req,res){
     try{
 
@@ -89,4 +93,37 @@ async function updateAnnouncement(req,res){
     }
 }
 
-module.exports ={createAnnouncement,deleteAnnouncement,updateAnnouncement}
+//@route /
+//@desc GET to get all announcements
+//@access public
+
+async function getAnnouncement(req,res){
+    try{
+        let allProfiles = await Announcement.find();
+
+        res.status(200).json(allProfiles)
+    }
+    catch(err){
+        res.status(500).json(err.message)
+    }
+}
+
+//@route /:user_id
+//@desc GET to get all announcements of a user
+//@access public
+
+async function getUserAnnouncements(req,res){
+    try{
+        const {user_id} = req.params;
+
+        const userAnnouncements = await Announcement.findOne({announcedBy:user_id}) 
+
+
+        res.status(200).json(userAnnouncements)
+    }
+    catch(err){
+        res.status(500).json(err.message)
+    }
+}
+
+module.exports ={createAnnouncement,deleteAnnouncement,updateAnnouncement,getAnnouncement,getUserAnnouncements}
