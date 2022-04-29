@@ -42,5 +42,36 @@ async function getVideo(req,res){
         res.status(500).json(err.message)
     }
 }
+async function updateVideo(req,res){
+    try{
+        const {video_id} = req.params;
+        const video = await Video.findById(video_id);
+        
+         if(!video) return res.status(400).json("video not found")
 
-module.exports = {createVideo,getAllVideo,getVideo}
+         let reqKeys = Object.keys(req.body);
+
+         reqKeys.map(key=>{
+             video[key] = req.body[key];
+         })
+         video.save();
+         res.status(200).json(video)
+    }
+    catch(err){
+        res.status(500).json(err.message);
+    }
+}
+async function deleteVideo(req,res){
+    try{
+        const {video_id} = req.params;
+        const video = await Video.findOneAndDelete({_id:video_id});
+
+        if(!video)
+        return res.status(400).json("video doesnt exist");
+        res.status(200).json(video);
+    }catch(err){
+        res.status(500).json(err.message);
+    }
+}
+
+module.exports = {createVideo,getAllVideo,getVideo,updateVideo,deleteVideo}

@@ -27,6 +27,17 @@ async function getAllBadge(req,res){
 async function updateBadge(req,res){
     try{
         const badge = await Badge.findById({_id:req.params.badge_id}) 
+
+        if(!badge) return res.status(400).json("badge not found")
+
+        let badgeKeys = Object.keys(badge);
+        let reqKeys = Object.keys(req.body);
+        
+        for(let i=0;i<reqKeys.length;i++){
+            badge[reqKeys[i]] = req.body[reqKeys[i]];
+        }
+        badge.save();
+
         res.status(200).json(badge);
     }
     catch(err){
