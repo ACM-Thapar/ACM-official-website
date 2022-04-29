@@ -7,6 +7,8 @@ const blog = require('./routes/blog');
 const event = require('./routes/event');
 const project = require('./routes/project');
 const announcement = require('./routes/announcement')
+const badge = require('./routes/badge.js')
+const video = require('./routes/video.js')
 
 const cors = require('cors');
 const cloudiRouter = require('./routes/member');
@@ -40,6 +42,9 @@ app.use('/blog', blog);
 app.use('/event', event);
 app.use('/project', project);
 app.use('/announcement', announcement);
+app.use('/badge',badge);
+app.use('/video',video);
+
 
 //Cloudinary
 
