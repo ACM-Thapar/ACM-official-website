@@ -53,7 +53,7 @@ async function updateEvent(req,res){
     reqKeys.map(key=>{
       event[key] = req.body[key];
     })
-    event.save();
+    await event.save();
     res.json(event)
   }
   catch(err){

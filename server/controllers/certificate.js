@@ -63,7 +63,7 @@ async function updateCertificate(req,res){
      reqKeys.map(key=>{
          certificate[key] = req.body[key];
      })
-     certificate.save();
+     await certificate.save();
      res.status(200).json(certificate)
     }catch(err){
         console.log("here")

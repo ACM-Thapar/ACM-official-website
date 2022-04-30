@@ -45,7 +45,7 @@ async function updateBadge(req,res){
         for(let i=0;i<reqKeys.length;i++){
             badge[reqKeys[i]] = req.body[reqKeys[i]];
         }
-        badge.save();
+        await badge.save();
 
         res.status(200).json(badge);
     }

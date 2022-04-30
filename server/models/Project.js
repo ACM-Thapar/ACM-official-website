@@ -9,20 +9,20 @@ const projectSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  Members: {
+  Members: [{
     type: String,
     required: true
-  },
+  }],
 
   GithubURL: {
     type: String,
     required: true
   },
-  Languages: [
-    {
-      type: String,
-      default: '',
-    }
+  Languages: [{
+
+    type: String,
+    default: '',
+  }
   ],
 
   ImagesURL: [

@@ -67,7 +67,7 @@ async function updateVideo(req,res){
          reqKeys.map(key=>{
              video[key] = req.body[key];
          })
-         video.save();
+         await video.save();
          res.status(200).json(video)
     }
     catch(err){
