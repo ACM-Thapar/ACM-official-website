@@ -1,6 +1,10 @@
 const Video = require('../models/Video.js')
 
 
+//@route /
+//@desc POST to create a new video
+//@access Private/Admin
+
 async function createVideo(req,res){
     try{
 
@@ -15,7 +19,9 @@ async function createVideo(req,res){
         res.status(500).json(err.message)
     }
 }
-
+//@route /
+//@desc GET to get all videos 
+//@access Private
 async function getAllVideo(req,res){
     try{
         const newVideo = await Video.find();
@@ -26,6 +32,9 @@ async function getAllVideo(req,res){
         res.status(500).json(err.message)
     }
 }
+//@route /:video_id
+//@desc GET to  get a specific video
+//@access Private
 
 async function getVideo(req,res){
 
@@ -42,6 +51,10 @@ async function getVideo(req,res){
         res.status(500).json(err.message)
     }
 }
+
+//@route /:video_id
+//@desc PUT to update a video  
+//@access Private/Admin
 async function updateVideo(req,res){
     try{
         const {video_id} = req.params;
@@ -61,6 +74,10 @@ async function updateVideo(req,res){
         res.status(500).json(err.message);
     }
 }
+//@route /:video_id
+//@desc DELETE to delete a video  
+//@access Private/Admin
+
 async function deleteVideo(req,res){
     try{
         const {video_id} = req.params;

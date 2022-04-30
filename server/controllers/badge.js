@@ -1,7 +1,9 @@
 const Badge = require('../models/Badge')
 
 
-
+//@route /
+//@desc POST to create a new badge
+//@access Private/Admin
 async function createBadge(req,res){
     try{
             const newBadge = await Badge.create({...req.body})
@@ -14,6 +16,10 @@ async function createBadge(req,res){
     }
 }
 
+
+//@route /
+//@desc GET to get al badges  
+//@access Private
 async function getAllBadge(req,res){
     try{
 
@@ -24,6 +30,9 @@ async function getAllBadge(req,res){
     }
 }
 
+//@route /:video_id
+//@desc PUT  to update a badge  
+//@access Private/Admin
 async function updateBadge(req,res){
     try{
         const badge = await Badge.findById({_id:req.params.badge_id}) 
@@ -45,6 +54,9 @@ async function updateBadge(req,res){
     }
 }
 
+//@route /:video_id
+//@desc GET to  get a badge
+//@access Private
 async function getBadge(req,res){
 
     try{
@@ -59,6 +71,9 @@ async function getBadge(req,res){
         res.status(500).json(err.message)
     }
 }
+//@route /:video_id
+//@desc DELETE  to delete a badge  
+//@access Private/Admin
 async function deleteBadge(req,res){
 
     try{

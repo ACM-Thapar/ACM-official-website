@@ -1,6 +1,11 @@
 const Certificate = require('../models/Certificate.js')
 
 
+
+//@route /
+//@desc POST to create a new certificate
+//@access Private/admin
+
 async function createCertificate(res,res){
     try{
         const certificate = await Certificate.create({...req.body})
@@ -11,6 +16,10 @@ async function createCertificate(res,res){
     }
 }
 
+//@route /
+//@desc GET to get all certificate
+//@access Private/
+
 async function getAllCertificates(req,res){
     try{
         const allCertificates = await Certificate.find();
@@ -19,6 +28,11 @@ async function getAllCertificates(req,res){
         res.status(500).json(err.message)
     }
 }
+
+//@route /:certificate_id
+//@desc GET to get a specific certificate
+//@access Private
+
 async function getCertificate(req,res){
 
     try{
@@ -29,7 +43,12 @@ async function getCertificate(req,res){
     }
 }
 
+//@route /:certificate_id
+//@desc PUT to update a  certificate
+//@access Private/admin
+
 async function updateCertificate(req,res){
+    try{
     const {certificate_id} = req.params;
     const certificate = await Certificate.findById(certificate_id);
     
@@ -42,6 +61,23 @@ async function updateCertificate(req,res){
      })
      certificate.save();
      res.status(200).json(certificate)
+    }catch(err){
+        res.status(500).json(err.message)
+    }
 }
 
-module.exports ={createCertificate,getAllCertificates,getCertificate,updateCertificate}
+//@route /:certificate_id
+//@desc DELETE to delete a  certificate
+//@access Private/admin
+
+async function deleteCertificate(req,res){
+    try{
+        const {certificate_id} = req.params;
+    const certificate = await Certificate.findOneAndDelete({_id:certificate_id});
+
+    }   catch(err){
+        res.status(500).json(err.message)
+    }
+}
+
+module.exports ={createCertificate,getAllCertificates,getCertificate,updateCertificate,deleteCertificate}
