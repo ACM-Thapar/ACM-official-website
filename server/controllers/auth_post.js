@@ -123,7 +123,7 @@ exports.getAllUser = async(req,res) =>{
 
 //@route    PUT user
 //@desc     update user password 
-//@access   private/admin
+//@access   private 
 
 exports.updatePassword = async(req,res)=>{
   try{

@@ -11,7 +11,7 @@ router
 .get([auth],getAllCertificates)
 
 router
-.route('/certificate_id')
+.route('/:certificate_id')
 .get([auth],getCertificate) 
 .put([auth],admin,updateCertificate)
 .delete([auth],admin,deleteCertificate)
