@@ -21,19 +21,20 @@ async function getAllEvent (req, res){
 
  async function addEvent (req, res){
   try {
-    const newEvent = new Event({
-      Name: req.body.Name,
-      Description: req.body.Description,
-      Time: req.body.Time,
-      StartDate: req.body.StartDate,
-      EndDate: req.body.EndDate,
-    });
+    // const newEvent = new Event({
+    //   Name: req.body.Name,
+    //   Description: req.body.Description,
+    //   Time: req.body.Time,
+    //   StartDate: req.body.StartDate,
+    //   EndDate: req.body.EndDate,
+    // });
 
-    const event = await newEvent.save();
+    // const event = await newEvent.save();
+    const event = await Event.create({...req.body})
     res.json(event);
   } catch (err) {
     console.error(err.message);
-    return res.status(500).send('Server Error');
+    return res.status(500).send(err.message);
   }
 };
 
@@ -68,7 +69,7 @@ async function getEvent(req,res){
     const {event_id} = req.params;
     const event  = await Event.findById(event_id);
 
-    if(!event) return res.status(400).json(event);
+    if(!event) return res.status(400).json("event not found");
 
     res.status(200).json(event);
   }
