@@ -55,7 +55,7 @@ exports.register = async (req, res) => {
     return res.status(400).json({ errors: errors.array() });
   }
 
-  const { name, email} = req.body;
+  const { name, email,role} = req.body;
   const password = uuid.v4();
   try {
     let user = await User.findOne({ email });
@@ -68,6 +68,7 @@ exports.register = async (req, res) => {
       name,
       email,
       password,
+      department
     });
 
     const salt = await bcrypt.genSalt(10);
@@ -146,5 +147,63 @@ exports.updatePassword = async(req,res)=>{
   }
   catch(err){
     res.status(400).json(err.message)
+  }
+}
+
+
+//@route    GET user/:id
+//@desc     to get  user  
+//@access   Public
+
+exports.getUser = async(req,res)=>{
+  try{
+    const {id} = req.params;
+    const user = await User.findById(id);
+    if(!user) return res.status(400).json("user not found");
+
+    res.status(200).json(user);
+  }
+  catch(err){
+    res.status.json(err.message)
+  }
+}
+//@route    Delete user/:id
+//@desc     to delete a  user  
+//@access   private
+exports.deleteUser = async(req,res)=>{
+  try{
+    let {id} = req.params;
+    const user = await User.findByIdAndDelete(id);
+    
+    res.status(200).json("user deleted ");
+  }
+  catch(err){
+    res.status(500).json(err.message)
+  }
+}
+
+//@route    PUT user/:id
+//@desc     to update a user  
+//@access   Private
+
+exports.updateUser = async(req,res){
+  try{
+    const {id} = req.params;
+    let user = await User.findById(id);
+
+    if(!user) return res.status(400).json("user not found");
+
+    let reqKeys = Object.keys(req.body);
+
+    reqKeys.map(key=>{
+      user[key] = req.body[key];
+    })
+
+    await user.save();
+    res.status.json("updated")
+
+  }
+  catch(err){
+    res.status(500).json(err.message)
   }
 }

@@ -21,6 +21,11 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Password field is empty'],
     trim: true,
   },
+  department:{
+    type:String,
+    required:true,
+    enum:["Designing,Tech,Em,Logistics,Marketing"]
+  },
   isAdmin: {
     type: Boolean,
     required: true,

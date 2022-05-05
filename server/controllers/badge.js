@@ -16,7 +16,6 @@ async function createBadge(req,res){
     }
 }
 
-
 //@route /
 //@desc GET to get al badges  
 //@access Private
