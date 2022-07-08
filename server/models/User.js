@@ -21,16 +21,16 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Password field is empty'],
     trim: true,
   },
-  department:{
-    type:String,
-    required:true,
-    enum:["Designing,Tech,Em,Logistics,Marketing"]
+  department: {
+    type: String,
+    enum: ['Designing', 'Tech', 'Em', 'Logistics', 'Marketing', 'None'],
+    default: 'None',
   },
   isAdmin: {
     type: Boolean,
     required: true,
     default: false,
-  }
+  },
 });
 
 UserSchema.set('timestamps', true);

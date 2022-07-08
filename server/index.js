@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const auth = require('./routes/auth');
 const member = require('./routes/member');
@@ -6,10 +7,10 @@ const team = require('./routes/team');
 const blog = require('./routes/blog');
 const event = require('./routes/event');
 const project = require('./routes/project');
-const announcement = require('./routes/announcement')
-const badge = require('./routes/badge.js')
-const certificate = require('./routes/certificate.js')
-const video = require('./routes/video.js')
+const announcement = require('./routes/announcement');
+const badge = require('./routes/badge.js');
+const certificate = require('./routes/certificate.js');
+const video = require('./routes/video.js');
 
 const cors = require('cors');
 const cloudiRouter = require('./routes/member');
@@ -23,7 +24,7 @@ connectDB();
 
 const PORT = process.env.PORT || 5000;
 app.use(express.json({ extended: false }));
-
+app.use(cookieParser());
 //define routes
 
 app.use(cors());
@@ -43,10 +44,9 @@ app.use('/blog', blog);
 app.use('/event', event);
 app.use('/project', project);
 app.use('/announcement', announcement);
-app.use('/badge',badge);
-app.use('/video',video);
-app.use('/certificate',certificate);
-
+app.use('/badge', badge);
+app.use('/video', video);
+app.use('/certificate', certificate);
 
 //Cloudinary
 
