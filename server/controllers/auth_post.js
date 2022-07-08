@@ -37,7 +37,13 @@ exports.login = async (req, res) => {
     const JWT = jwt.sign({ user: user._id }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
-    res.json({ msg: 'User logged in successfully', data: JWT });
+
+    res.cookie('JWT', JWT, {
+      expiresIn: process.env.JWT_EXPIRESIN,
+    });
+    res.json({ msg: 'User registered successfully', data: JWT });
+
+    // res.json({ msg: 'User logged in successfully', data: JWT });
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
@@ -95,7 +101,7 @@ exports.register = async (req, res) => {
       html: `<b>You have been registered.Welcome to the ACM. Your password is ${password} </b>`,
     });
 
-    res.cookie('token', JWT, {
+    res.cookie('JWT', JWT, {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
     res.json({ msg: 'User registered successfully', data: JWT });
