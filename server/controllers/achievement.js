@@ -1,4 +1,4 @@
-const Achievement = require('../models/achievement');
+const Achievement = require('../models/Achievement');
 
 //@route   POST /achievements
 //@desc    Create a new achievement

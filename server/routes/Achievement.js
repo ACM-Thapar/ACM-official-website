@@ -1,22 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const {
-  createCertificate,
-  getAllCertificates,
-  getCertificate,
-  updateCertificate,
-  deleteCertificate,
+  createAchievement,
+  getAllAchievements,
+  getAchievement,
+  updateAchievement,
+  deleteAchievement,
 } = require('../controllers/achievement.js');
-const { auth } = require('../middleware/auth.js');
-const { admin } = require('../middleware/admin.js');
+const auth = require('../middleware/auth.js');
+const admin = require('../middleware/admin.js');
+
+router.route('/').post(createAchievement).get(getAllAchievements);
 
 router
-  .route('/')
-  .post([auth], admin, createCertificate)
-  .get([auth], getAllCertificates);
+  .route('/:achievement_id')
+  .get(auth, getAchievement)
+  .put(auth, admin, updateAchievement)
+  .delete(auth, admin, deleteAchievement);
 
-router
-  .route('/:certificate_id')
-  .get([auth], getCertificate)
-  .put([auth], admin, updateCertificate)
-  .delete([auth], admin, deleteCertificate);
+module.exports = router;
