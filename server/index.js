@@ -1,6 +1,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
+const badge = require('./routes/badge.js');
 const auth = require('./routes/auth');
 const member = require('./routes/member');
 const team = require('./routes/team');
@@ -8,7 +9,6 @@ const blog = require('./routes/blog');
 const event = require('./routes/event');
 const project = require('./routes/project');
 const announcement = require('./routes/announcement');
-const badge = require('./routes/badge.js');
 const certificate = require('./routes/certificate.js');
 const video = require('./routes/video.js');
 const achievement = require('./routes/achievement.js');

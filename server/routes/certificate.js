@@ -13,14 +13,14 @@ const router = express.Router();
 
 router
   .route('/')
-  // .post([auth],admin,createCertificate)
-  .post([auth], createCertificate)
-  .get([auth], getAllCertificates);
+  // .post(auth,admin,createCertificate)
+  .post(auth, createCertificate)
+  .get(auth, getAllCertificates);
 
 router
   .route('/:certificate_id')
-  .get([auth], getCertificate)
-  .put([auth], admin, updateCertificate)
-  .delete([auth], admin, deleteCertificate);
+  .get(auth, getCertificate)
+  .put(auth, admin, updateCertificate)
+  .delete(auth, admin, deleteCertificate);
 
 module.exports = router;

@@ -4,25 +4,30 @@ const auth = require('../middleware/auth');
 const imageController = require('../image-app/imageController');
 const upload = require('../image-app/cloudinaryUploads/multer');
 
-const { memberProfile, getMemberById,getAllMemberProfile,updateMemberById,deleteMemberProfile } = require('../controllers/member');
+const {
+  memberProfile,
+  getMemberById,
+  getAllMemberProfile,
+  updateMemberById,
+  deleteMemberProfile,
+} = require('../controllers/member');
 
 const { validMemberProfile } = require('../utils/validation-checks');
 
 router
-.route('/profile')
-.post(validMemberProfile,[auth], memberProfile)
-.get(getAllMemberProfile)
-
+  .route('/profile')
+  .post(validMemberProfile, auth, memberProfile)
+  .get(getAllMemberProfile);
 
 router
-.route('/profile/:_id')
-.get([auth], getMemberById)
-.put([auth],updateMemberById)
-.delete([auth],deleteMemberProfile)
+  .route('/profile/:_id')
+  .get(auth, getMemberById)
+  .put(auth, updateMemberById)
+  .delete(auth, deleteMemberProfile);
 
 router.post(
   '/profile/addImage/:_id',
-  [auth],
+  auth,
   upload.any(),
   imageController.createApp,
 );

@@ -1,17 +1,20 @@
 const mongoose = require('mongoose');
 
-
-const certificateSchema = new mongoose.Schema({    
-
-    url:{
-        type:String,
+const certificateSchema = new mongoose.Schema({
+  user: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'user',
     },
-    title:{
-        type:String,
-    }
-
-})
+  ],
+  url: {
+    type: String,
+  },
+  title: {
+    type: String,
+  },
+});
 certificateSchema.set('timestamps', true);
 
-const Certificate = mongoose.model('certificate',certificateSchema);
-module.exports = Certificate
+const Certificate = mongoose.model('certificate', certificateSchema);
+module.exports = Certificate;

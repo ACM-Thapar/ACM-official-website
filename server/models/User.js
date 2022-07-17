@@ -31,6 +31,18 @@ const UserSchema = new mongoose.Schema({
     required: true,
     default: false,
   },
+  badges: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'badge',
+    },
+  ],
+  certificates: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'certificate',
+    },
+  ],
 });
 
 UserSchema.set('timestamps', true);

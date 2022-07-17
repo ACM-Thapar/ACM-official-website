@@ -117,7 +117,7 @@ exports.register = async (req, res) => {
 
 exports.getAllUser = async (req, res) => {
   try {
-    const user = await User.find();
+    const user = await User.find().populate('badges certificates');
     res.status(200).json(user);
   } catch (err) {
     res.status(400).json(err.message);
@@ -198,7 +198,18 @@ exports.updateUser = async (req, res) => {
     });
 
     await user.save();
-    res.status.json('updated');
+    res.status(200).json('updated');
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+};
+
+exports.deleteUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await User.findByIdAndDelete(id);
+    if (!user) return res.status(500).json('User not found');
+    res.status(200).json('user deleted');
   } catch (err) {
     res.status(500).json(err.message);
   }

@@ -1,94 +1,95 @@
-const Badge = require('../models/Badge')
-
-
+const Badge = require('../models/Badge.js');
+const User = require('../models/User');
+const { userUpdate } = require('../helper/userUpdate.js');
 //@route /
 //@desc POST to create a new badge
 //@access Private/Admin
-async function createBadge(req,res){
-    try{
-            const newBadge = await Badge.create({...req.body})
-
-            res.json(newBadge)
-    }
-    catch(err)
-    {
-        res.status(500).json(err.message)
-    }
+async function createBadge(req, res) {
+  try {
+    const newBadge = await Badge.create({ ...req.body });
+    await userUpdate(newBadge.user, 'badges', newBadge._id);
+    res.json(newBadge);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
 }
 
 //@route /
-//@desc GET to get al badges  
+//@desc GET to get al badges
 //@access Private
-async function getAllBadge(req,res){
-    try{
-
-            const allBadges = await Badge.find();
-            res.json(allBadges)
-    }catch(err){
-        res.status(500).json(err.message)
-    }
+async function getAllBadge(req, res) {
+  try {
+    const allBadges = await Badge.find().populate('user', '-password');
+    res.json(allBadges);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
 }
 
-//@route /:video_id
-//@desc PUT  to update a badge  
+//@route /:badge_id
+//@desc PUT  to update a badge
 //@access Private/Admin
-async function updateBadge(req,res){
-    try{
-        const badge = await Badge.findById({_id:req.params.badge_id}) 
+async function updateBadge(req, res) {
+  try {
+    let badge = await Badge.findById({ _id: req.params.badge_id });
 
-        if(!badge) return res.status(400).json("badge not found")
+    if (!badge) return res.status(400).json('badge not found');
 
-        let badgeKeys = Object.keys(badge);
-        let reqKeys = Object.keys(req.body);
-        
-        for(let i=0;i<reqKeys.length;i++){
-            badge[reqKeys[i]] = req.body[reqKeys[i]];
-        }
-        await badge.save();
+    badge.badge = req.body.badge || badge.badge;
+    badge.description = req.body.description || badge.description;
+    badge.url = req.body.url || badge.url;
 
-        res.status(200).json(badge);
-    }
-    catch(err){
-        res.status(500).json(err.message)
-    }
+    let badgeSet = new Set(badge.user);
+    badgeSet.add(req.body.user);
+    badge.user = [...badgeSet];
+
+    await badge.save();
+    await userUpdate(badge.user, 'badges', badge._id);
+    res.status(200).json(badge);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
 }
 
-//@route /:video_id
+//@route /:badge_id
 //@desc GET to  get a badge
 //@access Private
-async function getBadge(req,res){
+async function getBadge(req, res) {
+  try {
+    const { badge_id } = req.params;
+    const badge = await Badge.findOne({ _id: badge_id }).populate(
+      'user',
+      '-password',
+    );
 
-    try{
-        const {badge_id} = req.params;
-        const badge = await Badge.findOne({_id:badge_id});
-
-        if(!badge)
-        return res.status(400).json("badge not found")
-        res.status(200).json(badge)
-    }
-    catch(err){
-        res.status(500).json(err.message)
-    }
+    if (!badge) return res.status(400).json('badge not found');
+    res.status(200).json(badge);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
 }
-//@route /:video_id
-//@desc DELETE  to delete a badge  
+//@route /:badge_id
+//@desc DELETE  to delete a badge
 //@access Private/Admin
-async function deleteBadge(req,res){
+async function deleteBadge(req, res) {
+  try {
+    const { badge_id } = req.params;
+    const badge = await Badge.findOneAndDelete({ _id: badge_id });
 
-    try{
-        const {badge_id} = req.params;
-        const badge = await Badge.findOneAndDelete({_id:badge_id});
+    if (!badge) return res.status(400).json('Badge not found');
 
-        if(!badge)
-        res.status(400).json("Badge not found");
+    await userUpdate(badge.user, 'badges', badge._id, true);
 
-        res.status(200).json(badge)
-    }
-    catch(err){
-        res.status(500).json(err.message)
-    }
-    
+    res.status(200).json(badge);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
 }
 
-
-module.exports={createBadge,getAllBadge,updateBadge,getBadge,deleteBadge}
+module.exports = {
+  createBadge,
+  getAllBadge,
+  updateBadge,
+  getBadge,
+  deleteBadge,
+};
