@@ -214,3 +214,49 @@ exports.deleteUser = async (req, res) => {
     res.status(500).json(err.message);
   }
 };
+
+exports.forgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+    let gmailPass = process.env.gmailPass;
+
+    const user = await User.findOne({ email });
+
+    if (!user) throw new Error('email does not exist');
+
+    let resetPasswordLink = `${
+      req.protocol
+    }://localhost:3000/user/resetPassword/${user._id}-${uuid.v4()}`;
+
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'jogeshgupta963@gmail.com',
+        pass: gmailPass,
+      },
+    });
+    let info = transporter.sendMail({
+      from: '"Reset Paswword👻" <jogeshgupta963@gmail.com>',
+      to: email,
+      subject: `Password reset for.`,
+      html: `<b>Click here to reset ur password ${resetPasswordLink} </b>`,
+    });
+    res.json('reset link sent');
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+};
+
+exports.resetPasswordLink = async (req, res) => {
+  try {
+    const id = req.params.id.split('-')[0];
+    const { password } = req.body;
+    const user = await User.findById(id);
+
+    user.password = await bcrypt.hash(password, 10);
+    await user.save();
+    res.json(user);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+};

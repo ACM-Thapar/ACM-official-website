@@ -11,7 +11,8 @@ const {
   getUser,
   deleteUser,
   updateUser,
-  // deleteUser,
+  forgotPassword,
+  resetPasswordLink,
 } = require('../controllers/auth_post');
 const admin = require('../middleware/admin.js');
 const auth = require('../middleware/auth.js');
@@ -37,5 +38,9 @@ router
   // .put(auth, updateUser);
   .put(updateUser)
   .delete(deleteUser);
+
+router.route('/forgot-password').post(forgotPassword);
+
+router.route('/resetPassword/:id').post(resetPasswordLink);
 
 module.exports = router;
