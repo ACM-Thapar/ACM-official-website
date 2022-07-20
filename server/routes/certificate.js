@@ -13,8 +13,8 @@ const router = express.Router();
 
 router
   .route('/')
-  // .post(auth,admin,createCertificate)
-  .post(auth, createCertificate)
+  .post(auth, admin, createCertificate)
+  // .post(auth, createCertificate)
   .get(auth, getAllCertificates);
 
 router

@@ -31,7 +31,7 @@ async function getAllBadge(req, res) {
 //@access Private/Admin
 async function updateBadge(req, res) {
   try {
-    let badge = await Badge.findById({ _id: req.params.badge_id });
+    let badge = await Badge.findById(req.params.badge_id);
 
     if (!badge) return res.status(400).json('badge not found');
 
@@ -46,6 +46,7 @@ async function updateBadge(req, res) {
     await badge.save();
     await userUpdate(badge.user, 'badges', badge._id);
     res.status(200).json(badge);
+    // res.status(200).json(req.body);
   } catch (err) {
     res.status(500).json(err.message);
   }
@@ -57,14 +58,12 @@ async function updateBadge(req, res) {
 async function getBadge(req, res) {
   try {
     const { badge_id } = req.params;
-    const badge = await Badge.findOne({ _id: badge_id }).populate(
-      'user',
-      '-password',
-    );
+    const badge = await Badge.findById(badge_id).populate('user', '-password');
 
     if (!badge) return res.status(400).json('badge not found');
     res.status(200).json(badge);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err.message);
   }
 }
@@ -85,6 +84,27 @@ async function deleteBadge(req, res) {
     res.status(500).json(err.message);
   }
 }
+async function removeUser(req, res) {
+  try {
+    const { badge_id } = req.params;
+
+    let badge = await Badge.findById(badge_id);
+
+    if (!badge) return res.status(400).json('Badge not found');
+
+    badge.user = badge.user.filter((id) => {
+      return req.body.user.includes(id.toString()) === false;
+    });
+
+    await badge.save();
+    await userUpdate(req.body.user, 'badges', badge._id, true);
+
+    res.status(200).json(badge);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err.message);
+  }
+}
 
 module.exports = {
   createBadge,
@@ -92,4 +112,5 @@ module.exports = {
   updateBadge,
   getBadge,
   deleteBadge,
+  removeUser,
 };

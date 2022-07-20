@@ -117,8 +117,18 @@ exports.register = async (req, res) => {
 
 exports.getAllUser = async (req, res) => {
   try {
-    const user = await User.find().populate('badges certificates');
-    res.status(200).json(user);
+    // const user = await User.find().populate('badges certificates');
+    const keyword = req.query.search
+      ? {
+          $or: [
+            { name: { $regex: req.query.search, $options: 'i' } },
+            { email: { $regex: req.query.search, $options: 'i' } },
+          ],
+        }
+      : {};
+    const users = await User.find(keyword).populate('badges certificates');
+    res.json(users);
+    // res.status(200).json(users);
   } catch (err) {
     res.status(400).json(err.message);
   }

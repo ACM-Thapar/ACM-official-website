@@ -26,18 +26,18 @@ router.post('/', validUser, register);
 //get all users
 router
   .route('/user')
-  // .get([auth], admin, getAllUser)
-  .get(getAllUser)
+  .get(auth, admin, getAllUser)
+  // .get(getAllUser)
   .put(auth, updatePassword); //update password
 
 //get user by Id
 router
   .route('/user/:id')
-  .get(getUser)
+  .get(auth, getUser)
   // .delete(auth, deleteUser)
   // .put(auth, updateUser);
-  .put(updateUser)
-  .delete(deleteUser);
+  .put(auth, updateUser)
+  .delete(auth, admin, deleteUser);
 
 router.route('/forgot-password').post(forgotPassword);
 
