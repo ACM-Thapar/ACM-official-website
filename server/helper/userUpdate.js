@@ -4,11 +4,12 @@ async function userUpdate(userArray, field, field_id, remove = false) {
   try {
     await Promise.all(
       userArray.map(async (userId) => {
-        const user = await User.findById(userId);
+        let user = await User.findById(userId);
+        console.log(user);
         if (!remove) {
-          let set = new Set(user[field]);
-          set.add(field_id);
-          user[field] = [...set];
+          // let set = new Set(user[field]);
+          user[field].push(field_id);
+          // set.add(field_id);
           await user.save();
         } else if (remove) {
           user[field] = user[field].filter(

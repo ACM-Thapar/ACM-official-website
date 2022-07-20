@@ -42,9 +42,8 @@ async function updateBadge(req, res) {
     let badgeSet = new Set(badge.user);
     badgeSet.add(req.body.user);
     badge.user = [...badgeSet];
-
     await badge.save();
-    await userUpdate(badge.user, 'badges', badge._id);
+    await userUpdate(req.body.user, 'badges', badge._id);
     res.status(200).json(badge);
     // res.status(200).json(req.body);
   } catch (err) {

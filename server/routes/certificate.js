@@ -15,7 +15,8 @@ router
   .route('/')
   .post(auth, admin, createCertificate)
   // .post(auth, createCertificate)
-  .get(auth, getAllCertificates);
+  .get(getAllCertificates);
+// .get(auth, getAllCertificates);
 
 router
   .route('/:certificate_id')

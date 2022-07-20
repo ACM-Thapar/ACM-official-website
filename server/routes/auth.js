@@ -26,8 +26,8 @@ router.post('/', validUser, register);
 //get all users
 router
   .route('/user')
-  .get(auth, admin, getAllUser)
-  // .get(getAllUser)
+  // .get(auth, admin, getAllUser)
+  .get(getAllUser)
   .put(auth, updatePassword); //update password
 
 //get user by Id
