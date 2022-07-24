@@ -38,14 +38,14 @@ async function updateBadge(req, res) {
     badge.badge = req.body.badge || badge.badge;
     badge.description = req.body.description || badge.description;
     badge.url = req.body.url || badge.url;
-
-    let badgeSet = new Set(badge.user);
-    badgeSet.add(req.body.user);
-    badge.user = [...badgeSet];
+    if (req.body.user.length > 0) {
+      let badgeSet = new Set(badge.user);
+      badgeSet.add(req.body.user);
+      badge.user = [...badgeSet];
+      await userUpdate(req.body.user, 'badges', badge._id);
+    }
     await badge.save();
-    await userUpdate(req.body.user, 'badges', badge._id);
     res.status(200).json(badge);
-    // res.status(200).json(req.body);
   } catch (err) {
     res.status(500).json(err.message);
   }
@@ -62,7 +62,6 @@ async function getBadge(req, res) {
     if (!badge) return res.status(400).json('badge not found');
     res.status(200).json(badge);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err.message);
   }
 }
@@ -100,7 +99,6 @@ async function removeUser(req, res) {
 
     res.status(200).json(badge);
   } catch (err) {
-    console.log(err);
     res.status(500).json(err.message);
   }
 }

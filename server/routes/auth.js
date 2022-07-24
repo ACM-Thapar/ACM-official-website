@@ -13,6 +13,7 @@ const {
   updateUser,
   forgotPassword,
   resetPasswordLink,
+  removeBadgesOrCertificates,
 } = require('../controllers/auth_post');
 const admin = require('../middleware/admin.js');
 const auth = require('../middleware/auth.js');
@@ -33,11 +34,13 @@ router
 //get user by Id
 router
   .route('/user/:id')
-  .get(auth, getUser)
+  // .get(auth, getUser)
+  .get(getUser)
   // .delete(auth, deleteUser)
   // .put(auth, updateUser);
   .put(auth, updateUser)
   .delete(auth, admin, deleteUser);
+router.route('/remove/:id').put(removeBadgesOrCertificates);
 
 router.route('/forgot-password').post(forgotPassword);
 

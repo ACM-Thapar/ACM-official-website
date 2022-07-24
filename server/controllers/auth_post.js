@@ -5,7 +5,7 @@ require('dotenv').config();
 const { validationResult } = require('express-validator');
 const uuid = require('uuid');
 const nodemailer = require('nodemailer');
-
+const { updateBadgeOrCertificate } = require('../helper/userUpdate');
 //@route    POST auth/login
 //@desc     Authenticate user & get token
 //@access   Public
@@ -206,7 +206,6 @@ exports.updateUser = async (req, res) => {
     reqKeys.map((key) => {
       user[key] = req.body[key];
     });
-
     await user.save();
     res.status(200).json('updated');
   } catch (err) {
@@ -214,13 +213,24 @@ exports.updateUser = async (req, res) => {
   }
 };
 
-exports.deleteUser = async (req, res) => {
+exports.removeBadgesOrCertificates = async (req, res) => {
   try {
     const { id } = req.params;
-    const user = await User.findByIdAndDelete(id);
-    if (!user) return res.status(500).json('User not found');
-    res.status(200).json('user deleted');
+    let { remove } = req.query;
+    const { selectedElements } = req.body;
+    let user = await User.findById(id);
+
+    if (!user) return res.status(400).json('user not found');
+
+    user[remove] = user[remove].filter(
+      (elem) => !selectedElements.includes(elem._id.toString()),
+    );
+    updateBadgeOrCertificate(selectedElements, id, remove, true);
+    await user.save();
+
+    res.status(200).json('updated');
   } catch (err) {
+    console.log(err);
     res.status(500).json(err.message);
   }
 };

@@ -4,6 +4,7 @@ const auth = require('../middleware/auth.js');
 
 const {
   createCertificate,
+  removeUser,
   getAllCertificates,
   getCertificate,
   updateCertificate,
@@ -20,8 +21,15 @@ router
 
 router
   .route('/:certificate_id')
-  .get(auth, getCertificate)
-  .put(auth, admin, updateCertificate)
+  // .get(auth, getCertificate)
+  .get(getCertificate)
+  // .put(auth, admin, updateCertificate)
+  .put(updateCertificate)
   .delete(auth, admin, deleteCertificate);
+
+router
+  .route('/remove/:certificate_id')
+  // .post(auth,admin,removeUser)
+  .post(removeUser);
 
 module.exports = router;

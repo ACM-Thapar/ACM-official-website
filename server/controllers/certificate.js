@@ -64,15 +64,18 @@ async function updateCertificate(req, res) {
     certificate.url = req.body.url || certificate.url;
     certificate.title = req.body.title || certificate.title;
 
-    let certificateSet = new Set(certificate.user);
-    certificateSet.add(req.body.user);
-    badge.user = [...certificateSet];
+    if (req.body.user.length > 0) {
+      let certificateSet = new Set(certificate.user);
+      certificateSet.add(req.body.user);
+      certificate.user = [...certificateSet];
+      await userUpdate(certificate.user, 'certificates', certificate._id);
+    }
 
     await certificate.save();
 
-    await userUpdate(certificate.user, 'certificates', certificate._id);
     res.status(200).json(certificate);
   } catch (err) {
+    console.log(err.message);
     res.status(500).json(err.message);
   }
 }
@@ -94,6 +97,25 @@ async function deleteCertificate(req, res) {
     res.status(500).json(err.message);
   }
 }
+async function removeUser(req, res) {
+  try {
+    const { certificate_id } = req.params;
+
+    let certificate = await Certificate.findById(certificate_id);
+
+    if (!certificate) return res.status(400).json('certificate not found');
+
+    certificate.user = certificate.user.filter((id) => {
+      return req.body.user.includes(id.toString()) === false;
+    });
+    // console.log()
+    await certificate.save();
+    await userUpdate(req.body.user, 'certificates', certificate._id, true);
+    res.status(200).json(certificate);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+}
 
 module.exports = {
   createCertificate,
@@ -101,4 +123,5 @@ module.exports = {
   getCertificate,
   updateCertificate,
   deleteCertificate,
+  removeUser,
 };
