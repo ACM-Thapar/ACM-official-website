@@ -31,7 +31,7 @@ app.use(cookieParser());
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Server running');
+  res.send('Server is running');
 });
 
 app.listen(PORT, () => {
