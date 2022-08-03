@@ -21,6 +21,27 @@ const UserSchema = new mongoose.Schema({
     required: [true, 'Password field is empty'],
     trim: true,
   },
+  department: {
+    type: String,
+    enum: ['Designing', 'Tech', 'Em', 'Logistics', 'Marketing', 'None'],
+    default: 'None',
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
+  badges: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'badge',
+    },
+  ],
+  certificates: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'certificate',
+    },
+  ],
 });
 
 UserSchema.set('timestamps', true);

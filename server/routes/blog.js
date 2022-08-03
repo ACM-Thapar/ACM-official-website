@@ -8,11 +8,11 @@ const { getBlog, postBlog } = require('../controllers/blog');
 
 router.get('/', getBlog);
 
-router.post('/add', [auth], postBlog);
+router.post('/add', auth, postBlog);
 
 router.post(
   '/addImage/:_id',
-  [auth],
+  auth,
   upload.any(),
   imageController.createBlogApp,
 );
