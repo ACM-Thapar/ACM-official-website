@@ -30,6 +30,20 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  about:{
+    type:String,
+  },
+  skillSet:[
+    {
+      type:String
+    }
+  ],
+  bootcamps:[
+    {
+      enum:['Web Development',"Android Development","ML/AI","UI/UX"],
+      type:String
+    }
+  ],
   badges: [
     {
       type: mongoose.Schema.Types.ObjectId,
