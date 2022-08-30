@@ -41,7 +41,7 @@ exports.login = async (req, res) => {
     res.cookie('JWT', JWT, {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
-    res.json({ msg: 'User registered successfully', data: JWT });
+    res.json(user);
 
     // res.json({ msg: 'User logged in successfully', data: JWT });
   } catch (err) {
