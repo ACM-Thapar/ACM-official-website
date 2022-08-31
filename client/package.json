@@ -7,6 +7,7 @@
     "@emotion/styled": "^11.6.0",
     "@material-ui/core": "latest",
     "@material-ui/lab": "latest",
+    "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

@@ -1,6 +1,12 @@
+// import { School } from '@mui/icons-material';
 import React, { Fragment } from 'react';
 import { useState } from 'react';
 import './Bootcamps.css';
+import { School } from '@mui/icons-material';
+import WebIcon from '@mui/icons-material/Web';
+import AppShortcutIcon from '@mui/icons-material/AppShortcut';
+import FormatPaintIcon from '@mui/icons-material/FormatPaint';
+import FunctionsIcon from '@mui/icons-material/Functions';
 
 const panels = [
   {
@@ -9,6 +15,7 @@ const panels = [
       'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     active: true,
     heading: 'Academic Bootcamp',
+    icon: 'school',
   },
   {
     id: 1,
@@ -16,6 +23,7 @@ const panels = [
       'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     active: false,
     heading: 'Web Dev Bootcamp',
+    icon: 'web',
   },
   {
     id: 2,
@@ -23,6 +31,7 @@ const panels = [
       'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     active: false,
     heading: 'App Dev Bootcamp',
+    icon: 'app',
   },
   {
     id: 3,
@@ -30,6 +39,7 @@ const panels = [
       'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     active: false,
     heading: 'UI/UX Bootcamp',
+    icon: 'ui',
   },
   {
     id: 4,
@@ -37,6 +47,7 @@ const panels = [
       'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     active: false,
     heading: 'Machine Learning Bootcamp',
+    icon: 'ml',
   },
 ];
 
@@ -58,6 +69,31 @@ const Panel = (props) => {
       style={{
         backgroundImage: `url(${img})`,
       }}>
+      <div className="basecamp-icon">
+        {id === 0 ? (
+          <School color="primary" className="mat-icon" fontSize="large" />
+        ) : id === 1 ? (
+          <WebIcon color="primary" className="mat-icon" fontSize="large" />
+        ) : id === 2 ? (
+          <AppShortcutIcon
+            color="primary"
+            className="mat-icon"
+            fontSize="large"
+          />
+        ) : id === 3 ? (
+          <FormatPaintIcon
+            color="primary"
+            className="mat-icon"
+            fontSize="large"
+          />
+        ) : id === 4 ? (
+          <FunctionsIcon
+            color="primary"
+            className="mat-icon"
+            fontSize="large"
+          />
+        ) : null}
+      </div>
       <h3>{heading}</h3>
     </div>
   );
@@ -70,15 +106,13 @@ const Bootcamps = () => {
       <div class="container">
         {panels.map((panel) => {
           return (
-            <Fragment onClick={() => alert('hey')}>
-              <Panel
-                img={panel.backgroundImage}
-                active={panel.active}
-                heading={panel.heading}
-                id={panel.id}
-                setState={setState}
-              />
-            </Fragment>
+            <Panel
+              img={panel.backgroundImage}
+              active={panel.active}
+              heading={panel.heading}
+              id={panel.id}
+              setState={setState}
+            />
           );
         })}
       </div>

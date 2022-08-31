@@ -90,6 +90,10 @@ const Landing = () => {
           </div>
         </div>
       </section>
+
+      <h1 className="whatwedo2" >
+              Our Bootcamps
+      </h1>
       <Bootcamps />
       <section className="membership">
         <div className="container">
