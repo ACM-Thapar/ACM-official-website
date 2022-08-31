@@ -2,6 +2,7 @@ import React from 'react';
 import Ellipse from '../../images/Ellipse.svg';
 import Group1 from '../../images/Group1.svg';
 import src from '../../images/Programmer-amico.png';
+import Bootcamps from '../bootcamps/Bootcamps';
 
 const Landing = () => {
   return (
@@ -25,12 +26,14 @@ const Landing = () => {
                 activities and projects where brainstorming and strategic
                 planning is the primary key to excel.
               </p>
-              <button className="learn-more">
-                <span className="circle" aria-hidden="true">
-                  <span className="icon arrow" />
-                </span>
-                <span className="button-text">Learn More</span>
-              </button>
+              <a href="#wwd">
+                <button className="learn-more">
+                  <span className="circle" aria-hidden="true">
+                    <span className="icon arrow" />
+                  </span>
+                  <span className="button-text">Learn More</span>
+                </button>
+              </a>
             </div>
             <div className="col-md-6 bluecircle" style={{ paddingRight: '0%' }}>
               <img
@@ -48,7 +51,7 @@ const Landing = () => {
           <div className="row">
             <br />
             <br />
-            <h1 className="whatwedo">
+            <h1 className="whatwedo" id="wwd">
               <br />
               What do we do
             </h1>
@@ -91,6 +94,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
+      <Bootcamps />
       <section className="membership">
         <div className="container">
           <div className="row">
