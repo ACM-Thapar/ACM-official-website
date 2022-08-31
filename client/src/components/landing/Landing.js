@@ -3,6 +3,7 @@ import Ellipse from '../../images/Ellipse.svg';
 import Group1 from '../../images/Group1.svg';
 import src from '../../images/Programmer-amico.png';
 import Bootcamps from '../bootcamps/Bootcamps';
+import Cards from './Cards';
 
 const Landing = () => {
   return (
@@ -46,49 +47,44 @@ const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="landpagetwo">
+      <section classamicoName="landpagetwo">
         <div className="container">
           <div className="row">
             <br />
             <br />
             <h1 className="whatwedo" id="wwd">
-              <br />
               What do we do
             </h1>
           </div>
           <div className="row">
-            <div className="col-md-4">
-              <h3 className="whatwedopoints">Classes</h3>
-              <p>
-                We provide classes to our junior members particularly in the
-                field of Data Structures, Algorithms and Competitive
-                Programming.
-              </p>
-              <h3 className="whatwedopoints">Events</h3>
-              <p>
-                At ACM Thapar, we host a variety of such events to bring
-                together like-minded coders to collaborate, grow and have fun!.
-                We believe that youth encompassed with appropriate technology
-                holds the potential to revolutionize the world we perceive
-                today.
-              </p>
-            </div>
-            <div className="col-md-4">
-              <h3 className="whatwedopoints">Bootcamp</h3>
-              <p>
-                We have bootcamps in the fields of web development and app
-                development to upskill our members.
-              </p>
-              <h3 className="whatwedopoints">Projects</h3>
-              <p>
-                Projects serve as the platform for transforming knowledge into
-                ideas. While enhancing various skills and management techniques
-                in our actions and lives. Project-based learning inculcates
-                competencies to go beyond subject knowledge, prepare and
-                challenge the existing methods.
-              </p>
-            </div>
-            <div className="col-md-4">
+            <Cards
+              heading={'Classes'}
+              content={
+                'We provide classes to our junior members particularly in the field of Data Structures, Algorithms and Competitive Programming.'
+              }
+            />
+            <Cards
+              heading={'Bootcamp'}
+              content={
+                'We have bootcamps in the fields of web development and app development to upskill our members.'
+              }
+            />
+          </div>
+          <br/>
+          <div className="row">
+            <Cards
+              heading={'Events'}
+              content={
+                'At ACM Thapar, we host a variety of such events to bring together like-minded coders to collaborate, grow and have fun!. We believe that youth encompassed with appropriate technology holds the potential to revolutionize the world we perceive today.'
+              }
+            />
+            <Cards
+              heading={'Projects'}
+              content={
+                'Projects serve as the platform for transforming knowledge into ideas. While enhancing various skills and management techniques in our actions and lives. Project-based learning inculcates competencies to go beyond subject knowledge, prepare and challenge the existing methods.'
+              }
+            />
+            <div className="col-md-3">
               <img src={src} className="amico-img" />
             </div>
           </div>
