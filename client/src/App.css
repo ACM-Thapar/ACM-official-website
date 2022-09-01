@@ -416,9 +416,9 @@ h1.whatwedo2 {
   font-weight: bolder;
   font-size: 50px;
   line-height: 56px;
-  margin-top: 6vw;
-  /* margin-bottom: 2%; */
-  margin-left: 8vw;;
+  margin-top: 6.5vw;
+  margin-bottom: -2vw;
+  margin-left: 8vw;
 }
 
 h3.whatwedopoints {
@@ -4459,4 +4459,25 @@ a:hover {
 .custom-card hr {
   margin: 2px;
   padding-bottom: 2%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+  background-color: #011627;
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1b98df; 
+  border-radius: 1px;
+  transition: all 0.9s;
+  width: 90%;
+  margin: auto;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #006494; 
 }
