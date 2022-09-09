@@ -10,6 +10,12 @@ const announcementSchema = new mongoose.Schema({
     enum: ['Meet', 'Technical', 'Informational', 'Event'],
     default: 'Meet',
   },
+  date: {
+    type: String,
+  },
+  venue: {
+    type: String,
+  },
   content: {
     type: String,
   },

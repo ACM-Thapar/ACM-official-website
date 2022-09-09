@@ -20,7 +20,7 @@ exports.login = async (req, res) => {
 
   try {
     //Check if the user exists
-    let user = await User.findOne({ email });
+    let user = await User.findOne({ email }).populate('badges');
 
     if (!user) {
       return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
@@ -38,7 +38,7 @@ exports.login = async (req, res) => {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
 
-    res.cookie('JWT', JWT, {
+    res.cookie(process.env.COOKIE_NAME, JWT, {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
     res.json(user);
@@ -101,7 +101,7 @@ exports.register = async (req, res) => {
       html: `<b>You have been registered.Welcome to the ACM. Your password is ${password} </b>`,
     });
 
-    res.cookie('JWT', JWT, {
+    res.cookie(process.env.COOKIE_NAME, JWT, {
       expiresIn: process.env.JWT_EXPIRESIN,
     });
     res.json({ msg: 'User registered successfully', data: JWT });

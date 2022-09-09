@@ -6,11 +6,10 @@ const Announcement = require('../models/Announcement.js');
 
 async function createAnnouncement(req, res) {
   try {
-    const { heading, content, type, year } = req.body;
-
     const announcement = await Announcement.create(req.body);
     res.json(announcement);
   } catch (err) {
+    console.log(err.message);
     res.status(500).json(err.messsage);
   }
 }
@@ -55,30 +54,17 @@ async function updateAnnouncement(req, res) {
 
 async function getAnnouncement(req, res) {
   try {
+    const { limit } = req.query;
+    if (limit) {
+      const ann = await Announcement.find().limit(limit);
+      return res.status(200).json(ann);
+    }
     let allProfiles = await Announcement.find();
     res.status(200).json(allProfiles);
   } catch (err) {
     res.status(500).json(err.message);
   }
 }
-
-// //@route /:user_id
-// //@desc GET to get all announcements of a user
-// //@access public
-
-// async function getUserAnnouncements(req, res) {
-//   try {
-//     const { user_id } = req.params;
-
-//     const userAnnouncements = await Announcement.findOne({
-//       announcedBy: user_id,
-//     });
-
-//     res.status(200).json(userAnnouncements);
-//   } catch (err) {
-//     res.status(500).json(err.message);
-//   }
-// }
 
 module.exports = {
   createAnnouncement,
