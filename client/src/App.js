@@ -20,6 +20,9 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <div className='progress-container'>
+          <div className='progress-bar' id='myBar'></div>
+        </div>
         <Navbar />
         <section>
           <Switch>

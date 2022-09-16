@@ -1,0 +1,83 @@
+/* * {
+    box-sizing: border-box; */
+/* } */
+
+.bootcamp-section {
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bootcamp-section .container {
+  display: flex;
+  width: 90vw;
+}
+
+.bootcamp-section .panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.bootcamp-section .panel h3 {
+  font-size: 34px;
+  font-weight: bolder;
+  position: absolute;
+  bottom: 23px;
+  left: 100px;
+  margin: 0;
+  opacity: 0;
+}
+
+.bootcamp-section .panel.active {
+  flex: 2.5;
+  background-size: cover;
+  background-position-y: top;
+}
+
+.bootcamp-section .panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+.basecamp-icon {
+  width: 4.5vw;
+  background-color: white;
+  height: 4.5vw;
+  border-radius: 50%;
+  opacity: 1 !important;
+  position: absolute;
+  bottom: 15px;
+  left: 24px;
+}
+
+.mat-icon{
+  position: relative;
+  top: 15px;
+  left: 13px;
+}
+
+@media (max-width: 480px) {
+  .bootcamp-section .container {
+    width: 100vw;
+  }
+
+  .bootcamp-section .panel:nth-of-type(4),
+  .bootcamp-section :nth-of-type(5) {
+    display: none;
+  }
+}
