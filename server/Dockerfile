@@ -1,17 +1,15 @@
-#pulling official node image
-FROM node:12.16.1-alpine
+FROM node:17-alpine
 
-# set workdir
-WORKDIR "/app"
+RUN npm i -g nodemon 
 
-# copy package.json & yarn.lock
+WORKDIR ./app
+
 COPY package.json .
-COPY package-lock.json .
 
-# install dependencies
-RUN npm install
+RUN npm i
 
-# copy other files/directories
 COPY . .
 
-CMD ["npm" , "run" ,"start"]
+EXPOSE 5000
+
+CMD ["nodemon","index.js"]
