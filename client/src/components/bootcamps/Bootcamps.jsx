@@ -12,7 +12,7 @@ const panels = [
   {
     id: 0,
     backgroundImage:
-      'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+      'https://res.cloudinary.com/do05f06ts/image/upload/v1663311980/academic_kykspn.jpg',
     active: true,
     heading: 'Academic Bootcamp',
     icon: 'school',
@@ -20,7 +20,7 @@ const panels = [
   {
     id: 1,
     backgroundImage:
-      'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+      'https://res.cloudinary.com/do05f06ts/image/upload/v1663311968/web_dev_vgzogg.jpg',
     active: false,
     heading: 'Web Dev Bootcamp',
     icon: 'web',
@@ -28,7 +28,7 @@ const panels = [
   {
     id: 2,
     backgroundImage:
-      'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+      'https://res.cloudinary.com/do05f06ts/image/upload/v1663312830/app_dev_yj2jdh.jpg',
     active: false,
     heading: 'App Dev Bootcamp',
     icon: 'app',
@@ -36,7 +36,7 @@ const panels = [
   {
     id: 3,
     backgroundImage:
-      'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+      'https://res.cloudinary.com/do05f06ts/image/upload/v1663311978/ui-ux_jojt6u.jpg',
     active: false,
     heading: 'UI/UX Bootcamp',
     icon: 'ui',
@@ -44,7 +44,8 @@ const panels = [
   {
     id: 4,
     backgroundImage:
-      'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+      'https://res.cloudinary.com/do05f06ts/image/upload/v1663313452/ml_vfhww2.jpg',
+    // 'https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
     active: false,
     heading: 'Machine Learning Bootcamp',
     icon: 'ml',
@@ -60,13 +61,13 @@ const Panel = (props) => {
 
     panels[id].active = true;
     setState(Math.random());
-    console.log(panels);
   };
   return (
     <div
       onMouseEnter={() => clickHandler(id)}
       className={`panel ${active ? 'active' : null}`}
       style={{
+        // backgroundColor: 'black',
         backgroundImage: `url(${img})`,
       }}>
       <div className="basecamp-icon">

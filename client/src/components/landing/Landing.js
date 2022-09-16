@@ -3,6 +3,7 @@ import Ellipse from '../../images/Ellipse.svg';
 import Group1 from '../../images/Group1.svg';
 import src from '../../images/Programmer-amico.png';
 import Bootcamps from '../bootcamps/Bootcamps';
+import CourseGuide from '../courseGuide/courseGuide';
 import Cards from './Cards';
 
 const Landing = () => {
@@ -95,6 +96,7 @@ const Landing = () => {
               Our Bootcamps
       </h1>
       <Bootcamps />
+      <CourseGuide/>
       <section className="membership">
         <div className="container">
           <div className="row">

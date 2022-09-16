@@ -33,16 +33,19 @@
 }
 
 .bootcamp-section .panel h3 {
-  font-size: 24px;
+  font-size: 34px;
+  font-weight: bolder;
   position: absolute;
   bottom: 23px;
-  left: 80px;
+  left: 100px;
   margin: 0;
   opacity: 0;
 }
 
 .bootcamp-section .panel.active {
-  flex: 5;
+  flex: 2.5;
+  background-size: cover;
+  background-position-y: top;
 }
 
 .bootcamp-section .panel.active h3 {
@@ -52,20 +55,20 @@
 
 
 .basecamp-icon {
-  width: 3.5vw;
+  width: 4.5vw;
   background-color: white;
-  height: 3.5vw;
+  height: 4.5vw;
   border-radius: 50%;
   opacity: 1 !important;
   position: absolute;
   bottom: 15px;
-  left: 12px;
+  left: 24px;
 }
 
 .mat-icon{
   position: relative;
-  top: 5px;
-  left: 6.5px;
+  top: 15px;
+  left: 13px;
 }
 
 @media (max-width: 480px) {
