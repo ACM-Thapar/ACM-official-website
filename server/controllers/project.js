@@ -20,10 +20,11 @@ async function createProject(req, res) {
 //@access PRivate
 async function getAllProject(req, res) {
   try {
+    // console.log('here');
     const project = await Project.find();
-
     res.status(200).json(project);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err.message);
   }
 }

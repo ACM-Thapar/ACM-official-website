@@ -14,6 +14,7 @@ const {
   forgotPassword,
   resetPasswordLink,
   removeBadgesOrCertificates,
+  getLoggedInUser,
 } = require('../controllers/auth_post');
 const admin = require('../middleware/admin.js');
 const auth = require('../middleware/auth.js');
@@ -22,7 +23,7 @@ const auth = require('../middleware/auth.js');
 router.route('/login').post(validAuth, login);
 
 //register
-router.post('/', validUser, register);
+router.route('/').post(validUser, register).get(auth, getLoggedInUser);
 
 //get all users
 router

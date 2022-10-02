@@ -20,7 +20,7 @@ exports.login = async (req, res) => {
 
   try {
     //Check if the user exists
-    let user = await User.findOne({ email }).populate('badges');
+    let user = await User.findOne({ email }).populate('badges certificates');
 
     if (!user) {
       return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
@@ -279,4 +279,8 @@ exports.resetPasswordLink = async (req, res) => {
   } catch (err) {
     res.status(500).json(err.message);
   }
+};
+
+exports.getLoggedInUser = async (req, res) => {
+  res.json(req.user);
 };

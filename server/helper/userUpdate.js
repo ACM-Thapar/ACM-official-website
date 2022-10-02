@@ -8,16 +8,13 @@ async function userUpdate(userArray, field, field_id, remove = false) {
         let user = await User.findById(userId);
 
         if (!remove) {
-          // let set = new Set(user[field]);
           user[field].push(field_id);
-          // set.add(field_id);
-          await user.save();
+          const data = user.save();
+          console.log(data);
         } else if (remove) {
           user[field] = user[field].filter(
             (id) => id.toString() !== field_id.toString(),
           );
-          await user.save();
-          w;
         }
       }),
     );

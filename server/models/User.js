@@ -30,19 +30,19 @@ const UserSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  about:{
-    type:String,
+  about: {
+    type: String,
   },
-  skillSet:[
+  skillSet: [
     {
-      type:String
-    }
+      type: String,
+    },
   ],
-  bootcamps:[
+  bootcamps: [
     {
-      enum:['Web Development',"Android Development","ML/AI","UI/UX"],
-      type:String
-    }
+      enum: ['WebDev', 'AppDev', 'ML/AI', 'UI/UX'],
+      type: String,
+    },
   ],
   badges: [
     {
@@ -54,6 +54,11 @@ const UserSchema = new mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'certificate',
+    },
+  ],
+  socials: [
+    {
+      type: String,
     },
   ],
 });
