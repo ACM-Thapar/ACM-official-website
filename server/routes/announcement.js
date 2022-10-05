@@ -17,8 +17,7 @@ router.route('/').post(auth, admin, createAnnouncement).get(getAnnouncement);
 router
   .route('/:announcement_id')
   .delete(auth, admin, deleteAnnouncement)
-  // .delete(deleteAnnouncement)
+
   .put(auth, admin, updateAnnouncement);
-// .put(updateAnnouncement);
 
 module.exports = router;

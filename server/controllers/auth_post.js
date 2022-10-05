@@ -282,5 +282,14 @@ exports.resetPasswordLink = async (req, res) => {
 };
 
 exports.getLoggedInUser = async (req, res) => {
-  res.json(req.user);
+  try {
+    const user = await User.findOne(req.user._id)
+      .populate('badges certificates')
+      .select('-badges.user');
+    res.json(user);
+  } catch (err) {
+    res.json(err.message);
+  }
 };
+
+exports.logout = async (req, res) => {};
