@@ -11,7 +11,10 @@ const auth = require('../middleware/auth.js');
 
 const router = express.Router();
 
-router.route('/').post(auth, admin, createAnnouncement).get(getAnnouncement);
+router
+  .route('/')
+  .post(auth, admin, createAnnouncement)
+  .get(auth, getAnnouncement);
 // router.route('/').post(createAnnouncement).get(getAnnouncement);
 
 router
