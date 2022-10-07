@@ -50,6 +50,12 @@ const UserSchema = new mongoose.Schema({
       ref: 'badge',
     },
   ],
+  projects: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Project',
+    },
+  ],
   certificates: [
     {
       type: mongoose.Schema.Types.ObjectId,
