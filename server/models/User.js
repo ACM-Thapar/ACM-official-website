@@ -40,8 +40,13 @@ const UserSchema = new mongoose.Schema({
   ],
   bootcamps: [
     {
-      enum: ['WebDev', 'AppDev', 'ML/AI', 'UI/UX'],
-      type: String,
+      enrolled: {
+        enum: ['WebDev', 'AppDev', 'ML/AI', 'UI/UX'],
+        type: String,
+      },
+      url: {
+        link: String,
+      },
     },
   ],
   badges: [
