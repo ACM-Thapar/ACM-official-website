@@ -41,8 +41,8 @@ const UserSchema = new mongoose.Schema({
   bootcamps: [
     {
       enrolled: {
-        enum: ['WebDev', 'AppDev', 'ML/AI', 'UI/UX'],
         type: String,
+        enum: ['WebDev', 'AppDev', 'ML/AI', 'UI/UX'],
       },
       url: {
         link: String,

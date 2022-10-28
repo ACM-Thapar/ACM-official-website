@@ -55,10 +55,10 @@ exports.login = async (req, res) => {
 //@access   Public
 
 exports.register = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
+  // const errors = validationResult(req);
+  // if (!errors.isEmpty()) {
+  //   return res.status(400).json({ errors: errors.array() });
+  // }
 
   const { name, email } = req.body;
   const password = uuid.v4();
@@ -292,4 +292,7 @@ exports.getLoggedInUser = async (req, res) => {
   }
 };
 
-exports.logout = async (req, res) => {};
+exports.logout = async (req, res) => {
+  res.clearCookie(process.env.COOKIE_NAME);
+  return res.status(200).json('Logged out');
+};
