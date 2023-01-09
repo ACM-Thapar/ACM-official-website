@@ -1,23 +1,20 @@
 const User = require('../models/User');
 const Badge = require('../models/Badge');
 const Certificate = require('../models/Certificate');
+const Project = require('../models/Project');
 async function userUpdate(userArray, field, field_id, remove = false) {
   try {
     await Promise.all(
       userArray.map(async (userId) => {
         let user = await User.findById(userId);
-
         if (!remove) {
-          // let set = new Set(user[field]);
           user[field].push(field_id);
-          // set.add(field_id);
-          await user.save();
+          const data = user.save();
+          console.log(data);
         } else if (remove) {
           user[field] = user[field].filter(
             (id) => id.toString() !== field_id.toString(),
           );
-          await user.save();
-          w;
         }
       }),
     );
@@ -42,6 +39,13 @@ async function updateBadgeOrCertificate(array, userId, type, remove = false) {
         }
         if (remove && type === 'certificates') {
           const certificate = await Certificate.findByIdAndUpdate(elem._id, {
+            $pull: {
+              user: elem._id,
+            },
+          });
+        }
+        if (remove && type === 'projects') {
+          const project = await Project.findByIdAndUpdate(elem._id, {
             $pull: {
               user: elem._id,
             },

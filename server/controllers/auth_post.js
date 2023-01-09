@@ -20,7 +20,7 @@ exports.login = async (req, res) => {
 
   try {
     //Check if the user exists
-    let user = await User.findOne({ email }).populate('badges');
+    let user = await User.findOne({ email }).populate('badges certificates');
 
     if (!user) {
       return res.status(400).json({ errors: [{ msg: 'Invalid Credentials' }] });
@@ -55,10 +55,10 @@ exports.login = async (req, res) => {
 //@access   Public
 
 exports.register = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
+  // const errors = validationResult(req);
+  // if (!errors.isEmpty()) {
+  //   return res.status(400).json({ errors: errors.array() });
+  // }
 
   const { name, email } = req.body;
   const password = uuid.v4();
@@ -279,4 +279,20 @@ exports.resetPasswordLink = async (req, res) => {
   } catch (err) {
     res.status(500).json(err.message);
   }
+};
+
+exports.getLoggedInUser = async (req, res) => {
+  try {
+    const user = await User.findOne(req.user._id)
+      .populate('badges certificates')
+      .select('-badges.user');
+    res.json(user);
+  } catch (err) {
+    res.json(err.message);
+  }
+};
+
+exports.logout = async (req, res) => {
+  res.clearCookie(process.env.COOKIE_NAME);
+  return res.status(200).json('Logged out');
 };

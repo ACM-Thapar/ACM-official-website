@@ -62,6 +62,7 @@ async function getAnnouncement(req, res) {
     let allProfiles = await Announcement.find();
     res.status(200).json(allProfiles);
   } catch (err) {
+    console.log(err.message);
     res.status(500).json(err.message);
   }
 }

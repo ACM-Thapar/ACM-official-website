@@ -1,3 +1,4 @@
+const { userUpdate } = require('../helper/userUpdate');
 const Project = require('../models/Project');
 
 //@route /project/
@@ -7,7 +8,6 @@ const Project = require('../models/Project');
 async function createProject(req, res) {
   try {
     req.body.Languages = req.body.Languages.split(',');
-    req.body.Members = req.body.Members.split(',');
 
     const project = await Project.create({ ...req.body });
     res.json(project);
@@ -20,10 +20,10 @@ async function createProject(req, res) {
 //@access PRivate
 async function getAllProject(req, res) {
   try {
-    const project = await Project.find();
-
+    const project = await Project.find().populate('user');
     res.status(200).json(project);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err.message);
   }
 }
@@ -50,13 +50,15 @@ async function updateProject(req, res) {
 
     if (!project) return res.status(400).json('!project doesnt exist');
 
-    let reqKey = Object.keys(req.body);
-    reqKey.map((key) => {
-      if (key == 'Members' || key == 'Languages') {
-        project[key] = req.body[key].split(',');
-      } else project[key] = req.body[key];
-    });
-
+    project.Title = req.body.title || project.Title;
+    project.Description = req.body.description || project.Description;
+    project.GithubURL = req.body.githubURL || project.GithubURL;
+    project.Languages = req.body.Languages
+      ? req.body.Languages.split(',')
+      : project.Languages;
+    if (req.body.user.length > 0) {
+      await userUpdate(req.body.user, 'projects', project._id);
+    }
     await project.save();
     res.status(200).json(project);
   } catch (err) {
@@ -73,7 +75,7 @@ async function deleteProject(req, res) {
     const project = await Project.findOneAndDelete({ _id: project_id });
 
     if (!project) res.status(400).json('project not found');
-
+    await userUpdate(project.user, 'projects', project._id, true);
     res.status(200).json(project);
   } catch (err) {
     res.status(500).json(err.message);

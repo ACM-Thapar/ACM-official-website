@@ -1,39 +1,39 @@
 const mongoose = require('mongoose');
 
 const projectSchema = new mongoose.Schema({
-  Title:{
+  Title: {
     type: String,
-    required: true
+    required: true,
   },
-  Description:{
+  Description: {
     type: String,
-    required: true
+    required: true,
   },
-  Members: [{
-    type: String,
-    required: true
-  }],
-
+  user: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'user',
+    },
+  ],
   GithubURL: {
     type: String,
-    required: true
+    required: true,
   },
-  Languages: [{
-
-    type: String,
-    default: '',
-  }
+  Languages: [
+    {
+      type: String,
+      default: '',
+    },
   ],
 
   ImagesURL: [
     {
       type: String,
       default: '',
-    }
-  ]
+    },
+  ],
 });
 
 const Project = mongoose.model('Project', projectSchema);
 
 module.exports = Project;
-
